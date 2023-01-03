@@ -1,0 +1,94 @@
+---
+import { Icon } from "astro-icon";
+
+const items = [
+  [
+    {
+      question: "When the payment is fullfiled?",
+      answer: `Payments are taken two days prior to arrival.`,
+    },
+    {
+      question: "Do you have WIFI?",
+      answer: `The WiFi works great and you can connect from every room in the hostel and in the lounge area where there are tables you can work from.`,
+    },
+    {
+      question: "What about the lockers?",
+      answer: `The room has lockable lockers and you can either buy a lock from us (£4) or bring your own!`,
+    },
+    {
+      question: "Do you serve breakfast?",
+      answer: `We can offer Breakfast at £3.90 though we are not the ones cooking, it is the cafe downstairs. 
+      \n\nBreakfast consists of a barista style coffee/hot drink + a filled roll or pancakes. 
+      \n\nSo far our guests are happy with it.`,
+    },
+    {
+      question: "Is it possible to cook my own food?",
+      answer: `We have big a kitchen with many cooking utensils, ovens and hobs, a microwave, etc. We have free salt, spices, instant coffee, tea and sugar.
+      \n\nWe don't provide a dinner service but you are welcome to cook something for yourself.`,
+    },
+  ],
+  [
+    {
+      question: "Can I do my laundry?",
+      answer: `We do not provide a laundry service, however there is a laundrette 10 minutes walk away : Bendix Self Service`,
+    },
+    {
+      question: "Can I have a lower bunk bed?",
+      answer: `We have a first come first serve policy regarding bed allocation though we are sure we'll have a comfortable bed for you when you arrive.`,
+    },
+    {
+      question: "Where can I park my car?",
+      answer: `We are right in the town centre and there is no good spot. 
+      \n\nThe best is to download the app Ringgo, otherwise there is paid parking on Waterloo Place, St Andrews Square or George Square. 
+      \n\nFrom 6.30pm till 8.30am, on-street-parking is virtually free.`,
+    },
+    {
+      question: "Is there a place to park my bike?",
+      answer: `Yes, we have a secure place for your bike. However our hostel is at the top of a building so there are quite a few steps to get up to us.`,
+    },
+    {
+      question: "Your question is left unanswered?",
+      answer: `Don't hesitate to reach out on Whatsapp.`,
+    },
+  ],
+];
+---
+
+<div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
+  <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
+    <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      <h2
+        class="max-w-lg mb-4 text-3xl font-bold leading-none tracking-tight sm:text-4xl md:mx-auto font-heading"
+      >
+        Frequently Asked Questions
+      </h2>
+    </div>
+  </div>
+  <div class="max-w-screen-xl sm:mx-auto">
+    <div class="grid grid-cols-1 gap-x-8 gap-y-8 lg:gap-x-16 md:grid-cols-2">
+      {
+        items.map((subitems) => (
+          <div class="space-y-8">
+            {subitems.map(({ question, answer }) => (
+              <div>
+                <p class="mb-4 text-xl font-bold">
+                  <Icon
+                    name="tabler:arrow-down-right"
+                    class="w-7 h-7 text-primary-500 inline-block"
+                  />
+                  {question}
+                </p>
+                {answer.split("\n\n").map((paragraph) => (
+                  <p
+                    class="text-gray-700 dark:text-gray-400 mb-2"
+                    set:html={paragraph}
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>
