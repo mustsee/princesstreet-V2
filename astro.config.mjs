@@ -1,9 +1,40 @@
-import { defineConfig } from 'astro/config';
+import path from "path";
+import { fileURLToPath } from "url";
 
-// https://astro.build/config
+import { defineConfig } from "astro/config";
+
 import tailwind from "@astrojs/tailwind";
+import image from "@astrojs/image";
+import sitemap from "@astrojs/sitemap";
 
-// https://astro.build/config
+import { SITE } from "./src/config.mjs";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 export default defineConfig({
-  integrations: [tailwind()]
+  site: SITE.origin,
+  base: SITE.basePathname,
+  trailingSlash: SITE.trailingSlash ? "always" : "never",
+
+  output: "static",
+
+  integrations: [
+    tailwind({
+      config: {
+        applyBaseStyles: false,
+      },
+    }),
+    sitemap(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+  ],
+
+  vite: {
+    resolve: {
+      alias: {
+        "~": path.resolve(__dirname, "./src"),
+      },
+    },
+  },
 });

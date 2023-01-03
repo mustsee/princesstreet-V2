@@ -1,10 +1,15 @@
 ---
 import { Icon } from "astro-icon";
-import Logo from "./../atoms/Logo.astro";
-import ToggleTheme from "./../core/ToggleTheme.astro";
-import ToggleMenu from "./../core/ToggleMenu.astro";
+import Logo from "~/components/atoms/Logo.astro";
+import ToggleTheme from "~/components/core/ToggleTheme.astro";
+import ToggleMenu from "~/components/core/ToggleMenu.astro";
 
 import { getHomePermalink, getPermalink } from "./../../utils/permalinks";
+
+/* TODO:
+    - Put the right logo (png to svg, then remove the title) and find a font for PSH.
+    - Change the menu on small screen (it's ugly for now)
+*/
 ---
 
 <header
