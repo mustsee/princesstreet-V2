@@ -4,16 +4,16 @@ import { Icon } from "astro-icon";
 import { findImage } from "~/utils/images";
 
 const images = [
-  { name: "psh-lunch-room.jpg", alt: "Princes Street lunch room" },
+  { name: "psh-lunch-room-min.jpg", alt: "Princes Street lunch room" },
   { name: "edinburgh-calton-hill.jpg", alt: "View from nearby Calton Hill" },
-  { name: "psh-bathroom.jpg", alt: "Princes Street bathroom" },
+  { name: "psh-bathroom-min.jpg", alt: "Princes Street bathroom" },
   { name: "edinburgh-street-group.jpg", alt: "Group in Edinburgh" },
-  { name: "psh-kitchen.jpg", alt: "Princes Street kitchen" },
+  { name: "psh-kitchen-min.jpg", alt: "Princes Street kitchen" },
   {
     name: "edinburgh-street-jumping-girl.jpg",
     alt: "Jumping girl in Edinburgh",
   },
-  { name: "psh-shower.jpg", alt: "Princes Street shower" },
+  { name: "psh-shower-min.jpg", alt: "Princes Street shower" },
 ];
 
 const prefix = "~/assets/images/";
@@ -122,78 +122,78 @@ const picture6 = await findImage(`${prefix}${images[6].name}`);
     width={1480}
     height={833}
   />
-
-  <script>
-    let index = 0;
-    let intervalTime = 10000;
-    let slideInterval;
-
-    const nextImage = () => {
-      slides[index].classList.toggle("hide");
-      if (!slides[index + 1]) {
-        index = 0;
-        slides[index].classList.toggle("hide");
-      } else {
-        index += 1;
-        slides[index].classList.toggle("hide");
-      }
-      clearInterval(slideInterval);
-      slideInterval = setInterval(moveSlides, intervalTime);
-    };
-
-    const previousImage = () => {
-      slides[index].classList.toggle("hide");
-      if (!slides[index - 1]) {
-        index = slides.length - 1;
-        slides[index].classList.toggle("hide");
-      } else {
-        index -= 1;
-        slides[index].classList.toggle("hide");
-      }
-      clearInterval(slideInterval);
-      slideInterval = setInterval(moveSlides, intervalTime);
-    };
-
-    const moveSlides = () => {
-      slides[index].classList.toggle("hide");
-      if (!slides[index + 1]) {
-        index = 0;
-        slides[index].classList.toggle("hide");
-      } else {
-        index += 1;
-        slides[index].classList.toggle("hide");
-      }
-    };
-
-    let slides = document.getElementsByClassName("slide");
-
-    let previous = document.getElementById("previous-image");
-    previous.addEventListener("click", previousImage);
-
-    let next = document.getElementById("next-image");
-    next.addEventListener("click", nextImage);
-
-    slideInterval = setInterval(moveSlides, intervalTime);
-
-    // Clear interval and remove event listener
-    window.onbeforeunload = function () {
-      clearInterval(slideInterval);
-      next.removeEventListener("click", nextImage);
-      next.removeEventListener("click", previousImage);
-    };
-  </script>
-
-  <style>
-    .slide {
-      transition: opacity 0.3s;
-    }
-
-    .hide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -10;
-      opacity: 0%;
-    }
-  </style>
 </div>
+
+<script>
+  let index = 0;
+  let intervalTime = 10000;
+  let slideInterval;
+
+  const nextImage = () => {
+    slides[index].classList.toggle("hide");
+    if (!slides[index + 1]) {
+      index = 0;
+      slides[index].classList.toggle("hide");
+    } else {
+      index += 1;
+      slides[index].classList.toggle("hide");
+    }
+    clearInterval(slideInterval);
+    slideInterval = setInterval(moveSlides, intervalTime);
+  };
+
+  const previousImage = () => {
+    slides[index].classList.toggle("hide");
+    if (!slides[index - 1]) {
+      index = slides.length - 1;
+      slides[index].classList.toggle("hide");
+    } else {
+      index -= 1;
+      slides[index].classList.toggle("hide");
+    }
+    clearInterval(slideInterval);
+    slideInterval = setInterval(moveSlides, intervalTime);
+  };
+
+  const moveSlides = () => {
+    slides[index].classList.toggle("hide");
+    if (!slides[index + 1]) {
+      index = 0;
+      slides[index].classList.toggle("hide");
+    } else {
+      index += 1;
+      slides[index].classList.toggle("hide");
+    }
+  };
+
+  let slides = document.getElementsByClassName("slide");
+
+  let previous = document.getElementById("previous-image");
+  previous.addEventListener("click", previousImage);
+
+  let next = document.getElementById("next-image");
+  next.addEventListener("click", nextImage);
+
+  slideInterval = setInterval(moveSlides, intervalTime);
+
+  // Clear interval and remove event listener
+  window.onbeforeunload = function () {
+    clearInterval(slideInterval);
+    next.removeEventListener("click", nextImage);
+    next.removeEventListener("click", previousImage);
+  };
+</script>
+
+<style>
+  .slide {
+    transition: opacity 0.3s;
+  }
+
+  .hide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    opacity: 0%;
+  }
+</style>
