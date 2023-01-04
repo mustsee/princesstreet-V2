@@ -1,10 +1,10 @@
 ---
 import { Icon } from "astro-icon";
-import { Picture } from "@astrojs/image/components";
+import SlidesShow from "./SlidesShow.astro";
 
 /* TODO:
     - Change href of learn more button
-    - Add a react slide show with the right images (if cannot find anything with astro)
+    - Avoid image flickering in SlideShow widget: https://stackoverflow.com/questions/22269759/how-to-prevent-a-background-image-flickering-on-change
 */
 ---
 
@@ -40,8 +40,11 @@ import { Picture } from "@astrojs/image/components";
                 target="_blank"
                 rel="noopener"
               >
-                <Icon name="tabler:notebook" class="w-5 h-5 mr-1 -ml-1.5" />
-                Book now
+                BOOK NOW
+                <Icon
+                  name="tabler:chevron-right"
+                  class="w-5 h-5 ml-1 -mr-1.5"
+                />
               </a>
             </div>
             <div class="flex w-full sm:w-auto">
@@ -52,19 +55,7 @@ import { Picture } from "@astrojs/image/components";
         </div>
       </div>
       <div>
-        <div class="relative m-auto max-w-4xl">
-          <Picture
-            src={import("~/assets/images/hero.jpg")}
-            class="mx-auto rounded-md w-full"
-            widths={[400, 768, 1480]}
-            sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
-            alt="Hero Image"
-            aspectRatio={1480 / 833}
-            loading="eager"
-            width={1480}
-            height={833}
-          />
-        </div>
+        <SlidesShow />
       </div>
     </div>
   </div>

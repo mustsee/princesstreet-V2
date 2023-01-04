@@ -1,0 +1,204 @@
+---
+import { Picture } from "@astrojs/image/components";
+import { Icon } from "astro-icon";
+import { findImage } from "~/utils/images";
+
+const images = [
+  { name: "psh-lunch-room.jpg", alt: "Princes Street lunch room" },
+  { name: "edinburgh-calton-hill.jpg", alt: "View from nearby Calton Hill" },
+  { name: "psh-bathroom.jpg", alt: "Princes Street bathroom" },
+  { name: "edinburgh-street-group.jpg", alt: "Group in Edinburgh" },
+  { name: "psh-kitchen.jpg", alt: "Princes Street kitchen" },
+  {
+    name: "edinburgh-street-jumping-girl.jpg",
+    alt: "Jumping girl in Edinburgh",
+  },
+  { name: "psh-shower.jpg", alt: "Princes Street shower" },
+];
+
+const prefix = "~/assets/images/";
+
+const picture0 = await findImage(`${prefix}${images[0].name}`);
+const picture1 = await findImage(`${prefix}${images[1].name}`);
+const picture2 = await findImage(`${prefix}${images[2].name}`);
+const picture3 = await findImage(`${prefix}${images[3].name}`);
+const picture4 = await findImage(`${prefix}${images[4].name}`);
+const picture5 = await findImage(`${prefix}${images[5].name}`);
+const picture6 = await findImage(`${prefix}${images[6].name}`);
+---
+
+<div class="relative m-auto max-w-4xl mb-12 md:mb-0">
+  <div
+    class="absolute -bottom-12 md:bottom-0 md:top-1/2 md:z-10 h-12 w-full flex justify-between"
+  >
+    <Icon
+      id="previous-image"
+      name="tabler:arrow-narrow-left"
+      class="icon-slide-show icon-slide-show-sm md:icon-slide-show-md"
+    />
+    <div class="flex flex-1 bg-slate-900 dark:bg-white opacity-10 md:hidden">
+    </div>
+    <Icon
+      id="next-image"
+      name="tabler:arrow-narrow-right"
+      class="icon-slide-show icon-slide-show-sm md:icon-slide-show-md"
+    />
+  </div>
+  <Picture
+    src={picture0}
+    id="picture"
+    class="slide mx-auto rounded-md w-full"
+    widths={[400, 768, 1480]}
+    sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
+    alt={images[0].alt}
+    aspectRatio={1480 / 833}
+    loading="eager"
+    width={1480}
+    height={833}
+  />
+  <Picture
+    src={picture1}
+    class="slide hide mx-auto rounded-md w-full"
+    widths={[400, 768, 1480]}
+    sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
+    alt={images[1].alt}
+    aspectRatio={1480 / 833}
+    loading="eager"
+    width={1480}
+    height={833}
+  />
+  <Picture
+    src={picture2}
+    class="slide hide mx-auto rounded-md w-full"
+    widths={[400, 768, 1480]}
+    sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
+    alt={images[2].alt}
+    aspectRatio={1480 / 833}
+    loading="eager"
+    width={1480}
+    height={833}
+  />
+  <Picture
+    src={picture3}
+    class="slide hide mx-auto rounded-md w-full"
+    widths={[400, 768, 1480]}
+    sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
+    alt={images[3].alt}
+    aspectRatio={1480 / 833}
+    loading="eager"
+    width={1480}
+    height={833}
+  />
+  <Picture
+    src={picture4}
+    class="slide hide mx-auto rounded-md w-full"
+    widths={[400, 768, 1480]}
+    sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
+    alt={images[4].alt}
+    aspectRatio={1480 / 833}
+    loading="eager"
+    width={1480}
+    height={833}
+  />
+  <Picture
+    src={picture5}
+    class="slide hide mx-auto rounded-md w-full"
+    widths={[400, 768, 1480]}
+    sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
+    alt={images[5].alt}
+    aspectRatio={1480 / 833}
+    loading="eager"
+    width={1480}
+    height={833}
+  />
+  <Picture
+    src={picture6}
+    class="slide hide mx-auto rounded-md w-full"
+    widths={[400, 768, 1480]}
+    sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
+    alt={images[6].alt}
+    aspectRatio={1480 / 833}
+    loading="eager"
+    width={1480}
+    height={833}
+  />
+
+  <script>
+    let index = 0;
+    let intervalTime = 10000;
+    let slideInterval;
+
+    const nextImage = () => {
+      slides[index].classList.toggle("hide");
+      if (!slides[index + 1]) {
+        index = 0;
+        slides[index].classList.toggle("hide");
+      } else {
+        index += 1;
+        slides[index].classList.toggle("hide");
+      }
+      clearInterval(slideInterval);
+      slideInterval = setInterval(moveSlides, intervalTime);
+    };
+
+    const previousImage = () => {
+      slides[index].classList.toggle("hide");
+      if (!slides[index - 1]) {
+        index = slides.length - 1;
+        slides[index].classList.toggle("hide");
+      } else {
+        index -= 1;
+        slides[index].classList.toggle("hide");
+      }
+      clearInterval(slideInterval);
+      slideInterval = setInterval(moveSlides, intervalTime);
+    };
+
+    const moveSlides = () => {
+      slides[index].classList.toggle("hide");
+      if (!slides[index + 1]) {
+        index = 0;
+        slides[index].classList.toggle("hide");
+      } else {
+        index += 1;
+        slides[index].classList.toggle("hide");
+      }
+    };
+
+    let slides = document.getElementsByClassName("slide");
+
+    let previous = document.getElementById("previous-image");
+    previous.addEventListener("click", previousImage);
+
+    let next = document.getElementById("next-image");
+    next.addEventListener("click", nextImage);
+
+    slideInterval = setInterval(moveSlides, intervalTime);
+
+    // Clear interval and remove event listener
+    window.onbeforeunload = function () {
+      clearInterval(slideInterval);
+      next.removeEventListener("click", nextImage);
+      next.removeEventListener("click", previousImage);
+    };
+  </script>
+
+  <style>
+    .slide {
+      animation: opacityAnimation 2s ease;
+    }
+    .hide {
+      display: none;
+    }
+
+    @keyframes opacityAnimation {
+      0% {
+        opacity: 75%;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</div>
