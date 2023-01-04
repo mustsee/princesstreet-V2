@@ -1,8 +1,27 @@
 ---
+import { findImage } from "~/utils/images";
+
+const logo = await findImage(`~/assets/images/logo-reversed-min.png`);
 ---
 
-<span
-  class="self-center ml-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
->
-  🏨 PSH
-</span>
+<div class="flex items-center">
+  <span class="inline-block w-8 md:w-9">
+    <img src={logo.src} alt="Logo Princes Street Hostel" />
+  </span>
+  <span class="ml-2">
+    <div
+      class="whitespace-nowrap tracking-tighter text-sm leading-none md:text-base md:leading-none"
+    >
+      <em>Princes Street</em>
+    </div>
+    <div
+      class="tracking-widest font-semibold text-lg leading-none md:text-xl md:leading-none"
+    >
+      HOSTEL
+    </div>
+  </span>
+  <!-- 
+    <div class="leading-none"><em>Princes Street</em></div>
+    <div class="text-2xl leading-none tracking-wider font-semibold">HOSTEL</div>
+   -->
+</div>
