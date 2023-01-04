@@ -29,7 +29,7 @@ const picture6 = await findImage(`${prefix}${images[6].name}`);
 
 <div class="relative m-auto max-w-4xl mb-12 md:mb-0">
   <div
-    class="absolute -bottom-12 md:bottom-0 md:top-1/2 md:z-10 h-12 w-full flex justify-between"
+    class="absolute -bottom-12 md:bottom-0 md:top-1/2 md:z-10 h-12 w-full flex justify-between select-none"
   >
     <Icon
       id="previous-image"
@@ -185,20 +185,15 @@ const picture6 = await findImage(`${prefix}${images[6].name}`);
 
   <style>
     .slide {
-      animation: opacityAnimation 2s ease;
+      transition: opacity 0.3s;
     }
+
     .hide {
-      display: none;
-    }
-
-    @keyframes opacityAnimation {
-      0% {
-        opacity: 75%;
-      }
-
-      100% {
-        opacity: 1;
-      }
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -10;
+      opacity: 0%;
     }
   </style>
 </div>
