@@ -1,0 +1,94 @@
+---
+import { findImage } from "~/utils/images";
+import Row from "./Features2Row.astro";
+import { getRelativeLink } from "~/utils/permalinks";
+
+const images = [
+  {
+    src: "psh-rooms-and-facilities-min.jpeg",
+    alt: "A dormitory",
+  },
+  {
+    src: "groups-min.jpeg",
+    alt: "A dormitory",
+  },
+  {
+    src: "tours-and-activities-min.jpeg",
+    alt: "A dormitory",
+  },
+];
+
+const cards = [
+  {
+    title: "Rooms and Facilities",
+    description:
+      "From cosy double rooms to large dorm bunks, including a female only room, we provide accomodation to fit all and any of your preferences.",
+    icon: "flat-color-icons:home",
+    buttonTitle: "More details",
+    buttonLink: getRelativeLink("rooms"),
+  },
+  {
+    title: "Groups",
+    description:
+      "We welcome groups for any occasion! Please reach out to us by clicking the button below and writing us a mail.",
+    icon: "flat-color-icons:conference-call",
+    buttonTitle: "Contact us",
+    buttonLink: "mailto:hello@princesstreethostel.com",
+  },
+  {
+    title: "Tours and Activities",
+    description:
+      "Discover Edinbugh and the cities around it ! Book an experience with our partners to discover the castles, lochs, whiskies and more. Without forgetting the cities magical Hary Potter history.",
+    icon: "flat-color-icons:landscape",
+    buttonTitle: "Partner website",
+    buttonLink: "https://princesstreethostel.tourdesk.scot/Tour",
+  },
+];
+
+const prefix = "~/assets/images/";
+
+const rooms = await findImage(`${prefix}${images[0].src}`);
+const groups = await findImage(`${prefix}${images[1].src}`);
+const tours = await findImage(`${prefix}${images[2].src}`);
+---
+
+<section class="relative">
+  <div
+    class="absolute inset-0 bg-primary-50 dark:bg-slate-800 pointer-events-none mb-32"
+    aria-hidden="true"
+  >
+  </div>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
+      <div class="mb-8 text-center">
+        <p
+          class="text-base text-primary-600 dark:text-primary-200 font-semibold tracking-wide uppercase"
+        >
+          Our hostel
+        </p>
+        <h2
+          class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+        >
+          What do we offer
+        </h2>
+        <p
+          class="max-w-3xl mx-auto text-center text-xl text-gray-600 dark:text-slate-400"
+        >
+          At the heart of Edinburgh, experience the city with us.
+        </p>
+      </div>
+      <div
+        class="max-w-sm md:max-w-3xl mx-auto grid gap-8 md:grid-cols-2 items-stretch my-12 dark:text-white"
+      >
+        <Row card={cards[0]} image={rooms} alt={images[0].alt} />
+        <Row
+          card={cards[1]}
+          image={groups}
+          alt={images[1].alt}
+          reverseOrder={true}
+        />
+        <Row card={cards[2]} image={tours} alt={images[1].alt} />
+      </div>
+    </div>
+  </div>
+</section>
