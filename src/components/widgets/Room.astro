@@ -1,0 +1,37 @@
+---
+import { Picture } from "@astrojs/image/components";
+
+import { findImage } from "~/utils/images";
+
+const { room } = Astro.props;
+
+const prefix = "~/assets/images/";
+const image = await findImage(`${prefix}${room.src}`);
+---
+
+<article class="mb-6 transition">
+  <div
+    class="relative h-0 pb-[56.25%] lg:h-72 overflow-hidden bg-gray-400 dark:bg-slate-700 rounded shadow-lg mb-6"
+  >
+    {
+      image && (
+        <Picture
+          src={image}
+          class="object-cover w-full lg:h-72 rounded shadow-lg bg-gray-400 dark:bg-slate-700"
+          widths={[400, 900]}
+          sizes="(max-width: 900px) 400px, 900px"
+          alt={room.alt}
+          aspectRatio="16:9"
+        />
+      )
+    }
+  </div>
+  <h3 class="mb-2 text-xl font-bold leading-snug sm:text-2xl font-heading">
+    <div class="underline underline-offset-4 decoration-1 decoration-dotted">
+      {room.name}
+    </div>
+  </h3>
+  <p class="text-gray-700 dark:text-gray-400">
+    {room.desc}
+  </p>
+</article>

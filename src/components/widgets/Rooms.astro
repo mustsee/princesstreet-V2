@@ -1,0 +1,47 @@
+---
+import Room from "./Room.astro";
+
+const rooms = [
+  {
+    name: "Double rooms",
+    alt: "A double room",
+    src: "psh-double-rooms-min.jpeg",
+    desc: "Bright private rooms with double style beds. These are perfect for couples, friends or anyone who prefers privacy while still enjoying the hostel environment. All private rooms are fitted with a bedside table, a lamp and an armchair. The bathrooms remained shared.",
+  },
+  {
+    name: "Shared rooms",
+    alt: "A dormitory",
+    src: "psh-dormitory-1-min.jpeg",
+    desc: "Bright 4 to 10 bed rooms for individuals, small groups and families. One of our dorms is female only so that everyone can feel comfortable. If you fancy making friends and enjoy the essence of what a hostel is you will love the budget friendly dorms!",
+  },
+  {
+    name: "Private rooms",
+    alt: "Another dormitory",
+    src: "psh-dormitory-2-min.jpeg",
+    desc: "Bright and spacious 4, 9 and 12 private bed rooms for friends, groups and families. Now you can book a privacy friendly room.",
+  },
+];
+---
+
+<section class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
+  <div class="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
+    <h2
+      class="max-w-lg mb-2 text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none lg:mb-5 group font-heading"
+    >
+      <span class="inline-block mb-1 sm:mb-4"
+        >Discover our rooms<br class="hidden md:block" />
+      </span>
+    </h2>
+
+    <p class="text-gray-700 dark:text-slate-400 lg:text-sm lg:max-w-md">
+      Our hostel is divided into 4 levels. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Ratione eligendi tempora dicta atque,
+      veritatis dolor eum iure odit consectetur quo reiciendis nesciunt commodi
+      natus! Non necessitatibus facere aut dignissimos magnam?
+    </p>
+  </div>
+
+  <div class="grid gap-6 row-gap-5 md:grid-cols-2 lg:grid-cols-3 -mb-6">
+    {rooms.map((room) => <Room room={room} />)}
+  </div>
+</section>
