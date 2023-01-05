@@ -43,7 +43,9 @@ export const getPermalink = (slug = "", type = "page") => {
 /** */
 export const getHomePermalink = () => {
   const permalink = getPermalink();
-  return permalink !== "/" ? permalink + "/" : permalink;
+  // For github pages
+  //return permalink !== "/" ? permalink + "/" : permalink;
+  return permalink;
 };
 
 /** */

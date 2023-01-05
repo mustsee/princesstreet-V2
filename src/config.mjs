@@ -1,8 +1,11 @@
 export const SITE = {
   name: "Princes Street Hostel",
 
-  origin: "https://princesstreethostel.com",
-  basePathname: "/",
+  // For github pages
+  origin: "https://mustsee.github.io",
+  basePathname: "/princesstreet-V2/",
+  //origin: "https://princesstreethostel.com",
+  //basePathname: "/",
   trailingSlash: false,
 
   title: "Princes Street Hostel — Your hostel in Edinburgh",
