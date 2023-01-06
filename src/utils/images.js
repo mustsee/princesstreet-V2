@@ -30,7 +30,7 @@ export const findImage = async (imagePath) => {
     return null;
   } // For now only consume images using ~/assets alias (or absolute)
 
-  // Absolute path and images in public folder
+  // Start from public folder to go back to src/images...
   // Is needed to make it work with github pages
   if (process.env.NODE_ENV !== "development") {
     console.log("d", imagePath.replace("~/", "/../src/"));
