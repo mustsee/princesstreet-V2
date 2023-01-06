@@ -3,7 +3,7 @@ export const SITE = {
 
   // For github pages
   origin: "https://mustsee.github.io",
-  basePathname: "/princesstreet-V2",
+  basePathname: "/princesstreet-V2/",
   //origin: "https://princesstreethostel.com",
   //basePathname: "/",
   trailingSlash: false,

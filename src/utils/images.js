@@ -30,10 +30,17 @@ export const findImage = async (imagePath) => {
     return null;
   } // For now only consume images using ~/assets alias (or absolute)
 
-  const images = await fetchLocalImages();
-  const key = imagePath.replace("~/", "/src/");
+  // Absolute path and images in public folder
+  // Is needed to make it work with github pages
+  if (process.env.NODE_ENV !== "development") {
+    console.log("d", imagePath.replace("~/", "/../src/"));
+    return { src: imagePath.replace("~/", "/../src/") };
+  } else {
+    const images = await fetchLocalImages();
+    const key = imagePath.replace("~/", "/src/");
 
-  return typeof images[key] === "function"
-    ? (await images[key]())["default"]
-    : null;
+    return typeof images[key] === "function"
+      ? (await images[key]())["default"]
+      : null;
+  }
 };
