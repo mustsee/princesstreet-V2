@@ -1,3 +1,7 @@
+---
+import { getPermalink } from "~/utils/permalinks";
+---
+
 <footer class="border-t border-gray-200 dark:border-slate-800">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <div class="py-8 md:py-12">
@@ -13,7 +17,7 @@
       <div
         class="footer-item mb-0 hover:underline transition duration-150 ease-in-out"
       >
-        <a href="#">Terms and conditions</a>
+        <a href={getPermalink("terms-and-conditions")}>Terms & conditions</a>
       </div>
     </div>
   </div>

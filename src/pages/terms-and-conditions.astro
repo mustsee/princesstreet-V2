@@ -4,5 +4,11 @@ import PageLayout from "~/layouts/PageLayout.astro";
 ---
 
 <PageLayout>
-  <article class="prose"><Terms /></article>
+  <div
+    class="container mx-auto px-6 max-w-3xl prose prose-headings:text-center dark:prose-invert prose-a:text-primary-600 dark:prose-a:text-primary-400 my-8"
+  >
+    <article>
+      <Terms />
+    </article>
+  </div>
 </PageLayout>

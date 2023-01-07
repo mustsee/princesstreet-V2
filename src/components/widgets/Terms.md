@@ -1,4 +1,6 @@
-## BOOKING CRITERIA
+## TERMS & CONDITIONS
+
+### BOOKING CRITERIA
 
 1. Rates: All transactions with the Hostel are in Pounds Sterling. No booking fees are charged for bookings made directly with the Hostel. All rates quoted are inclusive of VAT and are subject to availability and alteration.
 
@@ -36,7 +38,7 @@
 
 14. Late Arrival: If a guest thinks they may be arriving after 10.00pm, they are requested to contact the hostel to inform us of this.
 
-## BOOKING RESTRICTIONS
+### BOOKING RESTRICTIONS
 
 1. Bookings cannot be accepted from any person under the age of 18 unless they are accompanied by an adult (over 18) who is staying in the same room. Guests under the age of 18 years of age must stay in a private room with a responsible adult they cannot share in a general dormitory room with persons that are not part of their own group or family.
 
@@ -52,11 +54,11 @@
 
 7. If any payment under these terms and conditions are not met, then without prejudice to our other rights and remedies we may cancel your booking; and/or we may suspend the supply and/or deliveries of any other services provided to you by us. We will, however, inform you in writing prior to any such action.
 
-## WHATSAPP
+### WHATSAPP
 
 1. We use prominently the WhatsApp messaging app to contact our guests before there arrival to give them the best possible guest experience.
 
-## PERSONAL PROPERTY
+### PERSONAL PROPERTY
 
 1. Guests are asked to use the lockers provided in all dormitory accommodation and secure them with a padlock, should a guest not have a padlock, one can be purchased from reception.
 
@@ -70,7 +72,7 @@
 
 6. Guests will be expected to reimburse the hostel for any damages caused by inappropriate behaviour during their stay.
 
-## HOSTEL FACILITIES
+### HOSTEL FACILITIES
 
 1. Parking: There is no parking facilities provided by the Hostel, but nearby on-street parking is available for customer vehicles. A member of staff will be happy to direct the guest to the parking location.
 
@@ -82,7 +84,7 @@
 
 5. Showers: Hot showers are provided free of charge to all the hostel guests.
 
-## GUEST BEHAVIOUR / CODE OF CONDUCT
+### GUEST BEHAVIOUR / CODE OF CONDUCT
 
 1. Entry Refusal: The comfort, safety and security of our guests are of paramount importance. Any guest(s) who, in the opinion of our team, compromise the comfort, safety or security of other guests, team members or residents will be requested to leave the hostel premises and will not be offered a refund. The Princes Street Hostel Management reserve the right to refuse entry of any guests at point of check in, that in their opinion, by allowing to stay would compromise the comfort, safety or security of other guests, team members or residents. This decision being at the sole discretion of the General Manager or Duty Manager of the Hostel in question. The Princes Street Hostel reserves the right to refuse entry to the main hostel building and any annexe building forming part of the hostel at any time.
 
@@ -103,7 +105,7 @@
 
 8. Code of Conduct: Guests are required to give due consideration to the collective needs of others in the Hostel, to take due care of the facilities provided and to respect the shared environment. In the interest of maintaining community relations, we expect all clients to refrain from any activity likely to antagonise the local community or bring The Princes Street Hostel into disrepute. Any guest displaying unacceptable behaviour will be asked to leave the Hostel without refund. Guests are requested to consider other guests and be quiet within the corridors and Rooms of the Hostel after 10 pm, anybody making excessive noise after this time, creating a nuisance to other guests, team members or residents or behaving in an unacceptable manner either inside the hostel or in the immediate area outside the hostel will be asked to vacate the hostel. No refund will be given because of the departure of the guest from the hostel in this instance.
 
-## GROUP BOOKINGS
+### GROUP BOOKINGS
 
 1. Group Bookings: A Booking for 8 persons or over is classified as a group booking and is subject to additional terms and conditions. Bookings of this type cannot be booked over the web using our online booking system. Please send a request to hello@princesstreethostel.com providing as much information as you can and we will be back in touch within 1 working day to let you know if we have availability for the days and number of beds you have requested and we will provide you with any additional terms and conditions that may be pertinent to your group booking.
 
@@ -122,7 +124,7 @@
 
 8. Additional Costs: The Princes Street Hostel accepts no responsibility for extra costs incurred by any person, driver or group leader not willing to share room facilities with other drivers, group leaders or persons.
 
-## MISCELLANEOUS ITEMS
+### MISCELLANEOUS ITEMS
 
 1. Promotional Documents: The Princes Street Hostel exerts all due care and diligence when producing electronic and printed materials on the Hostel facilities and local attractions. However, we reserve the right to revise, update or make obsolete some or all the contents without the obligation to notify any person of such changes. Despite every effort to the contrary, errors, omissions or discrepancies may occur in the preparation of promotional and informational documents (electronic and printed), and The Princes Street Hostel assumes no liability for loss or damages incurred due in part or in whole to such errors. All maps and photographs displayed in The Princes Street Hostel printed and electronic materials are for information purposes only.
 
@@ -138,21 +140,21 @@
 
 7. Individual Booking: Any booking for seven or fewer people is regarded as an individual booking. One person from the party will be responsible for making the booking and arranging payment and this person is regarded as the Lead Person. The Lead Person will be the point of contact for all correspondence and will also be the primary contact with the Hostel during the stay.
 
-## GUEST DISABILITIES / ILLNESSES
+### GUEST DISABILITIES / ILLNESSES
 
 1. Guests with Disabilities, Medical Problems or Special Needs: We advise you to notify us at the time of booking, and a minimum of 48 hours in advance if you or any of your party has any disability, medical problem or special needs, which may require specific facilities. We will endeavour to meet your requirements where possible –please check requirements are identified and communicated to the hostel staff. We cannot, however, aid with walking, eating or other personal needs. If you need help, you must take someone with you who can take care of your needs. It is the responsibility of the group leader to ensure that all special needs requirements are identified and communicated to the hostel staff.
 
 2. Equality of Access: The Princes Street Hostel is open to all. No customer will be discriminated against based on race, nationality, gender, age, status, occupation, religion etc. Where an individual’s circumstances may lead to special accommodation or catering requirements, we advise the Customer to notify us at the time of booking, and a minimum of 72 hours in advance so that, subject to availability, appropriate measures can be taken to meet the individual’s needs.
 
-## OVERSIGHTS & ERRORS
+### OVERSIGHTS & ERRORS
 
 While every effort has been made to ensure the accuracy of all information, The Princes Street Hostel does not accept liability for any errors or omissions and reserves the right to change information. We make every effort to accommodate you in the dormitory size of your choice. However, because of the nature of our business, we may have to place you in a different sized dormitory. As a result, the balance to be paid upon arrival can be slightly different than what is stated on your confirmation.
 
-## DISCRETION
+### DISCRETION
 
 All bookings are subject to availability and The Princes Street Hostel reserve the right to decline any booking at their sole discretion.
 
-## QUERIES
+### QUERIES
 
 Any queries regarding the terms and conditions contained herein should be in the first instance directed to:
 
@@ -163,7 +165,7 @@ Edinburgh EH22AA
 Phone: +44 (0)131 556 6894  
 Reservations Email: hello@princesstreethostel.com
 
-## LEGAL DESIGNATION
+### LEGAL DESIGNATION
 
 The Princes Street Hostel is a trading name and is a wholly owned subsidiary of:
 
