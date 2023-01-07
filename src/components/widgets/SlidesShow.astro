@@ -1,33 +1,37 @@
 ---
 import { Picture } from "@astrojs/image/components";
 import { Icon } from "astro-icon";
-import { findImage } from "~/utils/images";
+import { SITE } from "~/config.mjs";
 
-const images = [
-  {
-    name: "psh-lunch-room-min-resized-1480.jpg",
-    alt: "Princes Street lunch room",
-  },
-  { name: "edinburgh-calton-hill.jpg", alt: "View from nearby Calton Hill" },
-  { name: "psh-bathroom-min.jpg", alt: "Princes Street bathroom" },
-  { name: "edinburgh-street-group.jpg", alt: "Group in Edinburgh" },
-  { name: "psh-kitchen-min.jpg", alt: "Princes Street kitchen" },
-  {
-    name: "edinburgh-street-jumping-girl.jpg",
-    alt: "Jumping girl in Edinburgh",
-  },
-  { name: "psh-shower-min.jpg", alt: "Princes Street shower" },
+const alts = [
+  { alt: "Princes Street lunch room" },
+  { alt: "View from nearby Calton Hill" },
+  { alt: "Princes Street bathroom" },
+  { alt: "Group in Edinburgh" },
+  { alt: "Princes Street kitchen" },
+  { alt: "Jumping girl in Edinburgh" },
+  { alt: "Princes Street shower" },
 ];
 
-const prefix = "~/assets/images/";
+// Astro loads images in order
+// So I prefixed images with numbers : 01, 02...
+const images = await Astro.glob("~/assets/images/hero/**");
 
-const picture0 = await findImage(`${prefix}${images[0].name}`);
-const picture1 = await findImage(`${prefix}${images[1].name}`);
-const picture2 = await findImage(`${prefix}${images[2].name}`);
-const picture3 = await findImage(`${prefix}${images[3].name}`);
-const picture4 = await findImage(`${prefix}${images[4].name}`);
-const picture5 = await findImage(`${prefix}${images[5].name}`);
-const picture6 = await findImage(`${prefix}${images[6].name}`);
+const loadImages = images.map((image, index) => {
+  // import.meta.env.DEV is a Vite built-in variable
+  if (import.meta.env.DEV) {
+    return {
+      src: image.default,
+      alt: alts[index],
+    };
+  }
+  return {
+    ...image.default,
+    // Remove the path to build assets for github pages
+    src: image.default.src.replace(`${SITE.basePathname}`, "/"),
+    alt: alts[index],
+  };
+});
 ---
 
 <div class="relative m-auto max-w-4xl mb-12 md:mb-0">
@@ -47,84 +51,22 @@ const picture6 = await findImage(`${prefix}${images[6].name}`);
       class="icon-slide-show icon-slide-show-sm md:icon-slide-show-md"
     />
   </div>
-  <Picture
-    src={picture0}
-    id="picture"
-    class="slide mx-auto rounded-md w-full"
-    widths={[400, 768, 1480]}
-    sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
-    alt={images[0].alt}
-    aspectRatio={1480 / 833}
-    loading="eager"
-    width={1480}
-    height={833}
-  />
-  <Picture
-    src={picture1}
-    class="slide hide mx-auto rounded-md w-full"
-    widths={[400, 768, 1480]}
-    sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
-    alt={images[1].alt}
-    aspectRatio={1480 / 833}
-    loading="eager"
-    width={1480}
-    height={833}
-  />
-  <Picture
-    src={picture2}
-    class="slide hide mx-auto rounded-md w-full"
-    widths={[400, 768, 1480]}
-    sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
-    alt={images[2].alt}
-    aspectRatio={1480 / 833}
-    loading="eager"
-    width={1480}
-    height={833}
-  />
-  <Picture
-    src={picture3}
-    class="slide hide mx-auto rounded-md w-full"
-    widths={[400, 768, 1480]}
-    sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
-    alt={images[3].alt}
-    aspectRatio={1480 / 833}
-    loading="eager"
-    width={1480}
-    height={833}
-  />
-  <Picture
-    src={picture4}
-    class="slide hide mx-auto rounded-md w-full"
-    widths={[400, 768, 1480]}
-    sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
-    alt={images[4].alt}
-    aspectRatio={1480 / 833}
-    loading="eager"
-    width={1480}
-    height={833}
-  />
-  <Picture
-    src={picture5}
-    class="slide hide mx-auto rounded-md w-full"
-    widths={[400, 768, 1480]}
-    sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
-    alt={images[5].alt}
-    aspectRatio={1480 / 833}
-    loading="eager"
-    width={1480}
-    height={833}
-  />
-  <Picture
-    src={picture6}
-    class="slide hide mx-auto rounded-md w-full"
-    widths={[400, 768, 1480]}
-    sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
-    alt={images[6].alt}
-    aspectRatio={1480 / 833}
-    loading="eager"
-    width={1480}
-    height={833}
-  />
+  {
+    loadImages.map((image, index) => (
+      <Picture
+        src={image.src}
+        id="picture"
+        class={`slide mx-auto rounded-md w-full ${index !== 0 && "hide"}`}
+        widths={[400, 768, 1480]}
+        sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
+        alt={image.alt}
+        aspectRatio={1480 / 833}
+        loading="eager"
+        width={1480}
+        height={833}
+      />
+    ))
+  }
 </div>
 
 <script>
