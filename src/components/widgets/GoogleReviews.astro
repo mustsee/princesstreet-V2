@@ -26,37 +26,21 @@ const convertTime = (unixTimestamp) => {
   return time;
 };
 
-/* const GoogleReviews = async () => {
+const GoogleReviews = async () => {
   const placeId = "ChIJ_SVfZmPHh0gREqcwzgqtAo4";
   const url = `https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeId}&key=${
     import.meta.env.API_GOOGLE_PLACE
   }`;
   try {
     const details = await fetch(url);
-    const {
-      result: { reviews },
-    } = await details.json();
-    return reviews.filter((review) => review.rating >= 4);
+    const res = await details.json();
+    return res.result.reviews.filter((review) => review.rating >= 4);
   } catch (e) {
     console.log("Error retrieving reviews", e);
   }
 };
 
-let reviews = await GoogleReviews(); */
-
-let getCatFact = async () => {
-  const url = "https://catfact.ninja/fact";
-  try {
-    const fact = await fetch(url);
-    const res = await fact.json();
-    console.log("q", res);
-    return res;
-  } catch (e) {
-    console.log("Error retrieving catFact", e);
-  }
-};
-
-let catFact = await getCatFact();
+let reviews = await GoogleReviews();
 ---
 
 <div class="max-w-3xl mx-auto pt-12">
@@ -69,7 +53,33 @@ let catFact = await getCatFact();
     class="relative mx-auto grid md:grid-cols-1 cursor-pointer select-none"
     id="reviews-wrapper"
   >
-    {catFact.fact}
+    {
+      reviews.map(({ author_name, rating, text, time }, index) => (
+        <div
+          class={`${
+            index !== 0 && "hide"
+          } reviews p-6 text-gray-500 dark:text-gray-400 bg-white dark:bg-slate-900 rounded transition dark:border dark:border-slate-800`}
+        >
+          <div class="w-full overflow-hidden text-ellipsis text-center">
+            "<em>{text}</em>"
+          </div>
+          <div class="flex justify-center my-2">
+            {Array.from(Array(5)).map((item, index) => (
+              <Icon
+                name="ic:round-star-rate"
+                class={`w-5 h-5 ${
+                  index < rating ? "text-yellow-500" : "text-gray-500"
+                }`}
+              />
+            ))}
+          </div>
+          <div class="text-center">{shortenName(author_name)}</div>
+          <div class="text-center text-sm text-gray-400 dark:text-gray-500">
+            {convertTime(time)}
+          </div>
+        </div>
+      ))
+    }
   </div>
 </div>
 
@@ -86,7 +96,7 @@ let catFact = await getCatFact();
   }
 </style>
 
-<script is:inline>
+<!-- <script is:inline>
   let index = 0;
 
   const nextReview = () => {
@@ -108,4 +118,4 @@ let catFact = await getCatFact();
   window.onbeforeunload = function () {
     reviewsWrapper.removeEventListener("click", nextReview);
   };
-</script>
+</script> -->
