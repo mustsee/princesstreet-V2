@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   env:
-    GHP: ${{ GHP.API_GOOGLE_PLACE }}
+    API_GOOGLE_PLACE: ${{ secrets.API_GOOGLE_PLACE }}
   build:
     runs-on: ubuntu-latest
     steps:
