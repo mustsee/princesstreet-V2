@@ -103,17 +103,17 @@ reviews = await GoogleReviews();
     let index = 0;
 
     const nextReview = () => {
-      reviews[index].classList.toggle("hide");
-      if (!reviews[index + 1]) {
+      reviewItems[index].classList.toggle("hide");
+      if (!reviewItems[index + 1]) {
         index = 0;
-        reviews[index].classList.toggle("hide");
+        reviewItems[index].classList.toggle("hide");
       } else {
         index += 1;
-        reviews[index].classList.toggle("hide");
+        reviewItems[index].classList.toggle("hide");
       }
     };
 
-    let reviews = document.getElementsByClassName("reviews");
+    let reviewItems = document.getElementsByClassName("reviews");
     let reviewsWrapper = document.getElementById("reviews-wrapper");
     reviewsWrapper.addEventListener("click", nextReview);
 
