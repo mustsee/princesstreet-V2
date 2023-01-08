@@ -15,8 +15,7 @@ permissions:
   id-token: write
 
 jobs:
-  env:
-    API_GOOGLE_PLACE: ${{ GHP.API_GOOGLE_PLACE }}
+  env: ${{ GHP.API_GOOGLE_PLACE }}
   build:
     runs-on: ubuntu-latest
     steps:
