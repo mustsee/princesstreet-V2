@@ -22,14 +22,14 @@ const loadImages = images.map((image, index) => {
   if (import.meta.env.DEV) {
     return {
       src: image.default,
-      alt: alts[index],
+      alt: alts[index].alt,
     };
   }
   return {
     ...image.default,
     // Remove the path to build assets for github pages
     src: image.default.src.replace(`${SITE.basePathname}`, "/"),
-    alt: alts[index],
+    alt: alts[index].alt,
   };
 });
 ---
