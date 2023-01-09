@@ -33,16 +33,15 @@ const GoogleReviews = async () => {
   }`;
   try {
     const details = await fetch(url);
-    const {
-      result: { reviews },
-    } = await details.json();
-    return reviews.filter((review) => review.rating >= 4);
+    const res = await details.json();
+    return res.result.reviews.filter((review) => review.rating >= 4);
   } catch (e) {
     console.log("Error retrieving reviews", e);
+    return [];
   }
 };
 
-const reviews = await GoogleReviews();
+let reviews = await GoogleReviews();
 ---
 
 <div class="max-w-3xl mx-auto pt-12">
@@ -83,41 +82,41 @@ const reviews = await GoogleReviews();
       ))
     }
   </div>
-
-  <style>
-    .reviews {
-      transition: opacity 0.3s;
-    }
-    .hide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -10;
-      opacity: 0%;
-    }
-  </style>
-
-  <script>
-    let index = 0;
-
-    const nextReview = () => {
-      reviews[index].classList.toggle("hide");
-      if (!reviews[index + 1]) {
-        index = 0;
-        reviews[index].classList.toggle("hide");
-      } else {
-        index += 1;
-        reviews[index].classList.toggle("hide");
-      }
-    };
-
-    let reviews = document.getElementsByClassName("reviews");
-    let reviewsWrapper = document.getElementById("reviews-wrapper");
-    reviewsWrapper.addEventListener("click", nextReview);
-
-    // Clear interval and remove event listener
-    window.onbeforeunload = function () {
-      reviewsWrapper.removeEventListener("click", nextReview);
-    };
-  </script>
 </div>
+
+<style>
+  .reviews {
+    transition: opacity 0.3s;
+  }
+  .hide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    opacity: 0%;
+  }
+</style>
+
+<script is:inline>
+  let index = 0;
+
+  const nextReview = () => {
+    reviewItems[index].classList.toggle("hide");
+    if (!reviewItems[index + 1]) {
+      index = 0;
+      reviewItems[index].classList.toggle("hide");
+    } else {
+      index += 1;
+      reviewItems[index].classList.toggle("hide");
+    }
+  };
+
+  let reviewItems = document.getElementsByClassName("reviews");
+  let reviewsWrapper = document.getElementById("reviews-wrapper");
+  reviewsWrapper.addEventListener("click", nextReview);
+
+  // Clear interval and remove event listener
+  window.onbeforeunload = function () {
+    reviewsWrapper.removeEventListener("click", nextReview);
+  };
+</script>
