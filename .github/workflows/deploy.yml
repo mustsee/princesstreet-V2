@@ -23,8 +23,8 @@ jobs:
     env:
       API_GOOGLE_PLACE: "${{ secrets.API_GOOGLE_PLACE }}"
     steps:
-      - name: Print name
-        run: echo "${{ secrets.GHP }}"
+      - name: Load .env
+        run: echo $API_GOOGLE_PLACE
       - name: Checkout your repository using git
         uses: actions/checkout@v3
       - name: Install, build, and upload your site
