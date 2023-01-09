@@ -37,7 +37,7 @@ const GoogleReviews = async () => {
     return res.result.reviews.filter((review) => review.rating >= 4);
   } catch (e) {
     console.log("Error retrieving reviews", e);
-    //return [];
+    return [];
   }
 };
 
