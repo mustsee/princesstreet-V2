@@ -23,7 +23,7 @@ jobs:
       - name: Load .env
         run: |
           touch .env
-          echo API_GOOGLE_PLACE=${{ secrets.API_GOOGLE_PLACE }} >> .env
+          echo GHP=${{ secrets.GHP }} >> .env
           cat .env
       - name: Install, build, and upload your site
         uses: withastro/action@v0
