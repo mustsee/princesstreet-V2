@@ -10,6 +10,7 @@ import Stats from "~/components/widgets/Stats.astro"; */
 import GoogleReviews from "~/components/widgets/GoogleReviews.astro";
 import CallToAction from "~/components/widgets/CallToAction.astro";
 import Features2 from "~/components/widgets/Features2.astro";
+import GoogleMapWidget from "~/components/widgets/GoogleMap";
 ---
 
 <Layout>
@@ -20,6 +21,13 @@ import Features2 from "~/components/widgets/Features2.astro";
   <Features3 />
   <Stats /> -->
   <Features2 />
+  <div class="max-w-4xl mx-auto py-12 md:py-20 px-8">
+    <GoogleMapWidget
+      client:load
+      apiKey={import.meta.env.API_GOOGLE_MAP}
+      mapWidth="100%"
+    />
+  </div>
   <GoogleReviews />
   <CallToAction />
 </Layout>
