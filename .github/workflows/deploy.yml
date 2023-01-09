@@ -22,7 +22,9 @@ jobs:
         uses: actions/checkout@v3
       - name: Load .env
         run: |
-          echo "${{ secrets.GHP }}" > .env
+          touch .env
+          echo API_GOOGLE_PLACE=${{ secrets.API_GOOGLE_PLACE }} >> .env
+          cat .env
       - name: Install, build, and upload your site
         uses: withastro/action@v0
 
