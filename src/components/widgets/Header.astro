@@ -28,26 +28,32 @@ import { getHomePermalink, getPermalink } from "./../../utils/permalinks";
       </div>
     </div>
     <nav
-      class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-[calc(100vh-100px)] md:h-auto overflow-y-auto md:overflow-visible"
+      class="items-center w-72 mx-auto md:w-auto md:mx-0 hidden md:flex text-gray-600 dark:text-slate-200 h-[calc(100vh-100px)] md:h-auto overflow-y-auto md:overflow-visible"
       aria-label="Main navigation"
     >
       <ul
-        class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto text-xl md:text-base"
+        class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto text-base"
       >
-        <li class="dropdown">
+        <li
+          class="dropdown border-b border-gray-200 dark:border-slate-600 md:border-none"
+        >
           <a
             class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
             href={getHomePermalink()}>Home</a
           >
         </li>
-        <li>
+        <li
+          class="border-b border-gray-200 dark:border-slate-600 md:border-none"
+        >
           <a
             class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
             href={getPermalink("rooms")}
             >Rooms
           </a>
         </li>
-        <li>
+        <li
+          class="border-b border-gray-200 dark:border-slate-600 md:border-none"
+        >
           <a
             class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
             href={getPermalink("faq")}
@@ -55,13 +61,34 @@ import { getHomePermalink, getPermalink } from "./../../utils/permalinks";
           </a>
         </li>
 
-        <li class="md:hidden">
+        <li
+          class="md:hidden mt-8 rounded-lg bg-green-100 border border-green-600 dark:bg-transparent"
+        >
           <a
-            class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+            class="text-gray-700 dark:text-slate-200 hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center justify-between transition duration-150 ease-in-out"
             href="https://wa.me/447553137828"
             rel="noopener"
             target="_blank"
-            >WhatsApp
+          >
+            Contact us on WhatsApp
+            <Icon
+              name="tabler:brand-whatsapp"
+              class="w-5 h-5 ml-4 text-green-600"
+            />
+          </a>
+        </li>
+
+        <li
+          class="md:hidden mt-4 rounded-lg bg-red-100 border border-red-600 dark:bg-transparent"
+        >
+          <a
+            class="text-gray-700 dark:text-slate-200 hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center justify-between transition duration-150 ease-in-out"
+            href="mailto:hello@princesstreethostel.com"
+            aria-label="PSH mail"
+            rel="noopener"
+          >
+            Write us an Email
+            <Icon name="tabler:mail" class="w-5 h-5 ml-4 text-red-600" />
           </a>
         </li>
       </ul>
