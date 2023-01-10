@@ -1,6 +1,6 @@
 {
   "index": {
-    "hero-text": "The Princess Street Hostel Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem quibusdam repudiandae ducimus vel commodi sint? Soluta + odit deserunt minus quas , aliquid a nihil itaque harum quam eaque maxime rem quibusdam.",
+    "hero-text": "<p>The &lt;span class=\"font-semibold underline decoration-secondary-600 underline-offset-2\"&gt;Princess Street Hostel&lt;/span&gt; Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem quibusdam repudiandae ducimus vel commodi sint? &lt;em&gt;Soluta&lt;/em&gt; + &lt;em&gt;odit&lt;/em&gt; deserunt minus quas&lt;span class=\"inline sm:hidden\"&gt;...&lt;/span&gt;&lt;span class=\"hidden sm:inline\"&gt;, aliquid a nihil itaque harum quam eaque maxime rem quibusdam.</p>",
     "card-1-text": "From cosy double rooms to large dorm bunks, including a female only room, we provide accommodation to fit all and any of your preferences.",
     "card-2-text": "We welcome groups for any occasion! Please reach out to us by clicking the button below and writing us a mail.",
     "card-3-text": "Discover Edinburgh and the cities around it ! Book an experience with our partners to discover the castles, lochs, whiskies and more. Without forgetting the cities magical Harry Potter history."
