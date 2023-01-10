@@ -2,6 +2,7 @@
 import { findImage } from "~/utils/images";
 import Row from "./Features2Row.astro";
 import { getRelativeLink } from "~/utils/permalinks";
+import content from "~/../content.json";
 
 const images = [
   {
@@ -21,24 +22,21 @@ const images = [
 const cards = [
   {
     title: "Rooms and Facilities",
-    description:
-      "From cosy double rooms to large dorm bunks, including a female only room, we provide accomodation to fit all and any of your preferences.",
+    description: content["index"]["card-1-text"],
     icon: "flat-color-icons:home",
     buttonTitle: "More details",
     buttonLink: getRelativeLink("rooms"),
   },
   {
     title: "Groups",
-    description:
-      "We welcome groups for any occasion! Please reach out to us by clicking the button below and writing us a mail.",
+    description: content["index"]["card-2-text"],
     icon: "flat-color-icons:conference-call",
     buttonTitle: "Contact us",
     buttonLink: "mailto:hello@princesstreethostel.com",
   },
   {
     title: "Tours and Activities",
-    description:
-      "Discover Edinbugh and the cities around it ! Book an experience with our partners to discover the castles, lochs, whiskies and more. Without forgetting the cities magical Hary Potter history.",
+    description: content["index"]["card-3-text"],
     icon: "flat-color-icons:landscape",
     buttonTitle: "Partner website",
     buttonLink: "https://princesstreethostel.tourdesk.scot/Tour",
