@@ -3,8 +3,7 @@
   ":description": "This is the place where we can modify the text of the website. After clicking save, modifications will be directly deployed to production.",
   "index": {
     "hero-text": {
-      ":type": "text",
-      ":richtext": true
+      ":type": "text"
     },
     "card-1-text": {
       ":type": "text"
