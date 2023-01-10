@@ -1,8 +1,17 @@
 ---
+import { SITE } from "~/config.mjs";
+import { getCanonical, getPermalink } from "~/utils/permalinks";
+
 import FAQs from "~/components/atoms/FAQs.astro";
 import CallToAction from "~/components/widgets/CallToAction.astro";
 import Note from "~/components/widgets/Note.astro";
 import Layout from "~/layouts/PageLayout.astro";
+
+const meta = {
+  title: `FAQ — ${SITE.name}`,
+  description: SITE.description,
+  canonical: getCanonical(getPermalink("faq")),
+};
 ---
 
-<Layout><Note /><FAQs /><CallToAction /></Layout>
+<Layout {meta}><Note /><FAQs /><CallToAction /></Layout>

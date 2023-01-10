@@ -1,8 +1,11 @@
 ---
-import Layout from "~/layouts/BaseLayout.astro";
 import Error404 from "~/components/widgets/Error404.astro";
+import Layout from "~/layouts/BaseLayout.astro";
+import { SITE } from "~/config.mjs";
+
+const title = `Error 404 — ${SITE.name}`;
 ---
 
-<Layout>
+<Layout meta={{ title }}>
   <Error404 />
 </Layout>
