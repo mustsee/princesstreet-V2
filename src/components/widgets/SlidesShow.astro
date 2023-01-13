@@ -57,13 +57,13 @@ const loadImages = images.map((image, index) => {
         src={image.src}
         id="picture"
         class={`slide mx-auto rounded-md w-full ${index !== 0 && "hide"}`}
-        widths={[400, 768, 1480]}
-        sizes="(max-width: 767px) 400px, (max-width: 1479px) 768px, 1480px"
+        widths={[577, 900]}
+        sizes="(max-width: 639px) 577px, 900px"
         alt={image.alt}
         aspectRatio={16 / 9}
         loading="eager"
-        width={1480}
-        height={833}
+        width={900}
+        height={500}
         formats={["jpg"]}
       />
     ))
