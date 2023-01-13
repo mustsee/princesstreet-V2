@@ -1,16 +1,18 @@
 ---
+import { changeLanguage } from "i18next";
 import { SITE } from "~/config.mjs";
 import { getCanonical, getPermalink } from "~/utils/permalinks";
-
 import CallToAction from "~/components/widgets/CallToAction.astro";
 import Rooms from "~/components/widgets/Rooms.astro";
 import Note from "~/components/widgets/Note.astro";
 import Layout from "./../layouts/PageLayout.astro";
 
+changeLanguage("en");
+
 const meta = {
-  title: `Rooms — ${SITE.name}`,
-  description: SITE.description,
-  canonical: getCanonical(getPermalink("rooms")),
+    title: `Rooms — ${SITE.name}`,
+    description: SITE.description,
+    canonical: getCanonical(getPermalink("rooms")),
 };
 ---
 

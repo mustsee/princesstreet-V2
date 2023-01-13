@@ -13,7 +13,7 @@ const trim = (str, ch) => {
 const trimSlash = (s) => trim(trim(s, "/"));
 const createPath = (...params) => {
   const paths = params.filter((el) => !!el).join("/");
-  return "/" + paths + (SITE.trailingSlash && paths ? "/" : "");
+  return "/" + paths + (false && paths ? "/" : "");
 };
 
 const basePathname = trimSlash(SITE.basePathname);
@@ -43,9 +43,7 @@ export const getPermalink = (slug = "", type = "page") => {
 /** */
 export const getHomePermalink = () => {
   const permalink = getPermalink();
-  //return permalink !== "/" ? permalink + "/" : permalink;
-  // For github pages
-  return permalink;
+  return permalink !== "/" ? permalink + "/" : permalink;
 };
 
 /** */

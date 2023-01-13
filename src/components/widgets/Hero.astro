@@ -1,7 +1,8 @@
 ---
 import { Icon } from "astro-icon";
 import SlidesShow from "./SlidesShow.astro";
-import content from "~/../content.json";
+import { Trans } from "astro-i18next/components";
+import { t } from "i18next";
 ---
 
 <section>
@@ -15,7 +16,12 @@ import content from "~/../content.json";
         </h1>
         <div class="max-w-3xl mx-auto">
           <p class="text-xl text-gray-600 mb-8 dark:text-slate-400">
-            {content["index"]["hero-text"]}
+            <Trans i18nKey="index.title">
+              <span
+                class="font-semibold underline decoration-secondary-600 underline-offset-2"
+              ></span>
+            </Trans>
+            {t("index.title")}
             <!-- The <span
               class="font-semibold underline decoration-secondary-600 underline-offset-2"
               >Princess Street Hostel</span

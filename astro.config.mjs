@@ -1,18 +1,20 @@
+import image from "@astrojs/image";
+import react from "@astrojs/react";
+import sitemap from "@astrojs/sitemap";
+import tailwind from "@astrojs/tailwind";
+import astroI18next from "astro-i18next";
+import { defineConfig } from "astro/config";
 import path from "path";
 import { fileURLToPath } from "url";
-import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
-import image from "@astrojs/image";
-import sitemap from "@astrojs/sitemap";
 import { SITE } from "./src/config.mjs";
-import react from "@astrojs/react";
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
 export default defineConfig({
   site: SITE.origin,
   base: SITE.basePathname,
-  trailingSlash: SITE.trailingSlash ? "always" : "never",
+  //trailingSlash: SITE.trailingSlash ? "always" : "never",
   output: "static",
   integrations: [
     tailwind({
@@ -25,6 +27,7 @@ export default defineConfig({
       serviceEntryPoint: "@astrojs/image/sharp",
     }),
     react(),
+    astroI18next(),
   ],
   vite: {
     resolve: {

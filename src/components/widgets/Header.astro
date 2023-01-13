@@ -1,14 +1,11 @@
 ---
 import { Icon } from "astro-icon";
+import { LanguageSelector } from "astro-i18next/components";
 import Logo from "~/components/atoms/Logo.astro";
 import ToggleTheme from "~/components/core/ToggleTheme.astro";
 import ToggleMenu from "~/components/core/ToggleMenu.astro";
 
 import { getHomePermalink, getPermalink } from "./../../utils/permalinks";
-
-/* TODO:
-    - Change the menu on small screen (it's ugly for now)
-*/
 ---
 
 <header
@@ -59,6 +56,12 @@ import { getHomePermalink, getPermalink } from "./../../utils/permalinks";
             href={getPermalink("faq")}
             >FAQ
           </a>
+        </li>
+        <li>
+          <LanguageSelector
+            class="mt-2 py-2 px-4 font-semibold bg-transparent hover:bg-gray-50 border-2"
+            showFlag={true}
+          />
         </li>
 
         <li
