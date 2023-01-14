@@ -1,4 +1,5 @@
 import slugify from "limax";
+import { localizePath } from "astro-i18next";
 
 import { SITE } from "./../config.mjs";
 
@@ -13,7 +14,7 @@ const trim = (str, ch) => {
 const trimSlash = (s) => trim(trim(s, "/"));
 const createPath = (...params) => {
   const paths = params.filter((el) => !!el).join("/");
-  return "/" + paths + (false && paths ? "/" : "");
+  return localizePath("/" + paths + (false && paths ? "/" : ""));
 };
 
 const basePathname = trimSlash(SITE.basePathname);
@@ -43,10 +44,12 @@ export const getPermalink = (slug = "", type = "page") => {
 /** */
 export const getHomePermalink = () => {
   const permalink = getPermalink();
-  return permalink !== "/" ? permalink + "/" : permalink;
+  return permalink !== "/"
+    ? localizePath(permalink + "/")
+    : localizePath(permalink);
 };
 
 /** */
 export const getRelativeLink = (link = "") => {
-  return createPath(basePathname, trimSlash(link));
+  return localizePath(createPath(basePathname, trimSlash(link)));
 };

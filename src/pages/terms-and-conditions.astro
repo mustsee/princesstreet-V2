@@ -5,12 +5,12 @@ import { getCanonical, getPermalink } from "~/utils/permalinks";
 import Terms from "./../components/widgets/Terms.md";
 import Layout from "~/layouts/PageLayout.astro";
 
-changeLanguage("en");
+changeLanguage("en-GB");
 
 const meta = {
-    title: `Terms and conditions — ${SITE.name}`,
-    description: SITE.description,
-    canonical: getCanonical(getPermalink("terms-and-conditions")),
+  title: `Terms and conditions — ${SITE.name}`,
+  description: SITE.description,
+  canonical: getCanonical(getPermalink("terms-and-conditions")),
 };
 ---
 
