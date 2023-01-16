@@ -1,23 +1,18 @@
 {
-  ":name": "FrontAid CMS Example Model",
-  ":description": "This is a simple example of a FrontAid CMS model. You can change and extend it according to your needs, for example add new fields or restructure it. You can edit this file by cloning this repository and update it with your local editor and push it back into this Git repository. ",
-  "custom-field": {
-    ":description": "This example text is used as a description.",
-    ":type": "line"
-  },
-  "custom-object": {
-    "custom-line": {
-      ":type": "line"
-    },
-    "custom-text": {
+  ":name": "Princes Street Hostel Content Model",
+  ":description": "This is the place where we can modify the text of the website. After clicking save, modifications will be directly deployed to production.",
+  "index": {
+    "hero-text": {
       ":type": "text"
-    }
-  },
-  "custom-list": {
-    ":items": {
-      "custom-list-item": {
-        ":type": "line"
-      }
+    },
+    "card-1-text": {
+      ":type": "text"
+    },
+    "card-2-text": {
+      ":type": "text"
+    },
+    "card-3-text": {
+      ":type": "text"
     }
   }
 }
