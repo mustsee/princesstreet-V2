@@ -2,7 +2,7 @@
 import { findImage } from "~/utils/images";
 import Row from "./Features2Row.astro";
 import { getRelativeLink } from "~/utils/permalinks";
-import content from "~/../content.json";
+import { t } from "i18next";
 
 const images = [
   {
@@ -22,21 +22,21 @@ const images = [
 const cards = [
   {
     title: "Rooms and Facilities",
-    description: content["index"]["card-1-text"],
+    description: t("index.card-1-text"),
     icon: "flat-color-icons:home",
     buttonTitle: "More details",
     buttonLink: getRelativeLink("rooms"),
   },
   {
     title: "Groups",
-    description: content["index"]["card-2-text"],
+    description: t("index.card-2-text"),
     icon: "flat-color-icons:conference-call",
     buttonTitle: "Contact us",
     buttonLink: "mailto:hello@princesstreethostel.com",
   },
   {
     title: "Tours and Activities",
-    description: content["index"]["card-3-text"],
+    description: t("index.card-3-text"),
     icon: "flat-color-icons:landscape",
     buttonTitle: "Partner website",
     buttonLink: "https://princesstreethostel.tourdesk.scot/Tour",

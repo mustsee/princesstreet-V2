@@ -2,7 +2,6 @@
 import { Icon } from "astro-icon";
 import SlidesShow from "./SlidesShow.astro";
 import { Trans } from "astro-i18next/components";
-import { t } from "i18next";
 ---
 
 <section>
@@ -20,18 +19,9 @@ import { t } from "i18next";
               <span
                 class="font-semibold underline decoration-secondary-600 underline-offset-2"
               ></span>
+              <span class="inline sm:hidden"></span>
+              <span class="hidden sm:inline"></span>
             </Trans>
-            {t("index.title")}
-            <!-- The <span
-              class="font-semibold underline decoration-secondary-600 underline-offset-2"
-              >Princess Street Hostel</span
-            > Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem
-            quibusdam repudiandae ducimus vel commodi sint? <em>Soluta</em> +
-            <em>odit</em> deserunt minus quas
-            <span class="inline sm:hidden">...</span><span
-              class="hidden sm:inline"
-              >, aliquid a nihil itaque harum quam eaque maxime rem quibusdam.</span
-            > -->
           </p>
           <div
             class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4"
