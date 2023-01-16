@@ -15,5 +15,22 @@
     "card-3-text": {
       ":type": "text"
     }
+  },
+  "rooms": {
+    "title": {
+      ":type": "line"
+    },
+    "general-description": {
+      ":type": "text"
+    },
+    "db-rooms-description": {
+      ":type": "text"
+    },
+    "shared-rooms-description": {
+      ":type": "text"
+    },
+    "private-rooms-description": {
+      ":type": "text"
+    }
   }
 }
