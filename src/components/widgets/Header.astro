@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon";
-// import { LanguageSelector } from "astro-i18next/components";
+import { LanguageSelector } from "astro-i18next/components";
 import Logo from "~/components/atoms/Logo.astro";
 import ToggleTheme from "~/components/core/ToggleTheme.astro";
 import ToggleMenu from "~/components/core/ToggleMenu.astro";
@@ -32,7 +32,7 @@ import { getHomePermalink, getPermalink } from "./../../utils/permalinks";
         class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto text-base"
       >
         <li
-          class="dropdown border-b border-gray-200 dark:border-slate-600 md:border-none"
+          class="border-b border-gray-200 dark:border-slate-600 md:border-none"
         >
           <a
             class="font-medium hover:text-gray-900 dark:hover:text-white py-4 md:px-4 flex items-center transition duration-150 ease-in-out"
@@ -57,11 +57,17 @@ import { getHomePermalink, getPermalink } from "./../../utils/permalinks";
             >FAQ
           </a>
         </li>
-        <!--  <li class="md:px-1">
+        <li class="md:hidden">
           <LanguageSelector
-            class="outline-none bg-transparent flex flex-1 justify-center py-4 md:px-2"
+            mobile={true}
+            class="[&>button]:font-medium [&>button]:hover:text-gray-900 [&>button]:dark:hover:text-white [&>button]:cursor-pointer outline-none bg-transparent py-4 [&_li]:pt-2 [&_li]:pl-4 [&_li]:font-normal [&_svg]:dark:fill-white"
           />
-        </li> -->
+        </li>
+        <li class="hidden md:flex items-center px-4">
+          <LanguageSelector
+            class="font-medium hover:text-gray-900 dark:hover:text-white cursor-pointer outline-none bg-transparent py-4"
+          />
+        </li>
         <li
           class="md:hidden mt-8 rounded-lg bg-green-100 border border-green-600 dark:bg-transparent"
         >

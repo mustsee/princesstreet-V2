@@ -1,6 +1,6 @@
 {
   ":name": "Princes Street Hostel Content Model",
-  ":locales": ["en"],
+  ":locales": ["en", "fr", "es"],
   ":description": "This is the place where we can modify the text of the website. After clicking save, modifications will be directly deployed to production.",
   "index": {
     "hero-text": {

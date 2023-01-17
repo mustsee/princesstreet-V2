@@ -1,0 +1,14 @@
+---
+import { changeLanguage } from "i18next";
+import Error404 from "~/components/widgets/Error404.astro";
+import Layout from "~/layouts/BaseLayout.astro";
+import { SITE } from "~/config.mjs";
+
+changeLanguage("es");
+
+const title = `Error 404 — ${SITE.name}`;
+---
+
+<Layout meta={{ title }}>
+  <Error404 />
+</Layout>
