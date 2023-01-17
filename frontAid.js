@@ -1,6 +1,8 @@
 import fs from "fs";
 import content from "./src/frontaid.content.json" assert { type: "json" };
 
+// TODO: Add creation of lng directory if doesn't exists
+
 // We receive from our CMS frontAid a single JSON file
 // For Astro i18n integration, we need to have
 // A single tranlastion.json file per language, in a public/locales/${lng} folder
