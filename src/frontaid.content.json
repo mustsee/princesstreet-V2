@@ -13,5 +13,35 @@
       "shared-rooms-description": "Bright 4 to 10 bed rooms for individuals, small groups and families. One of our dorms is female only so that everyone can feel comfortable. If you fancy making friends and enjoy the essence of what a hostel is you will love the budget friendly dorms!",
       "private-rooms-description": "Bright and spacious 4, 9 and 12 private bed rooms for friends, groups and families. Now you can book a privacy friendly room."
     }
+  },
+  "fr": {
+    "index": {
+      "hero-text": "Le <0>Princess Street Hostel</0> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem quibusdam repudiandae ducimus vel commodi sint? Soluta + odit deserunt minus quas<1>...</1><2>, aliquid a nihil itaque harum quam eaque maxime rem.</2>",
+      "card-1-text": "From cosy double rooms to large dorm bunks, including a female only room, we provide accommodation to fit all and any of your preferences.",
+      "card-2-text": "We welcome groups for any occasion! Please reach out to us by clicking the button below and writing us a mail.",
+      "card-3-text": "Discover Edinburgh and the cities around it ! Book an experience with our partners to discover the castles, lochs, whiskies and more. Without forgetting the cities magical Harry Potter history."
+    },
+    "rooms": {
+      "title": "Discover our Rooms",
+      "general-description": "Our hostel is divided into 4 levels. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi tempora dicta atque, veritatis dolor eum iure odit consectetur quo reiciendis nesciunt commodi natus! Non necessitatibus facere aut dignissimos magnam?",
+      "db-rooms-description": "Bright private rooms with double style beds. These are perfect for couples, friends or anyone who prefers privacy while still enjoying the hostel environment. All private rooms are fitted with a bedside table, a lamp and an armchair. The bathrooms remained shared.",
+      "shared-rooms-description": "Bright 4 to 10 bed rooms for individuals, small groups and families. One of our dorms is female only so that everyone can feel comfortable. If you fancy making friends and enjoy the essence of what a hostel is you will love the budget friendly dorms!",
+      "private-rooms-description": "Bright and spacious 4, 9 and 12 private bed rooms for friends, groups and families. Now you can book a privacy friendly room."
+    }
+  },
+  "es": {
+    "index": {
+      "hero-text": "El <0>Princess Street Hostel</0> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem quibusdam repudiandae ducimus vel commodi sint? Soluta + odit deserunt minus quas<1>...</1><2>, aliquid a nihil itaque harum quam eaque maxime rem.</2>",
+      "card-1-text": "From cosy double rooms to large dorm bunks, including a female only room, we provide accommodation to fit all and any of your preferences.",
+      "card-2-text": "We welcome groups for any occasion! Please reach out to us by clicking the button below and writing us a mail.",
+      "card-3-text": "Discover Edinburgh and the cities around it ! Book an experience with our partners to discover the castles, lochs, whiskies and more. Without forgetting the cities magical Harry Potter history."
+    },
+    "rooms": {
+      "title": "Discover our Rooms",
+      "general-description": "Our hostel is divided into 4 levels. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eligendi tempora dicta atque, veritatis dolor eum iure odit consectetur quo reiciendis nesciunt commodi natus! Non necessitatibus facere aut dignissimos magnam?",
+      "db-rooms-description": "Bright private rooms with double style beds. These are perfect for couples, friends or anyone who prefers privacy while still enjoying the hostel environment. All private rooms are fitted with a bedside table, a lamp and an armchair. The bathrooms remained shared.",
+      "shared-rooms-description": "Bright 4 to 10 bed rooms for individuals, small groups and families. One of our dorms is female only so that everyone can feel comfortable. If you fancy making friends and enjoy the essence of what a hostel is you will love the budget friendly dorms!",
+      "private-rooms-description": "Bright and spacious 4, 9 and 12 private bed rooms for friends, groups and families. Now you can book a privacy friendly room."
+    }
   }
 }
