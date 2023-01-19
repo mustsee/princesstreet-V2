@@ -1,61 +1,8 @@
 ---
 import { Icon } from "astro-icon";
 
-const oldItems = [
-  [
-    {
-      question: "When is the payment fullfiled?",
-      answer: `Payments are taken two days prior to arrival.`,
-    },
-    {
-      question: "Do you have WIFI?",
-      answer: `The WiFi works great and you can connect from every room in the hostel and in the lounge area where there are tables you can work from.`,
-    },
-    {
-      question: "What about the lockers?",
-      answer: `The room has lockable lockers and you can either buy a lock from us (£4) or bring your own!`,
-    },
-    {
-      question: "Do you serve breakfast?",
-      answer: `We can offer Breakfast at £3.90 though we are not the ones cooking, it is the cafe downstairs. 
-      \n\nBreakfast consists of a barista style coffee/hot drink + a filled roll or pancakes. 
-      \n\nSo far our guests are happy with it.`,
-    },
-    {
-      question: "Is it possible to cook my own food?",
-      answer: `We have big a kitchen with many cooking utensils, ovens and hobs, a microwave, etc. We have free salt, spices, instant coffee, tea and sugar.
-      \n\nWe don't provide a dinner service but you are welcome to cook something for yourself.`,
-    },
-  ],
-  [
-    {
-      question: "Can I do my laundry?",
-      answer: `We do not provide a laundry service, however there is a laundrette 10 minutes walk away : Bendix Self Service.`,
-    },
-    {
-      question: "Can I have a lower bunk bed?",
-      answer: `We have a first come first serve policy regarding bed allocation though we are sure we'll have a comfortable bed for you when you arrive.`,
-    },
-    {
-      question: "Where can I park my car?",
-      answer: `We are right in the town centre and there is no good spot. 
-      \n\nThe best is to download the app Ringgo, otherwise there is paid parking on Waterloo Place, St Andrews Square or George Square. 
-      \n\nFrom 6.30pm till 8.30am, on-street-parking is virtually free.`,
-    },
-    {
-      question: "Is there a place to park my bike?",
-      answer: `Yes, we have a secure place for your bike. However our hostel is at the top of a building so there are quite a few steps to get up to us.`,
-    },
-    {
-      question: "Your question is left unanswered?",
-      answer: `Don't hesitate to reach out on Whatsapp.`,
-    },
-  ],
-];
-
 import i18next from "i18next";
 
-// Get current language here
 import en from "~/../public/locales/en/translation.json";
 import fr from "~/../public/locales/fr/translation.json";
 import es from "~/../public/locales/es/translation.json";
@@ -70,18 +17,21 @@ const currentLanguage = i18next.language;
 const content = contents[currentLanguage];
 
 const faq = content.faq;
-const faqLength = faq.length;
-const firstColLength = Math.ceil(faqLength / 2);
-const secondColLength = Math.floor(faqLength / 2);
 
-console.log("firstColLength", firstColLength);
-console.log("secondColLength", secondColLength);
+// Check if content is present in object
+// Object might be empty
+const faqFiltered = faq.filter((item) => {
+  if (item.hasOwnProperty("question") && item.hasOwnProperty("answer"))
+    return item;
+});
 
-const itemsFirstCol = faq.slice(0, firstColLength);
-const itemsSecondCol = faq.slice(firstColLength);
+const faqFilteredLength = faqFiltered.length;
+const firstColLength = Math.ceil(faqFilteredLength / 2);
+
+const itemsFirstCol = faqFiltered.slice(0, firstColLength);
+const itemsSecondCol = faqFiltered.slice(firstColLength);
 
 const items = [itemsFirstCol, itemsSecondCol];
-console.log(items);
 ---
 
 <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
@@ -106,7 +56,7 @@ console.log(items);
                     name="tabler:arrow-down-right"
                     class="w-7 h-7 text-primary-500 inline-block"
                   />
-                  {question}
+                  {question && question}
                 </p>
                 {answer &&
                   answer
