@@ -32,5 +32,11 @@
     "private-rooms-description": {
       ":type": "text"
     }
+  },
+  "faq": {
+    ":items": {
+      "question": { ":type": "line" },
+      "answer": { "type": "text" }
+    }
   }
 }
