@@ -1,7 +1,7 @@
 ---
 import { Icon } from "astro-icon";
 
-const items = [
+const oldItems = [
   [
     {
       question: "When is the payment fullfiled?",
@@ -52,6 +52,36 @@ const items = [
     },
   ],
 ];
+
+import i18next from "i18next";
+
+// Get current language here
+import en from "~/../public/locales/en/translation.json";
+import fr from "~/../public/locales/fr/translation.json";
+import es from "~/../public/locales/es/translation.json";
+
+const contents = {
+  en,
+  fr,
+  es,
+};
+
+const currentLanguage = i18next.language;
+const content = contents[currentLanguage];
+
+const faq = content.faq;
+const faqLength = faq.length;
+const firstColLength = Math.ceil(faqLength / 2);
+const secondColLength = Math.floor(faqLength / 2);
+
+console.log("firstColLength", firstColLength);
+console.log("secondColLength", secondColLength);
+
+const itemsFirstCol = faq.slice(0, firstColLength);
+const itemsSecondCol = faq.slice(firstColLength);
+
+const items = [itemsFirstCol, itemsSecondCol];
+console.log(items);
 ---
 
 <div class="px-4 py-16 mx-auto max-w-6xl lg:py-20">
@@ -78,12 +108,15 @@ const items = [
                   />
                   {question}
                 </p>
-                {answer.split("\n\n").map((paragraph) => (
-                  <p
-                    class="text-gray-700 dark:text-gray-400 mb-2"
-                    set:html={paragraph}
-                  />
-                ))}
+                {answer &&
+                  answer
+                    .split("\n\n")
+                    .map((paragraph) => (
+                      <p
+                        class="text-gray-700 dark:text-gray-400 mb-2"
+                        set:html={paragraph}
+                      />
+                    ))}
               </div>
             ))}
           </div>
