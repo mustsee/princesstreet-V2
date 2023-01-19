@@ -1,7 +1,7 @@
 import slugify from "limax";
 import { localizePath } from "astro-i18next";
 
-import { SITE } from "./../config.mjs";
+import { SITE, BLOG } from "./../config.mjs";
 
 const trim = (str, ch) => {
   let start = 0,
@@ -20,6 +20,11 @@ const createPath = (...params) => {
 const basePathname = trimSlash(SITE.basePathname);
 
 export const cleanSlug = (text) => slugify(trimSlash(text));
+
+export const BLOG_BASE = cleanSlug(BLOG?.blog?.pathname);
+export const POST_BASE = cleanSlug(BLOG?.post?.pathname);
+export const CATEGORY_BASE = cleanSlug(BLOG?.category?.pathname);
+export const TAG_BASE = cleanSlug(BLOG?.tag?.pathname);
 
 /** */
 export const getCanonical = (path = "") => new URL(path, SITE.origin);

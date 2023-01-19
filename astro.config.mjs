@@ -6,6 +6,7 @@ import astroI18next from "astro-i18next";
 import { defineConfig } from "astro/config";
 import path from "path";
 import { fileURLToPath } from "url";
+import { remarkReadingTime } from "./src/utils/frontmatter.mjs";
 import { SITE } from "./src/config.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -29,6 +30,12 @@ export default defineConfig({
     react(),
     astroI18next(),
   ],
+
+  markdown: {
+    remarkPlugins: [remarkReadingTime],
+    extendDefaultPlugins: true,
+  },
+
   vite: {
     resolve: {
       alias: {
