@@ -36,7 +36,7 @@
   "faq": {
     ":items": {
       "question": { ":type": "line" },
-      "answer": { "type": "text" }
+      "answer": { ":type": "text" }
     }
   }
 }
