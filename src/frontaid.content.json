@@ -15,14 +15,6 @@
     },
     "faq": [
       {
-        "question": "sadfjlkjasdlkfjaskldfj",
-        "answer": "kljasdfoijwerkljaslkdfjklasdfn\n\nasdfas\ndfasdf\nasd\nf"
-      },
-      {
-        "question": "What if I added an extra item ?",
-        "answer": "Does it still works or not ??\n\nI like long answers.\n\nOn multiple paragraphs !!"
-      },
-      {
         "question": "When is the payment fullfiled?",
         "answer": "Payments are taken two days prior to arrival."
       },
@@ -88,8 +80,6 @@
       {},
       {},
       {},
-      {},
-      {},
       {}
     ]
   },
@@ -97,8 +87,8 @@
     "index": {
       "hero-text": "¡Bienvenido a nuestro albergue, el más céntrico de Edimburgo, donde la limpieza y el servicio al cliente son nuestras principales prioridades! Somos conscientes de la importancia de una buena relación calidad-precio a la hora de viajar, por eso ofrecemos un alojamiento cómodo y asequible a nuestros huéspedes. Nuestro amable y dedicado personal está disponible para asegurarse de que tenga una excelente estadía. Ya sea que esté explorando la ciudad y más allá o simplemente necesite un lugar para descansar, lo tenemos cubierto. ¡Reserve su estadía con nosotros hoy y experimente la mejor relación calidad-precio en el centro de Edimburgo!",
       "card-1-text": "Ofrecemos una variedad de opciones de habitaciones para satisfacer sus necesidades, habitaciones dobles y cuádruples, dormitorios pequeños y tambien mas grandes. Los huéspedes pueden disfrutar de nuestras instalaciones comunes, como una cocina totalmente equipada y una sala de estar. Perfecto para cocinar sus propias comidas, socializar y relajarse después de un largo día de turismo.",
-      "card-2-text": "We welcome groups for any occasion! Please reach out to us by clicking the button below and writing us a mail.",
-      "card-3-text": "Discover Edinburgh and the cities around it ! Book an experience with our partners to discover the castles, lochs, whiskies and more. Without forgetting the cities magical Harry Potter history."
+      "card-2-text": "Estamos especializados en alojar grupos con tarifas preferenciales para estancias inolvidables en la capital escocesa. Ya sea que sea un grupo de amigos, un equipo deportivo o un grupo escolar, estamos aquí para hacer que su estadía en Edimburgo sea asequible, cómoda y memorable.",
+      "card-3-text": "Puede reservar los mejores tours en Edimburgo y Escocia directamente a través de nuestro sitio asociado. Nos hemos asociado con los mejores operadores turísticos locales para ofrecerle una variedad de tours que se adapten a sus intereses y presupuesto. Reserve su recorrido hoy y descubra la belleza de Escocia con facilidad."
     },
     "rooms": {
       "title": "Discover our Rooms",
@@ -108,11 +98,6 @@
       "private-rooms-description": "Bright and spacious 4, 9 and 12 private bed rooms for friends, groups and families. Now you can book a privacy friendly room."
     },
     "faq": [
-      {},
-      {
-        "question": "What if I added an extra item ?",
-        "answer": "Does it still works or not ??\n\nI like long answers.\n\nOn multiple paragraphs !!"
-      },
       {
         "question": "When is the payment fullfiled?",
         "answer": "Payments are taken two days prior to arrival."
