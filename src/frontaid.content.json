@@ -15,6 +15,10 @@
     },
     "faq": [
       {
+        "question": "What if I added an extra item ?",
+        "answer": "Does it still works or not ??\n\nI like long answers.\n\nOn multiple paragraphs !!"
+      },
+      {
         "question": "When is the payment fullfiled?",
         "answer": "Payments are taken two days prior to arrival."
       },
@@ -80,6 +84,7 @@
       {},
       {},
       {},
+      {},
       {}
     ]
   },
@@ -98,6 +103,10 @@
       "private-rooms-description": "Bright and spacious 4, 9 and 12 private bed rooms for friends, groups and families. Now you can book a privacy friendly room."
     },
     "faq": [
+      {
+        "question": "What if I added an extra item ?",
+        "answer": "Does it still works or not ??\n\nI like long answers.\n\nOn multiple paragraphs !!"
+      },
       {
         "question": "When is the payment fullfiled?",
         "answer": "Payments are taken two days prior to arrival."
