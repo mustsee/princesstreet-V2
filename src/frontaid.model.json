@@ -20,13 +20,31 @@
         ":type": "line"
       }
     },
-    "card-2-text": {
+    "card-2": {
+      ":name": "Card 2",
       ":description": "Groups",
-      ":type": "text"
+      "title": {
+        ":type": "line"
+      },
+      "text": {
+        ":type": "text"
+      },
+      "button": {
+        ":type": "line"
+      }
     },
-    "card-3-text": {
-      ":description": "Tours",
-      ":type": "text"
+    "card-3": {
+      ":name": "Card 3",
+      ":description": "Tours and Activities",
+      "title": {
+        ":type": "line"
+      },
+      "text": {
+        ":type": "text"
+      },
+      "button": {
+        ":type": "line"
+      }
     }
   },
   "rooms": {
