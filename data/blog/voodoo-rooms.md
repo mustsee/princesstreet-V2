@@ -6,7 +6,7 @@ image: "~/assets/images/blog/voodoo-rooms.jpeg"
 tags: [drinks, history, edinburgh]
 ---
 
-## The Voodoo Roons
+## The Voodoo Rooms
 
 The Voodoo Rooms in Edinburgh, Scotland is a fantastic bar and club that offers an unforgettable experience for all visitors. Located in the heart of the city, this unique venue is decorated in a voodoo and New Orleans style, creating a dark and mysterious atmosphere that is sure to captivate all who visit.
 

@@ -4,15 +4,28 @@
   ":description": "This is the place where we can modify the text of the website. After clicking save, modifications will be directly deployed to production.",
   "index": {
     "hero-text": {
+      ":description": "Main text of the home page",
       ":type": "text"
     },
-    "card-1-text": {
-      ":type": "text"
+    "card-1": {
+      ":name": "Card 1",
+      ":description": "Rooms and facilities",
+      "title": {
+        ":type": "line"
+      },
+      "text": {
+        ":type": "text"
+      },
+      "button": {
+        ":type": "line"
+      }
     },
     "card-2-text": {
+      ":description": "Groups",
       ":type": "text"
     },
     "card-3-text": {
+      ":description": "Tours",
       ":type": "text"
     }
   },
