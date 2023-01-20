@@ -7,6 +7,17 @@
       ":description": "Main text of the home page",
       ":type": "text"
     },
+    "cards-forefront": {
+      "primary-color-text": {
+        ":type": "line"
+      },
+      "main-text": {
+        ":type": "line"
+      },
+      "subtitle-text": {
+        ":type": "line"
+      }
+    },
     "card-1": {
       ":name": "Card 1",
       ":description": "Rooms and facilities",
