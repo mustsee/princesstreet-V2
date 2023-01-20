@@ -4,7 +4,12 @@
       "hero-text": "Welcome to our most central backpacker hostel in Edinburgh, where cleanliness and customer service are our top priorities! We understand the importance of good value for money when traveling, that's why we offer affordable and comfortable accommodation to our guests. Our friendly and dedicated staff are available to make sure you have a great stay. Whether you're exploring the city and beyond or just need a place to rest your head, we have you covered. Book your stay with us today and experience the best value for money in central Edinburgh!",
       "card-1-text": "We offer a variety of room options to suit your needs including private double and quadruple rooms, small and large dorms. Guests can enjoy our communal facilities such as a fully equipped kitchen and lounge area. Perfect for cooking your own meals, socializing and relax after a long day of sightseeing.",
       "card-2-text": "We specialize in accommodating groups with preferential rates for unforgettable stays in the Scottish capital. Whether you are a group of friends, a sports team or a school group, we are here to make your stay in Edinburgh affordable, comfortable and memorable.",
-      "card-3-text": "You can book the best tours in Edinburgh and around Scotland directly through our partner tour portal. From historical landmarks to scenic countryside, tours will take you to the must-see destinations in Scotland. We have partnered with the best local tour operators to offer you a variety of tours to suit your interests and budget. Book your tour with us today and discover the beauty of Scotland with ease."
+      "card-3-text": "You can book the best tours in Edinburgh and around Scotland directly through our partner tour portal. From historical landmarks to scenic countryside, tours will take you to the must-see destinations in Scotland. We have partnered with the best local tour operators to offer you a variety of tours to suit your interests and budget. Book your tour with us today and discover the beauty of Scotland with ease.",
+      "card-1": {
+        "title": "Rooms and facilities",
+        "text": "We offer a variety of room options to suit your needs including private double and quadruple rooms, small and large dorms. Guests can enjoy our communal facilities such as a fully equipped kitchen and lounge area. Perfect for cooking your own meals, socializing and relax after a long day of sightseeing.",
+        "button": "More details"
+      }
     },
     "rooms": {
       "title": "Discover our Rooms",
@@ -61,7 +66,12 @@
       "hero-text": "Bienvenue dans notre auberge en plein centre d'Édimbourg, où la propreté et le service client sont nos principales priorités ! Nous comprenons l'importance d'un bon rapport qualité-prix lorsque vous voyagez, c'est pourquoi nous proposons un hébergement abordable et confortable à nos clients. Notre personnel amical et dévoué est disponible pour s'assurer que vous passez un excellent séjour. Que vous exploriez la ville et au-delà ou que vous ayez simplement besoin d'un endroit pour vous reposer, nous avons ce qu'il vous faut. Réservez votre séjour avec nous dès aujourd'hui et découvrez le meilleur rapport qualité-prix en plein centre de la capitale Écossaise!",
       "card-1-text": "Nous offrons une variété d'options de chambres pour répondre à vos besoins, y compris des chambres doubles et quadruples, des petits dortoirs et des plus grands. Vous pourrez profiter de nos installations communes telles qu'une cuisine entièrement équipée et un coin salon. Parfait pour cuisiner vos propres repas, socialiser et se détendre après une longue journée de visites.",
       "card-2-text": "Nous sommes spécialisés dans l'accueil de groupes avec des tarifs préférentiels pour des séjours inoubliables dans la capitale écossaise. Que vous soyez un groupe d'amis, une équipe sportive ou un groupe scolaire, nous sommes là pour rendre votre séjour à Édimbourg abordable, confortable et mémorable.",
-      "card-3-text": "Vous pouvez réserver les meilleures visites à Édimbourg et en Écosse directement via notre site partenaire. Nous nous sommes associés aux meilleurs voyagistes locaux pour vous proposer une variété de circuits adaptés à vos intérêts et à votre budget. Réservez votre visite avec dès aujourd'hui et découvrez la beauté de l'Écosse en toute simplicité."
+      "card-3-text": "Vous pouvez réserver les meilleures visites à Édimbourg et en Écosse directement via notre site partenaire. Nous nous sommes associés aux meilleurs voyagistes locaux pour vous proposer une variété de circuits adaptés à vos intérêts et à votre budget. Réservez votre visite avec dès aujourd'hui et découvrez la beauté de l'Écosse en toute simplicité.",
+      "card-1": {
+        "title": "Rooms and facilities",
+        "text": "Nous offrons une variété d'options de chambres pour répondre à vos besoins, y compris des chambres doubles et quadruples, des petits dortoirs et des plus grands. Vous pourrez profiter de nos installations communes telles qu'une cuisine entièrement équipée et un coin salon. Parfait pour cuisiner vos propres repas, socialiser et se détendre après une longue journée de visites.",
+        "button": "More details"
+      }
     },
     "rooms": {
       "title": "Discover our Rooms",
@@ -88,7 +98,12 @@
       "hero-text": "¡Bienvenido a nuestro albergue, el más céntrico de Edimburgo, donde la limpieza y el servicio al cliente son nuestras principales prioridades! Somos conscientes de la importancia de una buena relación calidad-precio a la hora de viajar, por eso ofrecemos un alojamiento cómodo y asequible a nuestros huéspedes. Nuestro amable y dedicado personal está disponible para asegurarse de que tenga una excelente estadía. Ya sea que esté explorando la ciudad y más allá o simplemente necesite un lugar para descansar, lo tenemos cubierto. ¡Reserve su estadía con nosotros hoy y experimente la mejor relación calidad-precio en el centro de Edimburgo!",
       "card-1-text": "Ofrecemos una variedad de opciones de habitaciones para satisfacer sus necesidades, habitaciones dobles y cuádruples, dormitorios pequeños y tambien mas grandes. Los huéspedes pueden disfrutar de nuestras instalaciones comunes, como una cocina totalmente equipada y una sala de estar. Perfecto para cocinar sus propias comidas, socializar y relajarse después de un largo día de turismo.",
       "card-2-text": "Estamos especializados en alojar grupos con tarifas preferenciales para estancias inolvidables en la capital escocesa. Ya sea que sea un grupo de amigos, un equipo deportivo o un grupo escolar, estamos aquí para hacer que su estadía en Edimburgo sea asequible, cómoda y memorable.",
-      "card-3-text": "Puede reservar los mejores tours en Edimburgo y Escocia directamente a través de nuestro sitio asociado. Nos hemos asociado con los mejores operadores turísticos locales para ofrecerle una variedad de tours que se adapten a sus intereses y presupuesto. Reserve su recorrido hoy y descubra la belleza de Escocia con facilidad."
+      "card-3-text": "Puede reservar los mejores tours en Edimburgo y Escocia directamente a través de nuestro sitio asociado. Nos hemos asociado con los mejores operadores turísticos locales para ofrecerle una variedad de tours que se adapten a sus intereses y presupuesto. Reserve su recorrido hoy y descubra la belleza de Escocia con facilidad.",
+      "card-1": {
+        "title": "Rooms and facilities",
+        "text": "Ofrecemos una variedad de opciones de habitaciones para satisfacer sus necesidades, habitaciones dobles y cuádruples, dormitorios pequeños y tambien mas grandes. Los huéspedes pueden disfrutar de nuestras instalaciones comunes, como una cocina totalmente equipada y una sala de estar. Perfecto para cocinar sus propias comidas, socializar y relajarse después de un largo día de turismo.",
+        "button": "More details"
+      }
     },
     "rooms": {
       "title": "Discover our Rooms",
