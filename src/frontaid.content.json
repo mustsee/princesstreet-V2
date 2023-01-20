@@ -6,9 +6,19 @@
       "card-2-text": "We specialize in accommodating groups with preferential rates for unforgettable stays in the Scottish capital. Whether you are a group of friends, a sports team or a school group, we are here to make your stay in Edinburgh affordable, comfortable and memorable.",
       "card-3-text": "You can book the best tours in Edinburgh and around Scotland directly through our partner tour portal. From historical landmarks to scenic countryside, tours will take you to the must-see destinations in Scotland. We have partnered with the best local tour operators to offer you a variety of tours to suit your interests and budget. Book your tour with us today and discover the beauty of Scotland with ease.",
       "card-1": {
-        "title": "Rooms and facilities",
+        "title": "Rooms and Facilities",
         "text": "We offer a variety of room options to suit your needs including private double and quadruple rooms, small and large dorms. Guests can enjoy our communal facilities such as a fully equipped kitchen and lounge area. Perfect for cooking your own meals, socializing and relax after a long day of sightseeing.",
         "button": "More details"
+      },
+      "card-2": {
+        "title": "Groups",
+        "text": "We specialize in accommodating groups with preferential rates for unforgettable stays in the Scottish capital. Whether you are a group of friends, a sports team or a school group, we are here to make your stay in Edinburgh affordable, comfortable and memorable.",
+        "button": "Contact us"
+      },
+      "card-3": {
+        "title": "Tours and Activities",
+        "text": "You can book the best tours in Edinburgh and around Scotland directly through our partner tour portal. From historical landmarks to scenic countryside, tours will take you to the must-see destinations in Scotland. We have partnered with the best local tour operators to offer you a variety of tours to suit your interests and budget. Book your tour with us today and discover the beauty of Scotland with ease.",
+        "button": "Partner website"
       }
     },
     "rooms": {
@@ -68,9 +78,19 @@
       "card-2-text": "Nous sommes spécialisés dans l'accueil de groupes avec des tarifs préférentiels pour des séjours inoubliables dans la capitale écossaise. Que vous soyez un groupe d'amis, une équipe sportive ou un groupe scolaire, nous sommes là pour rendre votre séjour à Édimbourg abordable, confortable et mémorable.",
       "card-3-text": "Vous pouvez réserver les meilleures visites à Édimbourg et en Écosse directement via notre site partenaire. Nous nous sommes associés aux meilleurs voyagistes locaux pour vous proposer une variété de circuits adaptés à vos intérêts et à votre budget. Réservez votre visite avec dès aujourd'hui et découvrez la beauté de l'Écosse en toute simplicité.",
       "card-1": {
-        "title": "Rooms and facilities",
+        "title": "Rooms and Facilities",
         "text": "Nous offrons une variété d'options de chambres pour répondre à vos besoins, y compris des chambres doubles et quadruples, des petits dortoirs et des plus grands. Vous pourrez profiter de nos installations communes telles qu'une cuisine entièrement équipée et un coin salon. Parfait pour cuisiner vos propres repas, socialiser et se détendre après une longue journée de visites.",
         "button": "More details"
+      },
+      "card-2": {
+        "title": "Groups",
+        "text": "Nous sommes spécialisés dans l'accueil de groupes avec des tarifs préférentiels pour des séjours inoubliables dans la capitale écossaise. Que vous soyez un groupe d'amis, une équipe sportive ou un groupe scolaire, nous sommes là pour rendre votre séjour à Édimbourg abordable, confortable et mémorable.",
+        "button": "Contact us"
+      },
+      "card-3": {
+        "title": "Tours and Activities",
+        "text": "Vous pouvez réserver les meilleures visites à Édimbourg et en Écosse directement via notre site partenaire. Nous nous sommes associés aux meilleurs voyagistes locaux pour vous proposer une variété de circuits adaptés à vos intérêts et à votre budget. Réservez votre visite avec dès aujourd'hui et découvrez la beauté de l'Écosse en toute simplicité.",
+        "button": "Partner website"
       }
     },
     "rooms": {
@@ -100,9 +120,19 @@
       "card-2-text": "Estamos especializados en alojar grupos con tarifas preferenciales para estancias inolvidables en la capital escocesa. Ya sea que sea un grupo de amigos, un equipo deportivo o un grupo escolar, estamos aquí para hacer que su estadía en Edimburgo sea asequible, cómoda y memorable.",
       "card-3-text": "Puede reservar los mejores tours en Edimburgo y Escocia directamente a través de nuestro sitio asociado. Nos hemos asociado con los mejores operadores turísticos locales para ofrecerle una variedad de tours que se adapten a sus intereses y presupuesto. Reserve su recorrido hoy y descubra la belleza de Escocia con facilidad.",
       "card-1": {
-        "title": "Rooms and facilities",
+        "title": "Rooms and Facilities",
         "text": "Ofrecemos una variedad de opciones de habitaciones para satisfacer sus necesidades, habitaciones dobles y cuádruples, dormitorios pequeños y tambien mas grandes. Los huéspedes pueden disfrutar de nuestras instalaciones comunes, como una cocina totalmente equipada y una sala de estar. Perfecto para cocinar sus propias comidas, socializar y relajarse después de un largo día de turismo.",
         "button": "More details"
+      },
+      "card-2": {
+        "title": "Groups",
+        "text": "Estamos especializados en alojar grupos con tarifas preferenciales para estancias inolvidables en la capital escocesa. Ya sea que sea un grupo de amigos, un equipo deportivo o un grupo escolar, estamos aquí para hacer que su estadía en Edimburgo sea asequible, cómoda y memorable.",
+        "button": "Contact us"
+      },
+      "card-3": {
+        "title": "Tours and Activities",
+        "text": "Puede reservar los mejores tours en Edimburgo y Escocia directamente a través de nuestro sitio asociado. Nos hemos asociado con los mejores operadores turísticos locales para ofrecerle una variedad de tours que se adapten a sus intereses y presupuesto. Reserve su recorrido hoy y descubra la belleza de Escocia con facilidad.",
+        "button": "Partner website"
       }
     },
     "rooms": {
