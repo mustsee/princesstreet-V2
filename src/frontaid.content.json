@@ -35,40 +35,40 @@
     },
     "faq": [
       {
-        "question": "When is the payment fullfiled?",
-        "answer": "Payments are taken two days prior to arrival."
+        "question": "When is payment taken?",
+        "answer": "Depending of your booking terms and conditions, payments are taken prior to your arrival when the free cancellation period ends. \nFor non-refundable bookings, payment is taken right away upon reservation.\nIf your bank card or payment is not going through we will send you a reminder asking to update card your details. Only reservation paid for are guaranteed."
       },
       {
         "question": "Do you have WIFI?",
-        "answer": "The WiFi works great and you can connect from every room in the hostel and in the lounge area where there are tables you can work from."
+        "answer": "Yes we do! WiFi works great all around, the password will be sent to you upon check-in."
       },
       {
-        "question": "What about the lockers?",
-        "answer": "The room has lockable lockers and you can either buy a lock from us (£4) or bring your own!"
+        "question": "Can I store my bag in the room?",
+        "answer": "All the shared rooms have lockers about 80cm*30cm*40cm which allow you to store a big backpack or a \"carry-on\" style suitcase. If you have bigger items we may help you store them."
       },
       {
         "question": "Do you serve breakfast?",
-        "answer": "We can offer Breakfast at £3.90 though we are not the ones cooking, it is the cafe downstairs.\n\nBreakfast consists of a barista style coffee/hot drink + a filled roll or pancakes.\n\nSo far our guests are happy with it."
+        "answer": "We do offer breakfast vouchers at £4.50 for the lovely Cactus café, beneath the hostel.\nBreakfast consists of a barista style coffee/hot drink + a filled roll or pancakes."
       },
       {
-        "question": "Is it possible to cook my own food?",
-        "answer": "We have big a kitchen with many cooking utensils, ovens and hobs, a microwave, etc. We have free salt, spices, instant coffee, tea and sugar.\n\nWe don't provide a dinner service but you are welcome to cook something for yourself."
+        "question": "DO you have a kitchen for self-catering purposes?",
+        "answer": "Yes we do, with all the usual utensils and crockery. Kitchen is open from 8am until 12am. We work hard to keep the kitchen safe and clean for everyone. We ask for guests using the kitchen to be mindful and tidy."
       },
       {
-        "question": "Can I do my laundry?",
-        "answer": "We do not provide a laundry service, however there is a laundrette 10 minutes walk away : Bendix Self Service."
+        "question": "Do you have a laundry service?",
+        "answer": "We do not provide a laundry service however we can recommend laundrettes in the vicinity."
       },
       {
-        "question": "Can I have a lower bunk bed?",
-        "answer": "We have a first come first serve policy regarding bed allocation though we are sure we'll have a comfortable bed for you when you arrive."
+        "question": "Do you allocate bed numbers to guests?",
+        "answer": "We have a first come first served policy regarding bed allocation and we will make sure you have feel comfortable and have a comfortable bed during your entire stay."
       },
       {
         "question": "Where can I park my car?",
-        "answer": "We are right in the town centre and there is no good spot.\n\nThe best is to download the app Ringgo, otherwise there is paid parking on Waterloo Place, St Andrews Square or George Square.\n\nFrom 6.30pm till 8.30am, on-street-parking is virtually free."
+        "answer": "We are right in the town centre and parking can be tricky. We would encourage you to take public transports to come over.\nOtherwise, the best you can do is to download the app Ringgo, there is paid parking on Waterloo Place, St Andrews Square or George Street.\nFrom 6.30pm till 8.30am (at night), on-street-parking is free."
       },
       {
-        "question": "Is there a place to park my bike?",
-        "answer": "Yes, we have a secure place for your bike. However our hostel is at the top of a building so there are quite a few steps to get up to us."
+        "question": "And if I come by bicyle?",
+        "answer": "Yes, we have a secure place for your bicycle. However our hostel is at the top of a building so there are quite a few steps to get up to us."
       },
       {
         "question": "Your question is left unanswered?",
