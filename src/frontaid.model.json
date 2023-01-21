@@ -10,8 +10,13 @@
     "cta": {
       ":description": "CTA (Call To Action) component",
       "title": {
-        ":description": "Title has following form: <0>Book direct</0><1></1><2>and save</2>",
-        ":type": "line"
+        ":description": "On small screens, title is on two rows",
+        "first-row": {
+          ":type": "line"
+        },
+        "second-row": {
+          ":type": "line"
+        }
       },
       "subtitle": {
         ":type": "line"
