@@ -2,10 +2,37 @@
   ":name": "Princes Street Hostel Content Model",
   ":locales": ["en", "fr", "es"],
   ":description": "This is the place where we can modify the text of the website. After clicking save, modifications will be directly deployed to production.",
+  "common": {
+    "upper-note": {
+      ":description": "Original text: Book direct for the best price",
+      ":type": "line"
+    },
+    "cta": {
+      ":description": "CTA (Call To Action) component",
+      "title": {
+        ":description": "Title has following form: <0>Book direct</0><1></1><2>and save</2>",
+        ":type": "line"
+      },
+      "subtitle": {
+        ":type": "line"
+      },
+      "button": {
+        ":type": "line"
+      }
+    }
+  },
   "index": {
     "hero-text": {
       ":description": "Main text of the home page",
       ":type": "text"
+    },
+    "main-buttons": {
+      "book-now": {
+        ":type": "line"
+      },
+      "learn-more": {
+        ":type": "line"
+      }
     },
     "cards-forefront": {
       "primary-color-text": {
