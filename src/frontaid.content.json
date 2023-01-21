@@ -82,7 +82,10 @@
     "common": {
       "upper-note": "Book direct for the best price",
       "cta": {
-        "title": "<0>Book direct</0> <1>and save</1>",
+        "title": {
+          "first-row": "Book direct",
+          "second-row": "and save"
+        },
         "subtitle": "You'll always get the lowest price when you book direct with us. Guaranteed.",
         "button": "BOOK NOW"
       }
@@ -141,7 +144,10 @@
     "common": {
       "upper-note": "Book direct for the best price",
       "cta": {
-        "title": "<0>Book direct</0> <1>and save</1>",
+        "title": {
+          "first-row": "Book direct",
+          "second-row": "and save"
+        },
         "subtitle": "You'll always get the lowest price when you book direct with us. Guaranteed.",
         "button": "BOOK NOW"
       }
@@ -230,7 +236,10 @@
     "common": {
       "upper-note": "Book direct for the best price",
       "cta": {
-        "title": "<0>Book direct</0> <1>and save</1>",
+        "title": {
+          "first-row": "Book direct",
+          "second-row": "and save"
+        },
         "subtitle": "You'll always get the lowest price when you book direct with us. Guaranteed.",
         "button": "BOOK NOW"
       }
