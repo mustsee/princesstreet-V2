@@ -151,6 +151,11 @@
     global-agent "^3.0.0"
     node-fetch "^3.2.5"
 
+"@astrolib/analytics@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@astrolib/analytics/-/analytics-0.3.0.tgz#cdd4a4b33c36080785a436472083c42853d123d7"
+  integrity sha512-nwGiH7D6c+fnETlP/Gj51iirReo/9ftn8hYtKi5luiBpKDdUksDRDGh5Ni3PR2XPoHPRk5ah/Pk4IXyxUlR0Xg==
+
 "@astrolib/seo@^0.2.1":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@astrolib/seo/-/seo-0.2.1.tgz#48c4af599a2fca07308d013da39e176852f4eaeb"

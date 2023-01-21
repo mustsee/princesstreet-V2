@@ -1,5 +1,6 @@
 ---
 import { AstroSeo } from "@astrolib/seo";
+import { GoogleAnalytics } from "@astrolib/analytics";
 
 import { getImage } from "@astrojs/image";
 import { getRelativeUrlByFilePath } from "~/utils/directories";
@@ -9,7 +10,6 @@ import defaultImageSrc from "~/assets/images/default.png";
 import Fonts from "~/components/atoms/Fonts.astro";
 import { SITE } from "~/config.mjs";
 
-// import { GoogleAnalytics } from "@astrolib/analytics";
 // import SplitbeeAnalytics from "./SplitbeeAnalytics.astro";
 
 const { src: defaultImage } = await getImage({
@@ -84,13 +84,13 @@ const image =
 } -->
 
 <!-- Google Analytics -->
-<!-- {
+{
   SITE.googleAnalyticsId && (
     <GoogleAnalytics id={String(SITE.googleAnalyticsId)} partytown={true} />
   )
 }
 
-{
+<!-- {
   SITE.splitbeeAnalytics?.enabled && (
     <SplitbeeAnalytics {...SITE.splitbeeAnalytics} />
   )
