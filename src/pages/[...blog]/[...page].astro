@@ -10,23 +10,22 @@ import { getCanonical, getPermalink, BLOG_BASE } from "~/utils/permalinks";
 changeLanguage("en");
 
 export async function getStaticPaths({ paginate }) {
-  if (BLOG?.disabled || BLOG?.blog?.disabled) return [];
-  const posts = await fetchPosts();
-  return paginate(posts, {
-    params: { blog: BLOG_BASE || undefined },
-    pageSize: BLOG.postsPerPage,
-  });
+    if (BLOG?.disabled || BLOG?.blog?.disabled)
+        return [];
+    const posts = await fetchPosts();
+    return paginate(posts, {
+        params: { blog: BLOG_BASE || undefined },
+        pageSize: BLOG.postsPerPage,
+    });
 }
 const { page } = Astro.props;
 const currentPage = page.currentPage ?? 1;
 const meta = {
-  title: `Blog ${currentPage > 1 ? `— Page ${currentPage} ` : ""}— ${
-    SITE.name
-  }`,
-  description: SITE.description,
-  canonical: getCanonical(getPermalink(BLOG?.blog?.pathname)),
-  ogType: "blog",
-  noindex: currentPage > 1,
+    title: `Blog ${currentPage > 1 ? `— Page ${currentPage} ` : ""}— ${SITE.name}`,
+    description: SITE.description,
+    canonical: getCanonical(getPermalink(BLOG?.blog?.pathname)),
+    ogType: "blog",
+    noindex: currentPage > 1,
 };
 ---
 

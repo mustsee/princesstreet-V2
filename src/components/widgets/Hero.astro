@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon";
 import SlidesShow from "./SlidesShow.astro";
 import { Trans } from "astro-i18next/components";
+import { t } from "i18next";
 ---
 
 <section>
@@ -33,7 +34,7 @@ import { Trans } from "astro-i18next/components";
                 target="_blank"
                 rel="noopener"
               >
-                BOOK NOW
+                {t("index.main-buttons.book-now")}
                 <Icon
                   name="tabler:chevron-right"
                   class="w-5 h-5 ml-1 -mr-1.5"
@@ -41,7 +42,9 @@ import { Trans } from "astro-i18next/components";
               </a>
             </div>
             <div class="flex w-full sm:w-auto">
-              <a class="btn w-full" href="#offer">Learn more</a>
+              <a class="btn w-full" href="#offer">
+                {t("index.main-buttons.learn-more")}
+              </a>
             </div>
           </div>
         </div>

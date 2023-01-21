@@ -5,7 +5,7 @@ import Layout from "~/layouts/BlogLayout.astro";
 import BlogList from "~/components/blog/List.astro";
 import Pagination from "~/components/atoms/Pagination.astro";
 import { fetchPosts } from "~/utils/posts";
-import { getCanonical, getPermalink, cleanSlug, TAG_BASE } from "~/utils/permalinks";
+import { getCanonical, getPermalink, cleanSlug, TAG_BASE, } from "~/utils/permalinks";
 
 changeLanguage("fr");
 
@@ -15,7 +15,8 @@ export async function getStaticPaths({ paginate }) {
     const posts = await fetchPosts();
     const tags = new Set();
     posts.map((post) => {
-        Array.isArray(post.tags) && post.tags.map((tag) => tags.add(tag.toLowerCase()));
+        Array.isArray(post.tags) &&
+            post.tags.map((tag) => tags.add(tag.toLowerCase()));
     });
     return Array.from(tags).map((tag) => paginate(posts.filter((post) => Array.isArray(post.tags) && post.tags.includes(tag)), {
         params: { tag: cleanSlug(tag), tags: TAG_BASE || undefined },
@@ -34,9 +35,9 @@ const meta = {
 ---
 
 <Layout meta={meta}>
-	<Fragment slot="title">
-		Tag: {tag}
-	</Fragment>
-	<BlogList posts={page.data} />
-	<Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+  <Fragment slot="title">
+    Tag: {tag}
+  </Fragment>
+  <BlogList posts={page.data} />
+  <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
 </Layout>
