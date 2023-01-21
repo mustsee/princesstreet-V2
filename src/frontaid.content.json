@@ -24,6 +24,10 @@
         "primary-color-text": "Our hostel",
         "main-text": "What do we offer",
         "subtitle-text": "At the heart of Edinburgh, experience the city with us."
+      },
+      "main-buttons": {
+        "book-now": "BOOK NOW",
+        "learn-more": "Learn more"
       }
     },
     "rooms": {
@@ -74,7 +78,15 @@
         "question": "Your question is left unanswered?",
         "answer": "Don't hesitate to reach out on Whatsapp."
       }
-    ]
+    ],
+    "common": {
+      "upper-note": "Book direct for the best price",
+      "cta": {
+        "title": "<0>Book direct</0><1></1><2>and save</2>",
+        "subtitle": "You'll always get the lowest price when you book direct with us. Guaranteed.",
+        "button": "BOOK NOW"
+      }
+    }
   },
   "fr": {
     "index": {
@@ -101,6 +113,10 @@
         "primary-color-text": "Our hostel",
         "main-text": "What do we offer",
         "subtitle-text": "At the heart of Edinburgh, experience the city with us."
+      },
+      "main-buttons": {
+        "book-now": "BOOK NOW",
+        "learn-more": "Learn more"
       }
     },
     "rooms": {
@@ -121,7 +137,15 @@
       {},
       {},
       {}
-    ]
+    ],
+    "common": {
+      "upper-note": "Book direct for the best price",
+      "cta": {
+        "title": "<0>Book direct</0><1></1><2>and save</2>",
+        "subtitle": "You'll always get the lowest price when you book direct with us. Guaranteed.",
+        "button": "BOOK NOW"
+      }
+    }
   },
   "es": {
     "index": {
@@ -148,6 +172,10 @@
         "primary-color-text": "Our hostel",
         "main-text": "What do we offer",
         "subtitle-text": "At the heart of Edinburgh, experience the city with us."
+      },
+      "main-buttons": {
+        "book-now": "BOOK NOW",
+        "learn-more": "Learn more"
       }
     },
     "rooms": {
@@ -198,6 +226,14 @@
         "question": "Your question is left unanswered?",
         "answer": "Don't hesitate to reach out on Whatsapp."
       }
-    ]
+    ],
+    "common": {
+      "upper-note": "Book direct for the best price",
+      "cta": {
+        "title": "<0>Book direct</0><1></1><2>and save</2>",
+        "subtitle": "You'll always get the lowest price when you book direct with us. Guaranteed.",
+        "button": "BOOK NOW"
+      }
+    }
   }
 }
