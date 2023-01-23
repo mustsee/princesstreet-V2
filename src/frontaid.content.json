@@ -114,12 +114,12 @@
       },
       "cards-forefront": {
         "primary-color-text": "Our hostel",
-        "main-text": "What do we offer",
-        "subtitle-text": "At the heart of Edinburgh, experience the city with us."
+        "main-text": "Ce que nous offrons",
+        "subtitle-text": "Au coeur d'Edimbourg, vivez cette ville avec nous."
       },
       "main-buttons": {
-        "book-now": "BOOK NOW",
-        "learn-more": "Learn more"
+        "book-now": "Réservez Maintenant",
+        "learn-more": "En savoir plus"
       }
     },
     "rooms": {
@@ -176,12 +176,12 @@
       },
       "cards-forefront": {
         "primary-color-text": "Our hostel",
-        "main-text": "What do we offer",
-        "subtitle-text": "At the heart of Edinburgh, experience the city with us."
+        "main-text": "Que ofrecemos",
+        "subtitle-text": "En el corazon de la ciudad, vive Edinburgo con nosotros."
       },
       "main-buttons": {
-        "book-now": "BOOK NOW",
-        "learn-more": "Learn more"
+        "book-now": "Reserva Ahora",
+        "learn-more": "Más información"
       }
     },
     "rooms": {
