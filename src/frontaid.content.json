@@ -84,9 +84,9 @@
       "cta": {
         "title": {
           "first-row": "Book direct",
-          "second-row": "and save"
+          "second-row": "for the best price"
         },
-        "subtitle": "You'll always get the lowest price when you book direct with us. Guaranteed.",
+        "subtitle": "You'll always get the lowest price when you book directly with us. Guaranteed.",
         "button": "BOOK NOW"
       }
     }
@@ -142,14 +142,14 @@
       {}
     ],
     "common": {
-      "upper-note": "Book direct for the best price",
+      "upper-note": "Réservez au meilleur prix sur notre site",
       "cta": {
         "title": {
-          "first-row": "Book direct",
-          "second-row": "and save"
+          "first-row": "Réservez directement sur notre site",
+          "second-row": "pour les meilleurs prix"
         },
-        "subtitle": "You'll always get the lowest price when you book direct with us. Guaranteed.",
-        "button": "BOOK NOW"
+        "subtitle": "Les prix les plus bas sont sur notre site. Guarantie.",
+        "button": "Réservez Maintenant"
       }
     }
   },
@@ -234,14 +234,14 @@
       }
     ],
     "common": {
-      "upper-note": "Book direct for the best price",
+      "upper-note": "Haz su reserva al mejor precio en nuesta pagina",
       "cta": {
         "title": {
-          "first-row": "Book direct",
-          "second-row": "and save"
+          "first-row": "Reserva directamente en nuestra pagina",
+          "second-row": "para obtener los mejores precios"
         },
-        "subtitle": "You'll always get the lowest price when you book direct with us. Guaranteed.",
-        "button": "BOOK NOW"
+        "subtitle": "Los precios mas bajos estan en nuesrta pagina web. Guarantizado.",
+        "button": "Reserva Ahora"
       }
     }
   }
