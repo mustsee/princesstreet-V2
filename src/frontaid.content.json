@@ -93,7 +93,7 @@
     "blog": [
       {
         "publishDate": "Jan 25 2023",
-        "draft": "false",
+        "draft": "true",
         "slug": "test-purpose",
         "title": "This is a test",
         "description": "Gibberish",
