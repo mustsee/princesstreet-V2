@@ -92,30 +92,13 @@
     },
     "blog": [
       {
-        "publishDate": "asdf",
-        "draft": "asdf",
-        "slug": "asdf",
-        "title": "asdf",
-        "description": "asdf",
-        "body": "<p>asdf</p>",
-        "image": ""
-      },
-      {
-        "publishDate": "Jan 25 2023",
-        "draft": "false",
-        "slug": "test-purpose",
-        "title": "This is a test",
-        "description": "Gibberish",
-        "body": "<p>What can I say ?</p>",
-        "image": ""
-      },
-      {
         "publishDate": "Jan 24 2023",
         "draft": "false",
         "slug": "voodoo-rooms",
         "title": "The Voodoo Rooms",
         "description": "An historical bar just below the Princes Street Hostel",
         "body": "<h2><strong>The Voodoo Rooms</strong></h2><p>The Voodoo Rooms in Edinburgh, Scotland is a fantastic bar and club that offers an unforgettable experience for all visitors. Located in the heart of the city, this unique venue is decorated in a voodoo and New Orleans style, creating a dark and mysterious atmosphere that is sure to captivate all who visit.</p><p>One of the highlights of the Voodoo Rooms is its extensive range of cocktails. Whether you prefer a classic cocktail or something more adventurous, the Voodoo Rooms has something for everyone. The bartenders are knowledgeable and passionate about their craft, and they are happy to recommend their favorite drinks or create something special just for you.</p><p>The Voodoo Rooms also offers a variety of live music events, featuring local and international acts. This is a great opportunity to enjoy some fantastic music while sipping on a cocktail or two. The venue also has a dance floor, so you can let loose and enjoy the music.</p><p>But what sets the Voodoo Rooms apart from other bars is its unique atmosphere and décor. The venue is decorated in a voodoo and New Orleans style, with a dark and mysterious atmosphere. Visitors can also enjoy a variety of events and activities related to the occult and the supernatural, such as psychic readings and voodoo workshops.</p><p>Overall, the Voodoo Rooms is a fantastic bar and club that offers an unforgettable experience for all visitors. With its great atmosphere, delicious cocktails, and live music, it’s the perfect destination for a night out with friends or a special occasion. If you’re ever in Edinburgh, be sure to visit the Voodoo Rooms and discover why it’s one of the city’s most popular venues.</p>",
+        "image": "voodoo-rooms.jpeg",
         "tags": [
           {
             "tag": "drinks"
@@ -126,8 +109,7 @@
           {
             "tag": "edinburgh"
           }
-        ],
-        "image": "voodoo-rooms.jpeg"
+        ]
       },
       {
         "publishDate": "Jan 22 2023",
@@ -136,6 +118,7 @@
         "title": "Princes Street Garden",
         "description": "Nor Loch and the Princes Street Garden",
         "body": "<h2><strong>Princes Street Gardens</strong></h2><p>Princes Street Gardens in Edinburgh, Scotland, is a beautiful public park that offers a peaceful oasis in the heart of the city. However, beneath the lush greenery and picturesque views lies a dark and gloomy history. The park was built on top of the Nor Loch, a loch (lake) that was once a vital part of Edinburgh’s history.</p><p>The Nor Loch was a large body of water that stretched from Edinburgh Castle to the present-day location of Waverley Station. It was used for a variety of purposes, including as a source of drinking water, as a place for fishing, and as a defensive barrier for the city. However, the Nor Loch also had a darker side. It was used as a dumping ground for refuse and as a place to dispose of the bodies of criminals and plague victims.</p><p>During the 18th and 19th centuries, the Nor Loch had become a source of disease and a blight on the city. As Edinburgh’s population grew, the city’s leaders recognized the need to drain the loch and reclaim the land. The process of draining the loch was a long and difficult one, but it was finally completed in the early 19th century.</p><p>Today, Princes Street Gardens sits on top of the former Nor Loch, providing a beautiful and peaceful space for visitors to enjoy. But the dark history of the loch is still evident in the park, with several monuments and sculptures that pay tribute to the loch’s past. One of the most striking examples is the Scott Memorial, which features a statue of Sir Walter Scott with his back turned to the loch, symbolizing the city’s rejection of its past.</p><p>The park also has several other monuments, such as statues of Robert Burns and Sir Walter Scott, which were erected to commemorate the two famous Scottish poets. The park also provides panoramic views of Edinburgh Castle, and it’s one of the most popular spots for tourists to take photos.</p><p>In conclusion, Princes Street Gardens is a beautiful and peaceful public park in the heart of Edinburgh, but it also holds a dark and gloomy history, as it was built on top of the Nor Loch, which was once a source of disease and a blight on the city. The park provides visitors a chance to appreciate the beauty of the city while also remembering its past.</p>",
+        "image": "princes-street-garden.jpeg",
         "tags": [
           {
             "tag": "history"
@@ -146,8 +129,7 @@
           {
             "tag": "edinburgh"
           }
-        ],
-        "image": "princes-street-garden.jpeg"
+        ]
       },
       {
         "publishDate": "Jan 21 2023",
@@ -233,8 +215,6 @@
       }
     },
     "blog": [
-      {},
-      {},
       {
         "tags": [
           {},
@@ -350,8 +330,6 @@
       }
     },
     "blog": [
-      {},
-      {},
       {
         "tags": [
           {},
