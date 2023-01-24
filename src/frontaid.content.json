@@ -92,6 +92,15 @@
     },
     "blog": [
       {
+        "publishDate": "asdf",
+        "draft": "asdf",
+        "slug": "asdf",
+        "title": "asdf",
+        "description": "asdf",
+        "body": "<p>asdf</p>",
+        "image": ""
+      },
+      {
         "publishDate": "Jan 25 2023",
         "draft": "false",
         "slug": "test-purpose",
@@ -225,6 +234,7 @@
     },
     "blog": [
       {},
+      {},
       {
         "tags": [
           {},
@@ -340,6 +350,7 @@
       }
     },
     "blog": [
+      {},
       {},
       {
         "tags": [
