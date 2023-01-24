@@ -112,5 +112,10 @@
       "question": { ":type": "line" },
       "answer": { ":type": "text" }
     }
+  },
+  "blog": {
+    ":items": {
+      "post": { ":type": "text", ":richtext": true }
+    }
   }
 }
