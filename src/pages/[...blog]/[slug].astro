@@ -16,7 +16,7 @@ changeLanguage("en");
 
 export async function getStaticPaths() {
   if (BLOG?.disabled || BLOG?.post?.disabled) return [];
-  const posts = await fetchPosts();
+  const posts = await fetchPosts("en");
   return posts.map((post) => ({
     params: {
       slug: cleanSlug(post.slug),

@@ -1,23 +1,59 @@
-import content from "~/../public/locales/en/translation.json";
+import en from "~/../public/locales/en/translation.json";
+import fr from "~/../public/locales/fr/translation.json";
+import es from "~/../public/locales/es/translation.json";
 
-const getNormalizedPosts = async (posts) => {
-  return posts.map((post) => {
-    return {
-      id: post.slug,
-      src: post.image ? `/src/assets/images/blog/${post.image}.jpeg` : "",
-      publishDate: post.publishDate,
-      draft: post.draft === "true" ? true : false,
-      slug: post.slug,
-      title: post.title,
-      description: post.description,
-      body: post.body,
-      tags: post.tags ? post.tags.map((item) => item.tag) : [],
-    };
-  });
+const contents = {
+  en,
+  fr,
+  es,
 };
 
-const load = async function () {
-  const frontAidPosts = content.blog;
+const images = import.meta.glob("/src/assets/images/blog/*");
+
+let loadedImages = [];
+for (const path in images) {
+  images[path]().then((image) => {
+    loadedImages.push(image);
+    console.log("asdf", path, image);
+  });
+}
+
+console.log("qweqwe", loadedImages[0]);
+
+/* const image = post.image
+        ? await import(`/src/assets/images/blog/${post.image}`)
+        : "";
+
+      console.log("image", image); */
+
+//src: post.image ? `/src/assets/images/blog/${post.image}` : "",
+/* src: */
+// ~/assets/images/hero-hq/**.jpg
+
+const getNormalizedPosts = async (posts) => {
+  return posts
+    .map((post) => {
+      return {
+        id: post.slug,
+        src: post.image
+          ? `${import.meta.env.BASE_URL}/assets/blog/${post.image}`
+          : "",
+        publishDate: post.publishDate,
+        draft: post.draft === "true" ? true : false,
+        slug: post.slug,
+        title: post.title,
+        description: post.description,
+        body: post.body,
+        tags: post.tags
+          ? post.tags.map((item) => item.tag).filter((item) => !!item)
+          : [],
+      };
+    })
+    .filter((post) => post.title && post.slug);
+};
+
+const load = async function (lang) {
+  const frontAidPosts = contents[lang].blog;
   const normalizedPosts = await getNormalizedPosts(frontAidPosts);
   const results = normalizedPosts
     .sort(
@@ -29,11 +65,12 @@ const load = async function () {
   return results;
 };
 
-let _posts;
+// let _posts;
 
 /** */
-export const fetchPosts = async () => {
-  _posts = _posts || load();
+export const fetchPosts = async (lang) => {
+  //_posts = _posts || load(lang);
+  const _posts = load(lang);
 
   return await _posts;
 };
