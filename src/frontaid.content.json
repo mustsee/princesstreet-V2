@@ -92,6 +92,9 @@
     },
     "blog": [
       {
+        "post": "<pre><code>Testing the blow thing\nI guess it is markdown?\n\nWe'll see soon enough.\n\n</code></pre>"
+      },
+      {
         "post": "<p>This is a paragraph</p><p>And I'm testing how it works</p><h3>It should be html</h3><p><strong>Testing things </strong>or <em>other</em></p>"
       }
     ]
@@ -158,6 +161,7 @@
       }
     },
     "blog": [
+      {},
       {}
     ]
   },
@@ -253,6 +257,7 @@
       }
     },
     "blog": [
+      {},
       {}
     ]
   }
