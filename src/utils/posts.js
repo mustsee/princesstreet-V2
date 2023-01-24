@@ -1,50 +1,31 @@
-const getNormalizedPost = async (post) => {
-  const { frontmatter, Content, file } = post;
-  const ID = file.split("/").pop().split(".").shift();
+import content from "~/../public/locales/en/translation.json";
 
-  return {
-    id: ID,
-
-    publishDate: frontmatter.publishDate,
-    draft: frontmatter.draft,
-
-    canonical: frontmatter.canonical,
-    slug: frontmatter.slug || ID,
-
-    title: frontmatter.title,
-    description: frontmatter.description,
-    image: frontmatter.image,
-
-    Content: Content,
-    // or 'body' in case you consume from API
-
-    excerpt: frontmatter.excerpt,
-    authors: frontmatter.authors,
-    category: frontmatter.category,
-    tags: frontmatter.tags,
-    readingTime: frontmatter.readingTime,
-  };
+const getNormalizedPosts = async (posts) => {
+  return posts.map((post) => {
+    return {
+      id: post.slug,
+      src: `/src/assets/images/blog/${post.slug}.jpeg`,
+      publishDate: "Jan 21 2023",
+      draft: post.draft === "true" ? true : false,
+      slug: post.slug,
+      title: post.title,
+      description: post.description,
+      body: post.body, // Change key name to body ?
+      tags: post.tags, // Add in content model
+    };
+  });
 };
 
 const load = async function () {
-  const posts = import.meta.glob(
-    ["~/../data/blog/**/*.md", "~/../data/blog/**/*.mdx"],
-    {
-      eager: true,
-    }
-  );
-
-  const normalizedPosts = Object.keys(posts).map(async (key) => {
-    const post = await posts[key];
-    return await getNormalizedPost(post);
-  });
-
-  const results = (await Promise.all(normalizedPosts))
+  const frontAidPosts = content.blog;
+  const normalizedPosts = await getNormalizedPosts(frontAidPosts);
+  const results = normalizedPosts
     .sort(
       (a, b) =>
         new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf()
     )
     .filter((post) => !post.draft);
+
   return results;
 };
 

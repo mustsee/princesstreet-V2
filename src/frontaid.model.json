@@ -115,7 +115,36 @@
   },
   "blog": {
     ":items": {
-      "post": { ":type": "text", ":richtext": true }
+      "publishDate": {
+        ":description": "Follow this convention: Jan 21 2023",
+        ":type": "line"
+      },
+      "draft": {
+        ":description": "true or false",
+        ":type": "line"
+      },
+      "slug": {
+        ":description": "The URI the blog post will be published with. Follow format like: fringe-festival",
+        ":type": "line"
+      },
+      "title": {
+        ":description": "Title of the blog post",
+        ":type": "line"
+      },
+      "description": {
+        ":description": "Description of the blog post",
+        ":type": "text"
+      },
+      "body": {
+        ":description": "Content of the article",
+        ":type": "text",
+        ":richtext": true
+      },
+      "tags": {
+        ":items": {
+          "tag": { ":type": "line" }
+        }
+      }
     }
   }
 }
