@@ -84,9 +84,9 @@
       "cta": {
         "title": {
           "first-row": "Book direct",
-          "second-row": "and save"
+          "second-row": "for the best price"
         },
-        "subtitle": "You'll always get the lowest price when you book direct with us. Guaranteed.",
+        "subtitle": "You'll always get the lowest price when you book directly with us. Guaranteed.",
         "button": "BOOK NOW"
       }
     }
@@ -114,12 +114,12 @@
       },
       "cards-forefront": {
         "primary-color-text": "Our hostel",
-        "main-text": "What do we offer",
-        "subtitle-text": "At the heart of Edinburgh, experience the city with us."
+        "main-text": "Ce que nous offrons",
+        "subtitle-text": "Au coeur d'Edimbourg, vivez cette ville avec nous."
       },
       "main-buttons": {
-        "book-now": "BOOK NOW",
-        "learn-more": "Learn more"
+        "book-now": "Réservez Maintenant",
+        "learn-more": "En savoir plus"
       }
     },
     "rooms": {
@@ -142,14 +142,14 @@
       {}
     ],
     "common": {
-      "upper-note": "Book direct for the best price",
+      "upper-note": "Réservez au meilleur prix sur notre site",
       "cta": {
         "title": {
-          "first-row": "Book direct",
-          "second-row": "and save"
+          "first-row": "Réservez directement sur notre site",
+          "second-row": "pour les meilleurs prix"
         },
-        "subtitle": "You'll always get the lowest price when you book direct with us. Guaranteed.",
-        "button": "BOOK NOW"
+        "subtitle": "Les prix les plus bas sont sur notre site. Garantie.",
+        "button": "Réservez Maintenant"
       }
     }
   },
@@ -176,12 +176,12 @@
       },
       "cards-forefront": {
         "primary-color-text": "Our hostel",
-        "main-text": "What do we offer",
-        "subtitle-text": "At the heart of Edinburgh, experience the city with us."
+        "main-text": "Que ofrecemos",
+        "subtitle-text": "En el corazon de la ciudad, vive Edinburgo con nosotros."
       },
       "main-buttons": {
-        "book-now": "BOOK NOW",
-        "learn-more": "Learn more"
+        "book-now": "Reserva Ahora",
+        "learn-more": "Más información"
       }
     },
     "rooms": {
@@ -234,14 +234,14 @@
       }
     ],
     "common": {
-      "upper-note": "Book direct for the best price",
+      "upper-note": "Haz su reserva al mejor precio en nuesta pagina",
       "cta": {
         "title": {
-          "first-row": "Book direct",
-          "second-row": "and save"
+          "first-row": "Reserva directamente en nuestra pagina",
+          "second-row": "para obtener los mejores precios"
         },
-        "subtitle": "You'll always get the lowest price when you book direct with us. Guaranteed.",
-        "button": "BOOK NOW"
+        "subtitle": "Los precios mas bajos estan en nuesrta pagina web. Guarantizado.",
+        "button": "Reserva Ahora"
       }
     }
   }
