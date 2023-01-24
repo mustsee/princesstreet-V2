@@ -336,12 +336,12 @@
           {},
           {}
         ],
-        "publishDate": "Test",
-        "draft": "false",
-        "slug": "test-again-multilingue",
-        "title": "test-again-multilingue",
-        "description": "test-again-multilingue asdf",
-        "body": "<p>test-again-multilinguetest-again-multilingue</p>"
+        "publishDate": "",
+        "draft": "",
+        "slug": "",
+        "title": "",
+        "description": "",
+        "body": "<p></p>"
       },
       {
         "tags": [
