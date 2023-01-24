@@ -92,10 +92,23 @@
     },
     "blog": [
       {
-        "post": "<pre><code>Testing the blow thing\nI guess it is markdown?\n\nWe'll see soon enough.\n\n</code></pre>"
-      },
-      {
-        "post": "<p>This is a paragraph</p><p>And I'm testing how it works</p><h3>It should be html</h3><p><strong>Testing things </strong>or <em>other</em></p>"
+        "publishDate": "Jan 21 2023",
+        "draft": "false",
+        "slug": "fringe-festival",
+        "title": "The Fringe Festival in Edinburgh",
+        "description": "Why the Fringe festival in Edinburgh is such a big cultural event?",
+        "body": "<h2>Do you Fringe ?</h2><p>The Fringe Festival in Edinburgh, Scotland, is a cultural event that is considered to be one of the most important and influential festivals of its kind in the world. It is an annual arts festival that takes place in August and is an open access event, meaning that anyone can participate, regardless of experience or background.</p><p>The Fringe Festival was first established in 1947, as an alternative to the Edinburgh International Festival, which was a more traditional and curated event. The Fringe was created as an open-access platform for artists and performers who were not able to participate in the International Festival. This open-access format allows anyone to participate, which has resulted in a diverse and eclectic range of performances, including theater, comedy, music, dance, and more.</p><p>The Fringe Festival has grown significantly in size and popularity over the years and now attracts thousands of performers and hundreds of thousands of visitors from all over the world. It has become a major cultural event that showcases the talents of emerging and established artists, as well as providing a platform for new and innovative work.</p><p>One of the reasons the Fringe Festival has become such a big cultural event is its open-access format, which allows for a diversity of performances, from emerging artists to established performers. This open-access format has helped to create a vibrant and dynamic festival that attracts a wide range of audiences.</p><p>Additionally, the Fringe Festival also has a strong reputation for being a showcase for new and innovative work. Many performers use the Fringe as a platform to premiere new shows or try out new material, which makes it an exciting and unpredictable event.</p><p>The Fringe festival in Edinburgh is also a great opportunity to discover new talent and to see shows that may not be available in other venues or festivals. It’s a cultural event that provides a platform for artists from all over the world to showcase their work in a world-class cultural hub.</p><p>In conclusion, The Fringe Festival in Edinburgh is a big cultural event that has been growing in popularity and size over the years, it’s an open-access format and reputation for showcasing new and innovative work, as well as its ability to attract a diverse range of audiences, makes it one of the most important and influential festivals of its kind in the world.</p>",
+        "tags": [
+          {
+            "tag": "edinburgh"
+          },
+          {
+            "tag": "culture"
+          },
+          {
+            "tag": "summer"
+          }
+        ]
       }
     ]
   },
@@ -137,7 +150,18 @@
       "shared-rooms-description": "Nos dortoirs sont parfaits pour les groupes, les amis et les voyageurs individuels à petit budget. Nous proposons des chambres de 4 à 10 lits, toutes avec salle de bain commune. Chaque lit est équipé de prises USB et d'un casier pour garder vos effets personnels en toute sécurité. Certains de nos dortoirs sont réservés aux femmes afin que tout le monde puisse se sentir à l'aise. Si vous avez envie de vous faire des amis et de profiter de l'ambiance même d'une auberge, vous adorerez les dortoirs partagés!",
       "private-rooms-description": "Nos chambres privées quadruples ou plus sont parfaites pour les groupes d'ami(e)s et les familles à la recherche d'un hébergement privé confortable et abordable au cœur d'Édimbourg. Chaque chambre dispose de plusieurs lits confortables et d'une salle de bains commune, offrant tout ce dont vous avez besoin pour un séjour agréable. Chaque lit est équipé de prises USB pour votre confort."
     },
-    "faq": [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}],
+    "faq": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ],
     "common": {
       "upper-note": "Réservez au meilleur prix sur notre site",
       "cta": {
@@ -149,7 +173,15 @@
         "button": "Réservez Maintenant"
       }
     },
-    "blog": [{}, {}]
+    "blog": [
+      {
+        "tags": [
+          {},
+          {},
+          {}
+        ]
+      }
+    ]
   },
   "es": {
     "index": {
@@ -242,6 +274,14 @@
         "button": "Reserva Ahora"
       }
     },
-    "blog": [{}, {}]
+    "blog": [
+      {
+        "tags": [
+          {},
+          {},
+          {}
+        ]
+      }
+    ]
   }
 }
