@@ -97,7 +97,8 @@
         "slug": "test-purpose",
         "title": "This is a test",
         "description": "Gibberish",
-        "body": "<p>What can I say ?</p>"
+        "body": "<p>What can I say ?</p>",
+        "image": ""
       },
       {
         "publishDate": "Jan 24 2023",
@@ -116,7 +117,8 @@
           {
             "tag": "edinburgh"
           }
-        ]
+        ],
+        "image": "voodoo-rooms.jpeg"
       },
       {
         "publishDate": "Jan 22 2023",
@@ -135,7 +137,8 @@
           {
             "tag": "edinburgh"
           }
-        ]
+        ],
+        "image": "princes-street-garden.jpeg"
       },
       {
         "publishDate": "Jan 21 2023",
@@ -154,7 +157,8 @@
           {
             "tag": "summer"
           }
-        ]
+        ],
+        "image": "fringe-festival.jpeg"
       }
     ]
   },
