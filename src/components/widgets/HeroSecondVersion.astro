@@ -1,0 +1,97 @@
+---
+import { Icon } from "astro-icon";
+import { Trans } from "astro-i18next/components";
+const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
+// New version
+---
+
+<section>
+  <div id="hero-img" class="relative">
+    <img
+      src={images[0].default.src}
+      class="w-full h-full object-cover"
+      alt=""
+    />
+    <div
+      class="absolute left-1/2 transform -translate-x-1/2 top-2/3 sm:top-1/2 -translate-y-2/3 sm:-translate-y-1/2 z-10 text-white font-semibold uppercase"
+    >
+      <div class="flex flex-col items-center">
+        <h1
+          class="bg-primary-800 px-2 py-1 mb-4 text-center w-min whitespace-nowrap"
+        >
+          Princes Street Hostel
+        </h1>
+        <h2 class="sm:hidden text-sm flex flex-col items-center">
+          <div class="bg-primary-800 px-2 py-0.5 w-min whitespace-nowrap">
+            🧽 clean
+          </div>
+          <div class="bg-primary-800 px-2 py-0.5 my-2 w-min whitespace-nowrap">
+            👻 friendly
+          </div>
+          <div class="bg-primary-800 px-2 py-0.5 w-min whitespace-nowrap">
+            📍 perfectly located
+          </div>
+        </h2>
+        <h2
+          class="hidden sm:block bg-primary-800 text-sm px-2 py-1 whitespace-nowrap"
+        >
+          🧽 clean &nbsp;&sdot;&nbsp; 📍 perfectly located &nbsp;&sdot;&nbsp; 👻
+          friendly
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6">
+  <div class="py-12 pt-8 md:py-20 md:pt-16">
+    <div class="text-center max-w-5xl mx-auto">
+      <div class="max-w-3xl mx-auto">
+        <p class="text-xl text-gray-600 mb-8 dark:text-slate-400">
+          <Trans i18nKey="index.hero-text">
+            <span
+              class="font-semibold underline decoration-secondary-600 underline-offset-2"
+            ></span>
+            <span class="inline sm:hidden"></span>
+            <span class="hidden sm:inline"></span>
+          </Trans>
+        </p>
+        <div
+          class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4"
+        >
+          <div class="flex w-full sm:w-auto">
+            <a
+              class="btn btn-primary sm:mb-0 w-full"
+              href="https://beds24.com/booking2.php?propid=150425"
+              target="_blank"
+              rel="noopener"
+            >
+              BOOK NOW
+              <Icon name="tabler:chevron-right" class="w-5 h-5 ml-1 -mr-1.5" />
+            </a>
+          </div>
+          <div class="flex w-full sm:w-auto">
+            <a class="btn w-full" href="#offer">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <!-- <SlidesShow /> -->
+    </div>
+  </div>
+</div>
+
+<style>
+  @media (max-width: 640px) {
+    #hero-img {
+      height: 500px;
+    }
+  }
+
+  @media (min-width: 641px) {
+    #hero-img {
+      height: 560px;
+    }
+  }
+</style>
