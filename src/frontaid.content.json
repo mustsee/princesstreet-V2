@@ -89,7 +89,12 @@
         "subtitle": "You'll always get the lowest price when you book directly with us. Guaranteed.",
         "button": "BOOK NOW"
       }
-    }
+    },
+    "blog": [
+      {
+        "post": "<p>Testing the rich text editor en mode paragraph</p><h1>This is a h1 title</h1><ol><li><p>An ordered list</p></li><li><p>With two bullet points</p></li></ol><p>Another <strong>bold</strong> and <em>italic </em><code>Paragraph !</code></p><pre><code>This is a block(is it markdown ?)\nI don't know how it works...\n\nBlock heading I don't get it</code></pre>"
+      }
+    ]
   },
   "fr": {
     "index": {
@@ -151,7 +156,10 @@
         "subtitle": "Les prix les plus bas sont sur notre site. Garantie.",
         "button": "Réservez Maintenant"
       }
-    }
+    },
+    "blog": [
+      {}
+    ]
   },
   "es": {
     "index": {
@@ -243,6 +251,9 @@
         "subtitle": "Los precios mas bajos estan en nuesrta pagina web. Guarantizado.",
         "button": "Reserva Ahora"
       }
-    }
+    },
+    "blog": [
+      {}
+    ]
   }
 }
