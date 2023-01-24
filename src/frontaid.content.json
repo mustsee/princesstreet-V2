@@ -92,6 +92,14 @@
     },
     "blog": [
       {
+        "publishDate": "Jan 25 2023",
+        "draft": "false",
+        "slug": "test-purpose",
+        "title": "This is a test",
+        "description": "Gibberish",
+        "body": "<p>What can I say ?</p>"
+      },
+      {
         "publishDate": "Jan 24 2023",
         "draft": "false",
         "slug": "voodoo-rooms",
@@ -212,6 +220,7 @@
       }
     },
     "blog": [
+      {},
       {
         "tags": [
           {},
@@ -327,6 +336,7 @@
       }
     },
     "blog": [
+      {},
       {
         "tags": [
           {},
