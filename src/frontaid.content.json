@@ -92,7 +92,7 @@
     },
     "blog": [
       {
-        "post": "<p>Testing the rich text editor en mode paragraph</p><h1>This is a h1 title</h1><ol><li><p>An ordered list</p></li><li><p>With two bullet points</p></li></ol><p>Another <strong>bold</strong> and <em>italic </em><code>Paragraph !</code></p><pre><code>This is a block(is it markdown ?)\nI don't know how it works...\n\nBlock heading I don't get it</code></pre>"
+        "post": "<p>This is a paragraph</p><p>And I'm testing how it works</p><h3>It should be html</h3><p><strong>Testing things </strong>or <em>other</em></p>"
       }
     ]
   },
