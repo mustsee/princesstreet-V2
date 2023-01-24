@@ -123,6 +123,10 @@
         ":description": "true or false",
         ":type": "line"
       },
+      "image": {
+        ":description": "Image name, like: fringe-festival.jpg",
+        ":type": "line"
+      },
       "slug": {
         ":description": "The URI the blog post will be published with. Follow format like: fringe-festival",
         ":type": "line"
@@ -142,6 +146,7 @@
       },
       "tags": {
         ":items": {
+          ":description": "Follow convention: lowercase only",
           "tag": { ":type": "line" }
         }
       }

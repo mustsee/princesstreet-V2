@@ -4,14 +4,14 @@ const getNormalizedPosts = async (posts) => {
   return posts.map((post) => {
     return {
       id: post.slug,
-      src: `/src/assets/images/blog/${post.slug}.jpeg`,
-      publishDate: "Jan 21 2023",
+      src: post.image ? `/src/assets/images/blog/${post.image}.jpeg` : "",
+      publishDate: post.publishDate,
       draft: post.draft === "true" ? true : false,
       slug: post.slug,
       title: post.title,
       description: post.description,
-      body: post.body, // Change key name to body ?
-      tags: post.tags, // Add in content model
+      body: post.body,
+      tags: post.tags ? post.tags.map((item) => item.tag) : [],
     };
   });
 };
