@@ -8,28 +8,6 @@ const contents = {
   es,
 };
 
-const images = import.meta.glob("/src/assets/images/blog/*");
-
-let loadedImages = [];
-for (const path in images) {
-  images[path]().then((image) => {
-    loadedImages.push(image);
-    console.log("asdf", path, image);
-  });
-}
-
-console.log("qweqwe", loadedImages[0]);
-
-/* const image = post.image
-        ? await import(`/src/assets/images/blog/${post.image}`)
-        : "";
-
-      console.log("image", image); */
-
-//src: post.image ? `/src/assets/images/blog/${post.image}` : "",
-/* src: */
-// ~/assets/images/hero-hq/**.jpg
-
 const getNormalizedPosts = async (posts) => {
   return posts
     .map((post) => {
