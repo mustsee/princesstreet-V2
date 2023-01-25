@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+// import { Icon } from "astro-icon";
 import { Trans } from "astro-i18next/components";
 const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
 // New version
@@ -8,7 +8,7 @@ const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
 <section>
   <div id="hero-img" class="relative">
     <img
-      src={images[2].default.src}
+      src={images[3].default.src}
       class="w-full h-full object-cover"
       alt=""
     />
@@ -62,7 +62,10 @@ const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
             <span class="hidden sm:inline"></span>
           </Trans>
         </p>
-        <div
+        <div class="m-auto">
+          <div id="bookWidget-82775-150425-0-1674643010"></div>
+        </div>
+        <!-- <div
           class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4"
         >
           <div class="flex w-full sm:w-auto">
@@ -80,24 +83,51 @@ const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
             <a class="btn w-full" href="#offer">Learn more</a>
           </div>
         </div>
+      </div> -->
+      </div>
+      <div>
+        <!-- <SlidesShow /> -->
       </div>
     </div>
-    <div>
-      <!-- <SlidesShow /> -->
-    </div>
   </div>
+
+  <script>
+    // @ts-nocheck
+    jQuery(document).ready(function () {
+      jQuery("#bookWidget-82775-150425-0-1674643010").bookWidget({
+        propid: 150425,
+        availableBackgroundColor: "#4ade80",
+        backgroundColor: "transparent",
+        borderColor: "transparent",
+        boxShadow: false,
+        buttonBackgroundColor: "#1d4ed8",
+        buttonTitle: "BOOK NOW",
+        defaultNightsAdvance: 0,
+        defaultNumNight: 2,
+        formAction: "https://beds24.com/booking.php",
+        formTarget: "_self",
+        fontSize: "16px",
+        peopleSelection: 1,
+        searchLinkText: " ",
+        showLabels: false,
+        unavailableBackgroundColor: "#ef4444",
+        widgetLang: "en",
+        widgetType: "BookingStrip",
+      });
+    });
+  </script>
+
+  <style>
+    @media (max-width: 640px) {
+      #hero-img {
+        height: 500px;
+      }
+    }
+
+    @media (min-width: 641px) {
+      #hero-img {
+        height: 560px;
+      }
+    }
+  </style>
 </div>
-
-<style>
-  @media (max-width: 640px) {
-    #hero-img {
-      height: 500px;
-    }
-  }
-
-  @media (min-width: 641px) {
-    #hero-img {
-      height: 560px;
-    }
-  }
-</style>

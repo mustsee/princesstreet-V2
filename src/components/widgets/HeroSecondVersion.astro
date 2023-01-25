@@ -56,10 +56,9 @@ const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
             <span class="hidden sm:inline"></span>
           </Trans>
         </p>
-        <div
-          class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4"
-        >
-          <div class="flex w-full sm:w-auto">
+        <div class="m-auto">
+          <div id="bookWidget-82775-150425-0-1674643010"></div>
+          <!-- <div class="flex w-full sm:w-auto">
             <a
               class="btn btn-primary sm:mb-0 w-full"
               href="https://beds24.com/booking2.php?propid=150425"
@@ -72,7 +71,7 @@ const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
           </div>
           <div class="flex w-full sm:w-auto">
             <a class="btn w-full" href="#offer">Learn more</a>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -81,6 +80,32 @@ const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
     </div>
   </div>
 </div>
+
+<script>
+  // @ts-nocheck
+  jQuery(document).ready(function () {
+    jQuery("#bookWidget-82775-150425-0-1674643010").bookWidget({
+      propid: 150425,
+      availableBackgroundColor: "#4ade80",
+      backgroundColor: "transparent",
+      borderColor: "transparent",
+      boxShadow: false,
+      buttonBackgroundColor: "#1d4ed8",
+      buttonTitle: "BOOK NOW",
+      defaultNightsAdvance: 0,
+      defaultNumNight: 2,
+      formAction: "https://beds24.com/booking.php",
+      formTarget: "_self",
+      fontSize: "16px",
+      peopleSelection: 1,
+      searchLinkText: " ",
+      showLabels: false,
+      unavailableBackgroundColor: "#ef4444",
+      widgetLang: "en",
+      widgetType: "BookingStrip",
+    });
+  });
+</script>
 
 <style>
   @media (max-width: 640px) {

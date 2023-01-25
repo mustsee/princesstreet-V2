@@ -3,7 +3,7 @@ import { changeLanguage } from "i18next";
 import { SITE } from "~/config.mjs";
 import { getCanonical, getHomePermalink } from "~/utils/permalinks";
 import Layout from "~/layouts/PageLayout.astro";
-import Hero from "~/components/widgets/Hero.astro";
+import HeroSecondVersionPosition from "~/components/widgets/HeroSecondVersionPosition.astro";
 import Note from "~/components/widgets/Note.astro";
 import GoogleReviews from "~/components/widgets/GoogleReviews.astro";
 import CallToAction from "~/components/widgets/CallToAction.astro";
@@ -13,19 +13,19 @@ import GoogleMapWidget from "~/components/widgets/GoogleMap";
 changeLanguage("es");
 
 const meta = {
-    title: SITE.title,
-    description: SITE.description,
-    canonical: getCanonical(getHomePermalink()),
+  title: SITE.title,
+  description: SITE.description,
+  canonical: getCanonical(getHomePermalink()),
 };
 ---
 
 <Layout {meta}>
   <Note />
-  <Hero />
+  <HeroSecondVersionPosition />
   <Features2 />
   <div class="max-w-4xl mx-auto py-12 md:py-20 px-6">
     <GoogleMapWidget
-      client:load
+      client:visible
       apiKey={import.meta.env.API_GOOGLE_MAP}
       mapWidth="100%"
     />
