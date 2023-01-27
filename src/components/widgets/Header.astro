@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon";
 import { LanguageSelector } from "astro-i18next/components";
 import Logo from "~/components/atoms/Logo.astro";
-import ToggleTheme from "~/components/core/ToggleTheme.astro";
+//import ToggleTheme from "~/components/core/ToggleTheme.astro";
 import ToggleMenu from "~/components/core/ToggleMenu.astro";
 
 import { getHomePermalink, getPermalink } from "./../../utils/permalinks";
@@ -20,7 +20,7 @@ import { getHomePermalink, getPermalink } from "./../../utils/permalinks";
         <Logo />
       </a>
       <div class="flex items-center md:hidden">
-        <ToggleTheme />
+        <!-- <ToggleTheme /> -->
         <ToggleMenu />
       </div>
     </div>
@@ -110,7 +110,7 @@ import { getHomePermalink, getPermalink } from "./../../utils/permalinks";
       </ul>
       <div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
         <div class="hidden items-center md:flex">
-          <ToggleTheme iconClass="w-5 h-5" />
+          <!-- <ToggleTheme iconClass="w-5 h-5" /> -->
           <a
             class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2.5 inline-flex items-center"
             aria-label="PSH WhatsApp"
