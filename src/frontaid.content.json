@@ -48,7 +48,7 @@
       },
       {
         "question": "Can I store my bag in the room?",
-        "answer": "All the shared rooms have lockers about 80cm*30cm*40cm which allow you to store a big backpack or a \"carry-on\" style suitcase. If you have bigger items we may help you store them."
+        "answer": "All the shared rooms have lockers about 80cm*30cm*40cm which allow you to store a big backpack or a \"carry-on\" style suitcase. If you have bigger items we may help you store them. We sell padlocks for £4 if you forget yours."
       },
       {
         "question": "Do you serve breakfast?",
@@ -200,8 +200,14 @@
         "question": "Avez-vous le WIFI?",
         "answer": "Oui! Le WiFi fonctionne très bien partout, le mot de passe vous sera envoyé lors de l'enregistrement."
       },
-      {},
-      {},
+      {
+        "question": "Puis-je garder mon sac dans la chambre ?",
+        "answer": "Toutes les chambres partagées disposent de casiers d'environ 80cm*30cm*40cm qui permettent de ranger un gros sac à dos ou une valise de style \"carry-on\". Si vous avez des objets plus volumineux, nous pouvons vous aider à les stocker. Nous vendons des cadenas pour £4 si vous oubliez le votre."
+      },
+      {
+        "question": "Servez-vous le petit-déjeuner?",
+        "answer": "L'établissement propose des bons pour le petit-déjeuner à £4,50 GBP au Cactus Cafe, sous l'auberge de jeunesse.\nLe petit-déjeuner se compose d'un café/boisson chaude style barista + un petit pain fourré ou des pancakes."
+      },
       {},
       {},
       {},
@@ -292,12 +298,12 @@
         "answer": "¡Sí! El WiFi funciona muy bien, la contraseña se le enviará al momento del check-in."
       },
       {
-        "question": "What about the lockers?",
-        "answer": "The room has lockable lockers and you can either buy a lock from us (£4) or bring your own!"
+        "question": "¿Puedo guardar mi bolso en la habitación?",
+        "answer": "Todas las habitaciones compartidas tienen lockers de unos 80cm*30cm*40cm que te permiten guardar una mochila grande o una maleta estilo \"carry-on\". Si tiene artículos más grandes, podemos ayudarlo a almacenarlos. Vendemos candados por £4 si te olvidas del tuyo."
       },
       {
-        "question": "Do you serve breakfast?",
-        "answer": "We can offer Breakfast at £3.90 though we are not the ones cooking, it is the cafe downstairs.\n\nBreakfast consists of a barista style coffee/hot drink + a filled roll or pancakes.\n\nSo far our guests are happy with it."
+        "question": "¿Sirve el desayuno?",
+        "answer": "Ofrecemos vales de desayuno de £4,50 para el encantador Cactus Cafe, debajo del albergue.\nEl desayuno consiste en un café/bebida caliente estilo barista + un panecillo relleno o tortitas."
       },
       {
         "question": "Is it possible to cook my own food?",
