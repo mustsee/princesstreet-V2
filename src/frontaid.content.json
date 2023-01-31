@@ -192,8 +192,14 @@
       "private-rooms-description": "Nos chambres privées quadruples ou plus sont parfaites pour les groupes d'ami(e)s et les familles à la recherche d'un hébergement privé confortable et abordable au cœur d'Édimbourg. Chaque chambre dispose de plusieurs lits confortables et d'une salle de bains commune, offrant tout ce dont vous avez besoin pour un séjour agréable. Chaque lit est équipé de prises USB pour votre confort."
     },
     "faq": [
-      {},
-      {},
+      {
+        "question": "Quand le paiement est-il prélevé ?",
+        "answer": "Selon les termes et conditions de votre réservation, les paiements sont prélevés avant votre arrivée à la fin de la période d'annulation gratuite.\nPour les réservations non remboursables, le paiement est prélevé immédiatement lors de la réservation.\nSi votre carte bancaire ou votre paiement ne passe pas, nous vous enverrons un rappel vous demandant de mettre à jour vos coordonnées. Seules les réservations payées sont garanties."
+      },
+      {
+        "question": "Avez-vous le WIFI?",
+        "answer": "Oui! Le WiFi fonctionne très bien partout, le mot de passe vous sera envoyé lors de l'enregistrement."
+      },
       {},
       {},
       {},
@@ -278,12 +284,12 @@
     },
     "faq": [
       {
-        "question": "When is the payment fullfiled?",
-        "answer": "Payments are taken two days prior to arrival."
+        "question": "¿Cuándo se toma el pago?",
+        "answer": "Dependiendo de los términos y condiciones de su reserva, los pagos se realizan antes de su llegada cuando finaliza el período de cancelación gratuita.\nPara las reservas no reembolsables, el pago se realiza en el momento de la reserva.\nSi su tarjeta bancaria o pago no se realiza, le enviaremos un recordatorio para que actualice los datos de su tarjeta. Sólo se garantizan las reservas pagadas."
       },
       {
-        "question": "Do you have WIFI?",
-        "answer": "The WiFi works great and you can connect from every room in the hostel and in the lounge area where there are tables you can work from."
+        "question": "¿Tienes wifi?",
+        "answer": "¡Sí! El WiFi funciona muy bien, la contraseña se le enviará al momento del check-in."
       },
       {
         "question": "What about the lockers?",
