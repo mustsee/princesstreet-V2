@@ -56,7 +56,7 @@
       },
       {
         "question": "Do you have a kitchen for self-catering purposes?",
-        "answer": "Yes we do, with all the usual utensils and crockery. Kitchen is open from 8am until 12am. We work hard to keep the kitchen safe and clean for everyone. We ask for guests using the kitchen to be mindful and tidy."
+        "answer": "Yes we do, with all the usual utensils and crockery. Kitchen is open from 8am until 12am. We work hard to keep the kitchen safe and clean for everyone. We ask for guests using the kitchen to take care of it and keep it tidy."
       },
       {
         "question": "Do you have a laundry service?",
@@ -208,7 +208,10 @@
         "question": "Servez-vous le petit-déjeuner?",
         "answer": "L'établissement propose des bons pour le petit-déjeuner à £4,50 GBP au Cactus Cafe, sous l'auberge de jeunesse.\nLe petit-déjeuner se compose d'un café/boisson chaude style barista + un petit pain fourré ou des pancakes."
       },
-      {},
+      {
+        "question": "Avez-vous une cuisine?",
+        "answer": "Oui, avec tous les ustensiles et vaisselle habituels. La cuisine est ouverte de 8h à 12h. Nous faisons notre possible pour garder la cuisine propre pour tout le monde. Nous demandons aux clients utilisant la cuisine d'en prendre soin et la laisser propre."
+      },
       {},
       {},
       {},
@@ -306,8 +309,8 @@
         "answer": "Ofrecemos vales de desayuno de £4,50 para el encantador Cactus Cafe, debajo del albergue.\nEl desayuno consiste en un café/bebida caliente estilo barista + un panecillo relleno o tortitas."
       },
       {
-        "question": "Is it possible to cook my own food?",
-        "answer": "We have big a kitchen with many cooking utensils, ovens and hobs, a microwave, etc. We have free salt, spices, instant coffee, tea and sugar.\n\nWe don't provide a dinner service but you are welcome to cook something for yourself."
+        "question": "¿Tiene una cocina para cocinar su propia comida?",
+        "answer": "Sí, con todo el menaje y vajilla habitual. La cocina está abierta de 8 am a 12 am. Hacemos todo el posible para mantener la cocina segura y limpia para todos. Pedimos a los huéspedes que usen la cocina de cuidarla y guardarla limpia."
       },
       {
         "question": "Can I do my laundry?",
