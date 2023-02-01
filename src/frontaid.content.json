@@ -220,7 +220,10 @@
         "question": "Attribuez-vous des numéros de lit?",
         "answer": "Nous avons une politique de premier arrivé, premier servi concernant l'attribution des lits et nous veillerons à ce que vous vous sentiez à l'aise et que vous disposiez d'un lit confortable pendant tout votre séjour."
       },
-      {},
+      {
+        "question": "Où puis-je garer ma voiture ?",
+        "answer": "Nous sommes en plein centre-ville et le stationnement peut être difficile. Nous vous encourageons à prendre les transports en commun pour venir.\nSinon, le mieux que vous puissiez faire est de télécharger l'application Ringgo, il y a des parkings payants sur Waterloo Place, St Andrews Square ou George Street.\nDe 18h30 à 8h30 (la nuit), le stationnement dans la rue est gratuit."
+      },
       {},
       {}
     ],
@@ -327,8 +330,8 @@
         "answer": "Tenemos una política de orden de llegada con respecto a la asignación de camas y nos aseguraremos de que se sienta cómodo y tenga una cama cómoda durante toda su estadía."
       },
       {
-        "question": "Where can I park my car?",
-        "answer": "We are right in the town centre and there is no good spot.\n\nThe best is to download the app Ringgo, otherwise there is paid parking on Waterloo Place, St Andrews Square or George Square.\n\nFrom 6.30pm till 8.30am, on-street-parking is virtually free."
+        "question": "¿Dónde puedo aparcar mi coche?",
+        "answer": "Estamos justo en el centro de la ciudad y el estacionamiento puede ser complicado. Le recomendamos que tome el transporte público para venir.\nDe lo contrario, lo mejor que puedes hacer es descargar la aplicación Ringgo, hay aparcamiento de pago en Waterloo Place, St Andrews Square o George Street.\nDe 18:30 a 08:30 (por la noche), el aparcamiento en la calle es gratuito."
       },
       {
         "question": "Is there a place to park my bike?",
