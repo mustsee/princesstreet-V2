@@ -96,7 +96,7 @@
         "draft": "false",
         "slug": "voodoo-rooms",
         "title": "The Voodoo Rooms",
-        "description": "An historical bar just below the Princes Street Hostel",
+        "description": "A quirky venue just below the Princes Street Hostel",
         "body": "<h2><strong>The Voodoo Rooms</strong></h2><p>The Voodoo Rooms in Edinburgh, Scotland is a fantastic bar and club that offers an unforgettable experience for all visitors. Located in the heart of the city, this unique venue is decorated in a voodoo and New Orleans style, creating a dark and mysterious atmosphere that is sure to captivate all who visit.</p><p>One of the highlights of the Voodoo Rooms is its extensive range of cocktails. Whether you prefer a classic cocktail or something more adventurous, the Voodoo Rooms has something for everyone. The bartenders are knowledgeable and passionate about their craft, and they are happy to recommend their favorite drinks or create something special just for you.</p><p>The Voodoo Rooms also offers a variety of live music events, featuring local and international acts. This is a great opportunity to enjoy some fantastic music while sipping on a cocktail or two. The venue also has a dance floor, so you can let loose and enjoy the music.</p><p>But what sets the Voodoo Rooms apart from other bars is its unique atmosphere and décor. The venue is decorated in a voodoo and New Orleans style, with a dark and mysterious atmosphere. Visitors can also enjoy a variety of events and activities related to the occult and the supernatural, such as psychic readings and voodoo workshops.</p><p>Overall, the Voodoo Rooms is a fantastic bar and club that offers an unforgettable experience for all visitors. With its great atmosphere, delicious cocktails, and live music, it’s the perfect destination for a night out with friends or a special occasion. If you’re ever in Edinburgh, be sure to visit the Voodoo Rooms and discover why it’s one of the city’s most popular venues.</p>",
         "image": "voodoo-rooms.jpeg",
         "tags": [
@@ -250,7 +250,11 @@
           {},
           {},
           {}
-        ]
+        ],
+        "publishDate": "Jan 24 2023",
+        "title": "Le Voodoo Rooms",
+        "description": "Un bar insolite juste en dessous du Princes Street Hostel",
+        "body": "<h2><strong>Le Voodoo Rooms</strong></h2><p>Les Voodoo Rooms à Édimbourg, en Écosse, sont un bar et un club fantastiques qui offrent une expérience inoubliable à tous les visiteurs. Situé au cœur de la ville, ce lieu unique est décoré dans un style vaudou et de la Nouvelle-Orléans, créant une atmosphère sombre et mystérieuse qui ne manquera pas de captiver tous les visiteurs.\n\nL'un des points forts des Voodoo Rooms est sa vaste gamme de cocktails. Que vous préfériez un cocktail classique ou quelque chose de plus aventureux, les Voodoo Rooms ont quelque chose pour tout le monde. Les barmans sont compétents et passionnés par leur métier, et ils sont heureux de vous recommander leurs boissons préférées ou de créer quelque chose de spécial juste pour vous.\n\nLe Voodoo Rooms propose également une variété d'événements musicaux en direct, mettant en vedette des artistes locaux et internationaux. C'est une excellente occasion d'écouter de la musique fantastique tout en sirotant un cocktail ou deux. Le lieu dispose également d'une piste de danse, vous pouvez donc vous détendre et profiter de la musique.\n\nMais ce qui distingue les Voodoo Rooms des autres bars, c'est son atmosphère et sa décoration uniques. Le lieu est décoré dans un style vaudou et New Orleans, avec une atmosphère sombre et mystérieuse. Les visiteurs peuvent également profiter d'une variété d'événements et d'activités liés à l'occultisme et au surnaturel, tels que des lectures psychiques et des ateliers vaudous.\n\nDans l'ensemble, les Voodoo Rooms sont un bar et un club fantastiques qui offrent une expérience inoubliable à tous les visiteurs. Avec sa bonne ambiance, ses délicieux cocktails et sa musique live, c'est la destination idéale pour une soirée entre amis ou une occasion spéciale. Si vous êtes un jour à Édimbourg, assurez-vous de visiter les salles Voodoo et découvrez pourquoi c'est l'un des lieux les plus populaires de la ville.</p>"
       },
       {
         "tags": [
@@ -366,12 +370,12 @@
           {},
           {}
         ],
-        "publishDate": "",
+        "publishDate": "Ene 24 2023",
         "draft": "",
         "slug": "",
-        "title": "",
-        "description": "",
-        "body": "<p></p>"
+        "title": "El Voodoo Rooms",
+        "description": "Un pub peculiar justo debajo del Princes Street Hostel",
+        "body": "<h2><strong>El Voodoo Rooms</strong></h2><p>The Voodoo Rooms en Edimburgo, Escocia, es un fantástico bar y club que ofrece una experiencia inolvidable para todos los visitantes. Ubicado en el corazón de la ciudad, este lugar único está decorado con un estilo vudú y de Nueva Orleans, creando una atmósfera oscura y misteriosa que seguramente cautivará a todos los que lo visiten.\n\nUno de los aspectos más destacados de Voodoo Rooms es su amplia carta de cócteles. Ya sea que prefiera un cóctel clásico o algo más aventurero, Voodoo Rooms tiene algo para todos. Los cantineros son conocedores y apasionados de su oficio, y estarán felices de recomendar sus bebidas favoritas o crear algo especial solo para usted.\n\nThe Voodoo Rooms también ofrece una variedad de eventos de música en vivo, con actos locales e internacionales. Esta es una gran oportunidad para disfrutar de música fantástica mientras toma un cóctel o dos. El lugar también tiene una pista de baile, para que puedas soltarte y disfrutar de la música.\n\nPero lo que distingue a Voodoo Rooms de otros bares es su atmósfera y decoración únicas. El local está decorado al estilo vudú y de Nueva Orleans, con un ambiente oscuro y misterioso. Los visitantes también pueden disfrutar de una variedad de eventos y actividades relacionadas con el ocultismo y lo sobrenatural, como lecturas psíquicas y talleres de vudú.\n\nEn general, Voodoo Rooms es un fantástico bar y club que ofrece una experiencia inolvidable para todos los visitantes. Con su gran ambiente, deliciosos cócteles y música en vivo, es el destino perfecto para una noche de fiesta con amigos o una ocasión especial. Si alguna vez vas a Edimburgo, asegúrate de visitar Voodoo Rooms y descubre por qué es uno de los lugares más populares de la ciudad.</p>"
       },
       {
         "tags": [
