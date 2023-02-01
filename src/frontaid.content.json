@@ -224,8 +224,14 @@
         "question": "Où puis-je garer ma voiture ?",
         "answer": "Nous sommes en plein centre-ville et le stationnement peut être difficile. Nous vous encourageons à prendre les transports en commun pour venir.\nSinon, le mieux que vous puissiez faire est de télécharger l'application Ringgo, il y a des parkings payants sur Waterloo Place, St Andrews Square ou George Street.\nDe 18h30 à 8h30 (la nuit), le stationnement dans la rue est gratuit."
       },
-      {},
-      {}
+      {
+        "question": "Et si je viens à vélo ?",
+        "answer": "Oui, nous avons un endroit sécurisé pour garder votre vélo. Cependant, notre auberge de jeunesse se trouve au dernier étage. Il y a donc pas mal de marches pour arriver en haut."
+      },
+      {
+        "question": "Votre question est restée sans réponse ?",
+        "answer": "N'hésitez pas à nous contacter à travers Whatsapp."
+      }
     ],
     "common": {
       "upper-note": "Réservez au meilleur prix sur notre site",
@@ -334,12 +340,12 @@
         "answer": "Estamos justo en el centro de la ciudad y el estacionamiento puede ser complicado. Le recomendamos que tome el transporte público para venir.\nDe lo contrario, lo mejor que puedes hacer es descargar la aplicación Ringgo, hay aparcamiento de pago en Waterloo Place, St Andrews Square o George Street.\nDe 18:30 a 08:30 (por la noche), el aparcamiento en la calle es gratuito."
       },
       {
-        "question": "Is there a place to park my bike?",
-        "answer": "Yes, we have a secure place for your bike. However our hostel is at the top of a building so there are quite a few steps to get up to us."
+        "question": "¿Y si vengo en bicicleta?",
+        "answer": "Sí, tenemos un lugar seguro para guardar su bicicleta. Sin embargo, nuestro albergue está en la parte superior de un edificio, por lo que hay bastantes escaleras para llegar hasta nosotros."
       },
       {
-        "question": "Your question is left unanswered?",
-        "answer": "Don't hesitate to reach out on Whatsapp."
+        "question": "¿Tu pregunta quedó sin respuesta?",
+        "answer": "No dudes en comunicarte con nostros por Whatsapp."
       }
     ],
     "common": {
