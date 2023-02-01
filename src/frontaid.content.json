@@ -212,8 +212,14 @@
         "question": "Avez-vous une cuisine?",
         "answer": "Oui, avec tous les ustensiles et vaisselle habituels. La cuisine est ouverte de 8h à 12h. Nous faisons notre possible pour garder la cuisine propre pour tout le monde. Nous demandons aux clients utilisant la cuisine d'en prendre soin et la laisser propre."
       },
-      {},
-      {},
+      {
+        "question": "Avez-vous un service de laverie?",
+        "answer": "Nous ne proposons pas de service de blanchisserie, mais nous pouvons vous recommander des laveries à proximité."
+      },
+      {
+        "question": "Attribuez-vous des numéros de lit?",
+        "answer": "Nous avons une politique de premier arrivé, premier servi concernant l'attribution des lits et nous veillerons à ce que vous vous sentiez à l'aise et que vous disposiez d'un lit confortable pendant tout votre séjour."
+      },
       {},
       {},
       {}
@@ -313,12 +319,12 @@
         "answer": "Sí, con todo el menaje y vajilla habitual. La cocina está abierta de 8 am a 12 am. Hacemos todo el posible para mantener la cocina segura y limpia para todos. Pedimos a los huéspedes que usen la cocina de cuidarla y guardarla limpia."
       },
       {
-        "question": "Can I do my laundry?",
-        "answer": "We do not provide a laundry service, however there is a laundrette 10 minutes walk away : Bendix Self Service."
+        "question": "¿Tienen un servicio de lavandería?",
+        "answer": "No ofrecemos servicio de lavandería, pero podemos recomendar lavanderías cerca."
       },
       {
-        "question": "Can I have a lower bunk bed?",
-        "answer": "We have a first come first serve policy regarding bed allocation though we are sure we'll have a comfortable bed for you when you arrive."
+        "question": "¿Asignan los números de cama a los huespedes?",
+        "answer": "Tenemos una política de orden de llegada con respecto a la asignación de camas y nos aseguraremos de que se sienta cómodo y tenga una cama cómoda durante toda su estadía."
       },
       {
         "question": "Where can I park my car?",
