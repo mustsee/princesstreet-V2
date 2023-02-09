@@ -7,6 +7,20 @@
       ":description": "Original text: Book direct for the best price",
       ":type": "line"
     },
+    "value-proposition": {
+      "first": {
+        ":description": "Original text: clean",
+        ":type": "line"
+      },
+      "second": {
+        ":description": "Original text: perfectly located",
+        ":type": "line"
+      },
+      "third": {
+        ":description": "Original text: friendly",
+        ":type": "line"
+      }
+    },
     "cta": {
       ":description": "CTA (Call To Action) component",
       "title": {
@@ -114,6 +128,10 @@
     }
   },
   "blog": {
+    "page-title": {
+      ":description": "Original text: The blog",
+      ":type": "line"
+    },
     ":items": {
       "publishDate": {
         ":description": "Follow this convention: Jan 21 2023",
@@ -150,6 +168,16 @@
           "tag": { ":type": "line" }
         }
       }
+    }
+  },
+  "mobile-menu": {
+    "whatsapp": {
+      ":description": "Contact us on WhatsApp",
+      ":type": "line"
+    },
+    "email": {
+      ":description": "Write us an Email",
+      ":type": "line"
     }
   }
 }
