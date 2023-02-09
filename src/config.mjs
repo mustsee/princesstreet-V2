@@ -1,6 +1,9 @@
 export const SITE = {
   name: "Princes Street Hostel",
 
+  // For test
+  origin: "https://humournews.com",
+  basePathname: "/",
   // For github pages
   origin: "https://mustsee.github.io",
   basePathname: "/princesstreet-V2/",
