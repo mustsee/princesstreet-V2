@@ -1,4 +1,6 @@
 ---
+import { SITE } from "~/config.mjs";
+
 import "~/assets/styles/base.css";
 
 import MetaTags from "~/components/core/MetaTags.astro";
@@ -11,12 +13,7 @@ const { meta = {} } = Astro.props;
 <html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]">
   <head>
     <MetaTags {...meta} />
-    <link rel="icon" type="image/x-icon" href={`/favicon.ico`} />
-    <!-- <link
-      rel="icon"
-      type="image/x-icon"
-      href={`${import.meta.env.BASE_URL}/favicon.ico`}
-    /> -->
+    <link rel="icon" type="image/x-icon" href={`${SITE.origin}/favicon.ico`} />
     <script
       is:inline
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"

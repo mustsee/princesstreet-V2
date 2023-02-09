@@ -1,6 +1,7 @@
 import en from "~/../public/locales/en/translation.json";
-import fr from "~/../public/locales/fr/translation.json";
 import es from "~/../public/locales/es/translation.json";
+import fr from "~/../public/locales/fr/translation.json";
+import { SITE } from "~/config.mjs";
 
 const contents = {
   en,
@@ -13,7 +14,7 @@ const getNormalizedPosts = async (posts) => {
     .map((post) => {
       return {
         id: post.slug,
-        src: post.image ? `/assets/blog/${post.image}` : "",
+        src: post.image ? `${SITE.origin}/assets/blog/${post.image}` : "",
         publishDate: post.publishDate,
         draft: post.draft === "true" ? true : false,
         slug: post.slug,
@@ -24,21 +25,6 @@ const getNormalizedPosts = async (posts) => {
           ? post.tags.map((item) => item.tag).filter((item) => !!item)
           : [],
       };
-      /* return {
-        id: post.slug,
-        src: post.image
-          ? `${import.meta.env.BASE_URL}/assets/blog/${post.image}`
-          : "",
-        publishDate: post.publishDate,
-        draft: post.draft === "true" ? true : false,
-        slug: post.slug,
-        title: post.title,
-        description: post.description,
-        body: post.body,
-        tags: post.tags
-          ? post.tags.map((item) => item.tag).filter((item) => !!item)
-          : [],
-      }; */
     })
     .filter((post) => post.title && post.slug);
 };
