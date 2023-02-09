@@ -1,6 +1,7 @@
 ---
 import { Trans } from "astro-i18next/components";
 import { t } from "i18next";
+import Logo from "~/components/atoms/Logo.astro";
 const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
 ---
 
@@ -12,14 +13,10 @@ const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
       alt=""
     />
     <div
-      class="absolute transform top-1/4 -translate-y-3/4 left-1/2 -translate-x-1/2 md:top-1/2 md:translate-y-1/4 z-10 text-white font-semibold uppercase"
+      class="absolute transform top-1/4 -translate-y-3/4 left-1/2 -translate-x-1/2 md:top-1/2 md:translate-y-1/4 z-10"
     >
-      <div class="flex flex-col items-center">
-        <h1
-          class="bg-white dark:bg-slate-900 text-gray-900 dark:text-white px-2 py-1 mb-4 text-center w-min whitespace-nowrap border-x-8 border-yellow-500"
-        >
-          Princes Street Hostel
-        </h1>
+      <div class="flex flex-col items-center px-4 py-2 bg-white border-x-8">
+        <Logo />
       </div>
     </div>
     <div
@@ -33,23 +30,6 @@ const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
 <div class="max-w-6xl mx-auto px-4 sm:px-6">
   <div class="py-12 md:py-20">
     <div class="flex justify-center mb-8">
-      <!-- <h2 class="sm:hidden text-sm flex flex-col items-center">
-        <div
-          class="bg-white dark:bg-slate-900 text-gray-900 dark:text-white px-2 py-0.5 w-min whitespace-nowrap"
-        >
-          🧽 {t("common.value-proposition.first")}
-        </div>
-        <div
-          class="bg-white dark:bg-slate-900 text-gray-900 dark:text-white px-2 py-0.5 my-2 w-min whitespace-nowrap"
-        >
-          👻 {t("common.value-proposition.third")}
-        </div>
-        <div
-          class="bg-white dark:bg-slate-900 text-gray-900 dark:text-white px-2 py-0.5 w-min whitespace-nowrap"
-        >
-          📍 {t("common.value-proposition.second")}
-        </div>
-      </h2> -->
       <h2
         class="text-sm sm:text-base bg-white border-y-4 border-yellow-500 dark:bg-slate-900 text-gray-900 dark:text-white px-2 py-1 whitespace-nowrap"
       >
