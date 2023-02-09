@@ -1,6 +1,7 @@
 ---
 import { Icon } from "astro-icon";
 import { LanguageSelector } from "astro-i18next/components";
+import { t } from "i18next";
 import Logo from "~/components/atoms/Logo.astro";
 //import ToggleTheme from "~/components/core/ToggleTheme.astro";
 import ToggleMenu from "~/components/core/ToggleMenu.astro";
@@ -86,7 +87,7 @@ import { getHomePermalink, getPermalink } from "./../../utils/permalinks";
             rel="noopener"
             target="_blank"
           >
-            Contact us on WhatsApp
+            {t("mobile-menu.whatsapp")}
             <Icon
               name="tabler:brand-whatsapp"
               class="w-5 h-5 ml-4 text-green-600"
@@ -103,7 +104,7 @@ import { getHomePermalink, getPermalink } from "./../../utils/permalinks";
             aria-label="PSH mail"
             rel="noopener"
           >
-            Write us an Email
+            {t("mobile-menu.email")}
             <Icon name="tabler:mail" class="w-5 h-5 ml-4 text-red-600" />
           </a>
         </li>
