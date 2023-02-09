@@ -127,11 +127,11 @@
       "answer": { ":type": "text" }
     }
   },
+  "blog-title": {
+    ":description": "Original text: The blog",
+    ":type": "line"
+  },
   "blog": {
-    "page-title": {
-      ":description": "Original text: The blog",
-      ":type": "line"
-    },
     ":items": {
       "publishDate": {
         ":description": "Follow this convention: Jan 21 2023",
