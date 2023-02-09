@@ -1,5 +1,5 @@
 ---
-import { changeLanguage } from "i18next";
+import { t, changeLanguage } from "i18next";
 import { SITE, BLOG } from "~/config.mjs";
 import Layout from "~/layouts/BlogLayout.astro";
 import BlogList from "~/components/blog/List.astro";
@@ -11,7 +11,7 @@ changeLanguage("es");
 
 export async function getStaticPaths({ paginate }) {
   if (BLOG?.disabled || BLOG?.blog?.disabled) return [];
-  const posts = await fetchPosts("es");
+  const posts = await fetchPosts("en");
   return paginate(posts, {
     params: { blog: BLOG_BASE || undefined },
     pageSize: BLOG.postsPerPage,
@@ -31,7 +31,7 @@ const meta = {
 ---
 
 <Layout {meta}>
-  <Fragment slot="title">The blog</Fragment>
+  <Fragment slot="title">{t("blog-title")}</Fragment>
   <BlogList posts={page.data} />
   <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
 </Layout>

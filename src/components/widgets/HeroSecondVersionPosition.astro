@@ -1,8 +1,7 @@
 ---
-// import { Icon } from "astro-icon";
 import { Trans } from "astro-i18next/components";
+import { t } from "i18next";
 const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
-// New version
 ---
 
 <section>
@@ -25,24 +24,26 @@ const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
           <div
             class="bg-white dark:bg-slate-900 text-gray-900 dark:text-white px-2 py-0.5 w-min whitespace-nowrap"
           >
-            🧽 clean
+            🧽 {t("common.value-proposition.first")}
           </div>
           <div
             class="bg-white dark:bg-slate-900 text-gray-900 dark:text-white px-2 py-0.5 my-2 w-min whitespace-nowrap"
           >
-            👻 friendly
+            👻 {t("common.value-proposition.third")}
           </div>
           <div
             class="bg-white dark:bg-slate-900 text-gray-900 dark:text-white px-2 py-0.5 w-min whitespace-nowrap"
           >
-            📍 perfectly located
+            📍 {t("common.value-proposition.second")}
           </div>
         </h2>
         <h2
           class="hidden sm:block bg-white dark:bg-slate-900 text-gray-900 dark:text-white text-sm px-2 py-1 whitespace-nowrap"
         >
-          🧽 clean &nbsp;&sdot;&nbsp; 📍 perfectly located &nbsp;&sdot;&nbsp; 👻
-          friendly
+          🧽 {t("common.value-proposition.first")} &nbsp;&sdot;&nbsp; 📍 {
+            t("common.value-proposition.second")
+          } &nbsp;&sdot;&nbsp; 👻
+          {t("common.value-proposition.third")}
         </h2>
       </div>
     </div>
