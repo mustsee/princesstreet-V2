@@ -3,7 +3,7 @@ export const SITE = {
 
   // For test
   origin: "https://humournews.com",
-  basePathname: "",
+  basePathname: "/",
   // For github pages
   //origin: "https://mustsee.github.io",
   //basePathname: "/princesstreet-V2/",
