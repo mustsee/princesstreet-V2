@@ -71,7 +71,7 @@ const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
         formAction: "https://beds24.com/booking.php",
         formTarget: "_self",
         fontSize: "16px",
-        peopleSelection: 1,
+        defaultNumAdult: 1,
         searchLinkText: " ",
         showLabels: false,
         unavailableBackgroundColor: "#ef4444",
@@ -81,17 +81,28 @@ const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
     });
   </script>
 
-  <style>
-    @media (max-width: 640px) {
+  <style is:global>
+    @media (max-width: 767px) {
       #hero-img {
         height: 500px;
       }
     }
 
-    @media (min-width: 641px) {
+    @media (min-width: 768px) {
       #hero-img {
-        height: 560px;
+        height: 400px;
       }
+    }
+
+    @media (min-width: 1024px) {
+      #hero-img {
+        height: 500px;
+      }
+    }
+
+    #bookWidget-82775-150425-0-1674643010 .book-btn {
+      font-weight: 600;
+      padding: 6px 16px !important;
     }
   </style>
 </div>
