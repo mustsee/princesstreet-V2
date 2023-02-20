@@ -26,7 +26,7 @@ const convertTime = (unixTimestamp) => {
   return time;
 };
 
-const GoogleReviews = async () => {
+/* const GoogleReviews = async () => {
   const placeId = "ChIJ_SVfZmPHh0gREqcwzgqtAo4";
   const url = `https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeId}&key=${
     import.meta.env.API_GOOGLE_MAP
@@ -39,9 +39,84 @@ const GoogleReviews = async () => {
     console.log("Error retrieving reviews", e);
     return [];
   }
-};
+}; */
 
-let reviews = await GoogleReviews();
+// let reviews = await GoogleReviews();
+
+let reviews = [
+  {
+    author_name: "sandrine lussier (DiineLussier)",
+    author_url:
+      "https://www.google.com/maps/contrib/117466050219011911230/reviews",
+    language: "en",
+    original_language: "en",
+    profile_photo_url:
+      "https://lh3.googleusercontent.com/a-/AD5-WCnu9HghK_XIF1sDkRhI2H8SLIPXQpylzqDdWhH1hA=s128-c0x00000000-cc-rp-mo",
+    rating: 4,
+    relative_time_description: "4 months ago",
+    text: "The location is amazing. When I arrived, I was placed in a room with only men. Without even me asking, the very nice gentleman at the reception ( i unfortunately don’t know is name) offered me to change my room for a women only one. That was very appreciated. The kitchen is a great size. Plenty of toilets and showers, never had to queue. The wifi connection is very good. The only problems was with the beds and the communal area. My mattress was very uncomfortable. I’m usually not a picky sleeper but you could feel every spring. Personally, i found the communal room a little bit small. It was always full. Sometimes it was hard to find a place to eat",
+    time: 1664271067,
+    translated: false,
+  },
+  {
+    author_name: "Laura Casado Mancebo",
+    author_url:
+      "https://www.google.com/maps/contrib/102487663919267787272/reviews",
+    language: "en",
+    original_language: "en",
+    profile_photo_url:
+      "https://lh3.googleusercontent.com/a-/AD5-WClU0A6EkNTlepHLy4qXdY0TOov0Pyg0Va84UhTpevU=s128-c0x00000000-cc-rp-mo-ba3",
+    rating: 5,
+    relative_time_description: "3 months ago",
+    text: "Really great place. Really clean, toilets and showers are cleaned regularly and the bins in the rooms are changed everyday. The rooms are tidy and clean as well and the kitchen is well equipped and big. Only thing I would say is that it was really cold at night. The staff were really nice and helpful and the location was amazing. Would definitely stay again",
+    time: 1667758940,
+    translated: false,
+  },
+  {
+    author_name: "polly",
+    author_url:
+      "https://www.google.com/maps/contrib/108299767520345849588/reviews",
+    language: "en",
+    original_language: "en",
+    profile_photo_url:
+      "https://lh3.googleusercontent.com/a-/AD5-WCmmpGxUm1gG1gvEOf424I7-yL0MMCLFC-hZbSn4nQ=s128-c0x00000000-cc-rp-mo",
+    rating: 5,
+    relative_time_description: "a month ago",
+    text:
+      "Lovely hostel right in the City Centre!\n" +
+      "\n" +
+      "I had a lovely stay at this hostel, it was my first time visiting Edinburgh and firstly the location was perfect for anyone wanting to explore. It was just off the Main Street, and opposite the train station, and within easy walking distance of the castle, and the royal mile.\n" +
+      "\n" +
+      "The facilities were brilliant ; the showers were very clean, and hot (they looked newly renovated!). The shared facilities were lovely, with lots of space and ideas of things to do in the city & the kitchen had lots of space, plenty of things available to use like pots, pans and utensils - it was very clean and tidy!\n" +
+      "\n" +
+      "The staff were kind, friendly and helpful.\n" +
+      "\n" +
+      "The hostel felt very safe, and secure - my room had plenty of space for me to  store my belongings and a good locker.\n" +
+      "\n" +
+      "I’d definitely stay here again, if I ever return to Edinburgh!",
+    time: 1673817420,
+    translated: false,
+  },
+  {
+    author_name: "ivan paguni",
+    author_url:
+      "https://www.google.com/maps/contrib/117720178599385923670/reviews",
+    language: "en",
+    original_language: "en",
+    profile_photo_url:
+      "https://lh3.googleusercontent.com/a-/AD5-WCkwumbMKbJBLrcjHDZX__FXyZ6rwT3FY9tfbhWU6ik=s128-c0x00000000-cc-rp-mo-ba5",
+    rating: 5,
+    relative_time_description: "5 months ago",
+    text:
+      "The location was perfectly bang on in the middle of the city, few steps to the train station and high street. Big shopping centre around the corner, Edinburgh Castle and Calton Hill just five minutes away, everything you may need is just few steps from the hostel.\n" +
+      "Facilities are great, clean and stuffed kitchen, plenty of toilets and showers always clean, comfy beds and useful lounge/dining room. Staff was very attentive, helpful and friendly.\n" +
+      "The only negative thing is that the hostel is at the fourth floor without a lift.",
+    time: 1663264981,
+    translated: false,
+  },
+];
+
+console.log("r", reviews);
 ---
 
 <div class="bg-primary-50 dark:bg-slate-800">
