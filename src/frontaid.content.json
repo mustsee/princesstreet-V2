@@ -161,7 +161,10 @@
       "whatsapp": "Contact us on WhatsApp",
       "email": "Write us an Email"
     },
-    "blog-title": "The blog"
+    "blog-title": "The blog",
+    "facilities": {
+      "title": "And our Facilities"
+    }
   },
   "fr": {
     "index": {
@@ -290,7 +293,10 @@
       "whatsapp": "Contact us on WhatsApp",
       "email": "Write us an Email"
     },
-    "blog-title": "The blog"
+    "blog-title": "The blog",
+    "facilities": {
+      "title": "And our Facilities"
+    }
   },
   "es": {
     "index": {
@@ -421,6 +427,9 @@
       "whatsapp": "Contact us on WhatsApp",
       "email": "Write us an Email"
     },
-    "blog-title": "The blog"
+    "blog-title": "The blog",
+    "facilities": {
+      "title": "And our Facilities"
+    }
   }
 }
