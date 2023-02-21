@@ -4,6 +4,7 @@ import { SITE } from "~/config.mjs";
 import { getCanonical, getPermalink } from "~/utils/permalinks";
 import CallToAction from "~/components/widgets/CallToAction.astro";
 import Rooms from "~/components/widgets/Rooms.astro";
+import Facilities from "~/components/widgets/Facilities.astro";
 import Note from "~/components/widgets/Note.astro";
 import Layout from "./../layouts/PageLayout.astro";
 
@@ -16,4 +17,4 @@ const meta = {
 };
 ---
 
-<Layout {meta}><Note /><Rooms /><CallToAction /></Layout>
+<Layout {meta}><Note /><Rooms /><Facilities /><CallToAction /></Layout>

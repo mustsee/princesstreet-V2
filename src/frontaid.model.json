@@ -121,6 +121,11 @@
       ":type": "text"
     }
   },
+  "facilities": {
+    "title": {
+      ":type": "line"
+    }
+  },
   "faq": {
     ":items": {
       "question": { ":type": "line" },

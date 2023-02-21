@@ -5,17 +5,14 @@ import { SITE } from "~/config.mjs";
 
 const alts = [
   { alt: "Princes Street lunch room" },
-  { alt: "View from nearby Calton Hill" },
   { alt: "Princes Street bathroom" },
-  { alt: "Group in Edinburgh" },
   { alt: "Princes Street kitchen" },
-  { alt: "Jumping girl in Edinburgh" },
   { alt: "Princes Street shower" },
 ];
 
 // Astro loads images in order
 // So I prefixed images with numbers : 01, 02...
-const images = await Astro.glob("~/assets/images/hero/**");
+const images = await Astro.glob("~/assets/images/facilities/**");
 
 const loadImages = images.map((image, index) => {
   // import.meta.env.DEV is a Vite built-in variable
