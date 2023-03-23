@@ -97,6 +97,26 @@
     },
     "blog": [
       {
+        "publishDate": "Mar 23 2023",
+        "draft": "false",
+        "slug": "cactus-and-snax-cafe",
+        "title": "Cactus and Snax Cafe",
+        "description": "Full Scottish breakfast experience right on our doorstep!",
+        "body": "<p>Getting up tricksy closes, winding cobbled streets and dormant volcanoes is not for the meek hearted. What better way to get a spring in your step than by starting the day off with a hearty and delicious Scottish breakfast? Whether it’s traditional scran or something more continental that tickles your fancy, the options are endless. Luckily for our guests here at Princes Street Hostel, there’s no need to venture far in order to kick start the day with a variety of local options and fully experience Edinburgh’s food scene. Whether you want to make the most of our special breakfast deals at Cactus Café or if it’s something more traditional you’re after, we’re sure you’ll find what you’re looking for at one of the cafes on our doorstep that cater to anyone from hardcore vegans to haggis eaters alike!</p><p>&nbsp;Cactus Cafe, located just next to Princes Street Hostel, is a cozy haven for anyone looking for a delicious breakfast or a quick coffee stop. What sets Cactus Cafe apart is its perfect blend of Scottish homeliness and friendliness with a more modern, new-age twist. With a range of vegetarian and vegan options, this cafe caters to everyone's dietary needs. Customers can enjoy a delicious barista coffee with any milk option, including oat milk, soy milk, or almond milk. The cafe also offers an array of sweet treats and savory snacks, perfect for a quick bite or a leisurely breakfast. What's more, the cafe's warm and cozy atmosphere makes you feel like you're in someone's front room, making it the perfect spot to relax and refuel before hitting the Edinburgh streets.</p><p>&nbsp;However, if it’s a more traditional taste of Scotland you’re after, Snax Cafe is the perfect place to go. Frequented by local Edinburghians just round the corner from our hostel, this cafe offers the real deal when it comes to Scottish grub. Here, you can feel like one of the locals as you enjoy traditional dishes such as haggis, black pudding, and potato scones. But it's not just traditional Scottish fare that Snax Cafe offers - there are also plenty of options for those looking for a quick snack or a takeaway option to enjoy while exploring Edinburgh's historic streets. Whether you're in the mood for a hearty sandwich or a delicious pastry, Snax Cafe has got you covered. So why not stop by and taste the unrefined, real taste of Scotland? It's the perfect way to feel like a true Edinburghian and experience the city like a local!</p><p>&nbsp;</p>",
+        "image": "cactus-cafe.jpg",
+        "tags": [
+          {
+            "tag": "edinburgh"
+          },
+          {
+            "tag": "local"
+          },
+          {
+            "tag": "breakfast"
+          }
+        ]
+      },
+      {
         "publishDate": "Jan 24 2023",
         "draft": "false",
         "slug": "voodoo-rooms",
@@ -123,7 +143,6 @@
         "title": "Princes Street Garden",
         "description": "Nor Loch and the Princes Street Garden",
         "body": "<h2><strong>Princes Street Gardens</strong></h2><p>Princes Street Gardens in Edinburgh, Scotland, is a beautiful public park that offers a peaceful oasis in the heart of the city. However, beneath the lush greenery and picturesque views lies a dark and gloomy history. The park was built on top of the Nor Loch, a loch (lake) that was once a vital part of Edinburgh’s history.</p><p>The Nor Loch was a large body of water that stretched from Edinburgh Castle to the present-day location of Waverley Station. It was used for a variety of purposes, including as a source of drinking water, as a place for fishing, and as a defensive barrier for the city. However, the Nor Loch also had a darker side. It was used as a dumping ground for refuse and as a place to dispose of the bodies of criminals and plague victims.</p><p>During the 18th and 19th centuries, the Nor Loch had become a source of disease and a blight on the city. As Edinburgh’s population grew, the city’s leaders recognized the need to drain the loch and reclaim the land. The process of draining the loch was a long and difficult one, but it was finally completed in the early 19th century.</p><p>Today, Princes Street Gardens sits on top of the former Nor Loch, providing a beautiful and peaceful space for visitors to enjoy. But the dark history of the loch is still evident in the park, with several monuments and sculptures that pay tribute to the loch’s past. One of the most striking examples is the Scott Memorial, which features a statue of Sir Walter Scott with his back turned to the loch, symbolizing the city’s rejection of its past.</p><p>The park also has several other monuments, such as statues of Robert Burns and Sir Walter Scott, which were erected to commemorate the two famous Scottish poets. The park also provides panoramic views of Edinburgh Castle, and it’s one of the most popular spots for tourists to take photos.</p><p>In conclusion, Princes Street Gardens is a beautiful and peaceful public park in the heart of Edinburgh, but it also holds a dark and gloomy history, as it was built on top of the Nor Loch, which was once a source of disease and a blight on the city. The park provides visitors a chance to appreciate the beauty of the city while also remembering its past.</p>",
-        "image": "princes-street-garden.jpeg",
         "tags": [
           {
             "tag": "history"
@@ -134,7 +153,8 @@
           {
             "tag": "edinburgh"
           }
-        ]
+        ],
+        "image": "princes-street-garden.jpeg"
       },
       {
         "publishDate": "Jan 21 2023",
@@ -268,6 +288,13 @@
           {},
           {},
           {}
+        ]
+      },
+      {
+        "tags": [
+          {},
+          {},
+          {}
         ],
         "publishDate": "Jan 24 2023",
         "title": "Le Voodoo Rooms",
@@ -395,6 +422,13 @@
       }
     },
     "blog": [
+      {
+        "tags": [
+          {},
+          {},
+          {}
+        ]
+      },
       {
         "tags": [
           {},
