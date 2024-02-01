@@ -2,11 +2,11 @@ export const SITE = {
   name: "Princes Street Hostel",
 
   // For test
-  origin: "https://princesstreethostel.com",
-  basePathname: "/",
+  // origin: "https://princesstreethostel.com",
+  // basePathname: "/",
   // For github pages
-  //origin: "https://mustsee.github.io",
-  //basePathname: "/princesstreet-V2/",
+  origin: "https://mustsee.github.io",
+  basePathname: "/princesstreet-V2/",
   //trailingSlash: false, // false when it will be without basePathname (cf. sitemap)
 
   title: "Princes Street Hostel",
