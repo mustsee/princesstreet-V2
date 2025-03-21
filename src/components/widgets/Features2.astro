@@ -21,24 +21,27 @@ const images = [
 
 const cards = [
   {
-    title: t("index.card-1.title"),
-    description: t("index.card-1.text"),
+    title: "Rooms and Facilities",
+    description:
+      "We offer a variety of room options to suit your needs including private double and quadruple rooms, small and large dorms.\n\n\nGuests can enjoy our communal facilities such as a fully equipped kitchen and lounge area.\n\n\nPerfect for cooking your own meals, socializing and relax after a long day of sightseeing.",
     icon: "flat-color-icons:home",
-    buttonTitle: t("index.card-1.button"),
+    buttonTitle: "More details",
     buttonLink: getRelativeLink("rooms"),
   },
   {
-    title: t("index.card-2.title"),
-    description: t("index.card-2.text"),
+    title: "Groups",
+    description:
+      "We specialize in accommodating groups with preferential rates for unforgettable stays in the Scottish capital.\nWhether you are a group of friends, a sports team or a school group, we are here to make your stay in Edinburgh affordable, comfortable and memorable.",
     icon: "flat-color-icons:conference-call",
-    buttonTitle: t("index.card-2.button"),
+    buttonTitle: "Contact us",
     buttonLink: "mailto:hello@princesstreethostel.com",
   },
   {
-    title: t("index.card-3.title"),
-    description: t("index.card-3.text"),
+    title: "Tours and Activities",
+    description:
+      "You can book the best tours in Edinburgh and around Scotland directly through our partner tour portal. From historical landmarks to scenic countryside, tours will take you to the must-see destinations in Scotland.\nBook your tour with us today and discover the beauty of Scotland with ease.",
     icon: "flat-color-icons:landscape",
-    buttonTitle: t("index.card-3.button"),
+    buttonTitle: "Partner website",
     buttonLink: "https://princesstreethostel.tourdesk.scot/Tour",
   },
 ];
@@ -63,17 +66,17 @@ const tours = await findImage(`${prefix}${images[2].src}`);
         <p
           class="text-base text-primary-600 dark:text-primary-200 font-semibold tracking-wide uppercase"
         >
-          {t("index.cards-forefront.primary-color-text")}
+          Our Hostel
         </p>
         <h2
           class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
         >
-          {t("index.cards-forefront.main-text")}
+          What do we offer
         </h2>
         <p
           class="max-w-3xl mx-auto text-center text-xl text-gray-600 dark:text-slate-400"
         >
-          {t("index.cards-forefront.subtitle-text")}
+          At the heart of Edinburgh, experience the city with us.
         </p>
       </div>
       <div

@@ -5,7 +5,7 @@ export const SITE = {
   // origin: "https://princesstreethostel.com",
   // basePathname: "/",
   // For github pages
-  origin: "https://mustsee.github.io/princesstreet-V2/",
+  origin: "https://mustsee.github.io/",
   basePathname: "",
   //trailingSlash: false, // false when it will be without basePathname (cf. sitemap)
 
