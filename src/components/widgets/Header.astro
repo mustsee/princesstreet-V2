@@ -58,7 +58,7 @@ import { getHomePermalink, getPermalink } from "./../../utils/permalinks";
             >FAQ
           </a>
         </li>
-        <li
+        <!-- <li
           class="border-b border-gray-200 dark:border-slate-600 md:border-none"
         >
           <a
@@ -66,18 +66,18 @@ import { getHomePermalink, getPermalink } from "./../../utils/permalinks";
             href={getPermalink("blog")}
             >Blog
           </a>
-        </li>
-        <li class="md:hidden">
+        </li> -->
+        <!-- <li class="md:hidden">
           <LanguageSelector
             mobile={true}
             class="[&>button]:font-medium [&>button]:hover:text-gray-900 [&>button]:dark:hover:text-white [&>button]:cursor-pointer outline-none bg-transparent py-4 [&_ul]:pt-3 [&_li]:py-3 [&_li]:pl-4 [&_li]:font-normal [&_svg]:dark:fill-white"
           />
-        </li>
-        <li class="hidden md:flex items-center px-4">
+        </li> -->
+        <!-- <li class="hidden md:flex items-center px-4">
           <LanguageSelector
             class="font-medium hover:text-gray-900 dark:hover:text-white cursor-pointer outline-none bg-transparent py-4"
           />
-        </li>
+        </li> -->
         <li
           class="md:hidden mt-8 rounded-lg bg-green-100 border border-green-600 dark:bg-transparent"
         >
@@ -85,7 +85,7 @@ import { getHomePermalink, getPermalink } from "./../../utils/permalinks";
             class="text-gray-700 dark:text-slate-200 hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center justify-between transition duration-150 ease-in-out"
             href="https://wa.me/447553137828"
           >
-            {t("mobile-menu.whatsapp")}
+            Contact us on WhatsApp
             <Icon
               name="tabler:brand-whatsapp"
               class="w-5 h-5 ml-4 text-green-600"
@@ -100,7 +100,7 @@ import { getHomePermalink, getPermalink } from "./../../utils/permalinks";
             class="text-gray-700 dark:text-slate-200 hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center justify-between transition duration-150 ease-in-out"
             href="mailto:hello@princesstreethostel.com"
           >
-            {t("mobile-menu.email")}
+            Write us an Email
             <Icon name="tabler:mail" class="w-5 h-5 ml-4 text-red-600" />
           </a>
         </li>
