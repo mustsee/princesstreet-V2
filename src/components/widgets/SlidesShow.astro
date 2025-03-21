@@ -25,7 +25,7 @@ const loadImages = images.map((image, index) => {
   return {
     ...image.default,
     // Remove the path to build assets for github pages
-    src: image.default.src.replace(`${SITE.basePathname}`, "/"),
+    // src: image.default.src.replace(`${SITE.basePathname}`, "/"),
     alt: alts[index].alt,
   };
 });
