@@ -41,7 +41,9 @@ export default defineConfig({
       })
     ),
     react(),
-    astroI18next(),
+    astroI18next({
+      resourcesBasePath: '/princesstreet-V2/locales'
+    }),
   ],
 
   markdown: {
