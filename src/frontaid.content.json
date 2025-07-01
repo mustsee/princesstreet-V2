@@ -39,6 +39,10 @@
     },
     "faq": [
       {
+        "question": "Do you have a luggage room if I arrive before check-in time?",
+        "answer": "Yes, you can drop off your bags in the morning from 8am before check in time and also after check out, for the entire day. This comes free of charge."
+      },
+      {
         "question": "When is payment taken?",
         "answer": "Depending of your booking terms and conditions, payments are taken prior to your arrival when the free cancellation period ends. \nFor non-refundable bookings, payment is taken right away upon reservation.\nIf your bank card or payment is not going through we will send you a reminder asking to update card your details. Only reservation paid for are guaranteed."
       },
@@ -245,6 +249,7 @@
       "private-rooms-description": "Nos chambres privées quadruples ou plus sont parfaites pour les groupes d'ami(e)s et les familles à la recherche d'un hébergement privé confortable et abordable au cœur d'Édimbourg. Chaque chambre dispose de plusieurs lits confortables et d'une salle de bains commune, offrant tout ce dont vous avez besoin pour un séjour agréable. Chaque lit est équipé de prises USB pour votre confort."
     },
     "faq": [
+      {},
       {
         "question": "Quand le paiement est-il prélevé ?",
         "answer": "Selon les termes et conditions de votre réservation, les paiements sont prélevés avant votre arrivée à la fin de la période d'annulation gratuite.\nPour les réservations non remboursables, le paiement est prélevé immédiatement lors de la réservation.\nSi votre carte bancaire ou votre paiement ne passe pas, nous vous enverrons un rappel vous demandant de mettre à jour vos coordonnées. Seules les réservations payées sont garanties."
@@ -391,6 +396,7 @@
       "private-rooms-description": "Nuestras habitaciones privadas cuádruples y más grandes son perfectas para grupos, amigos y familias que buscan un alojamiento privado cómodo y asequible en el corazón de Edimburgo. Cada habitación cuenta con varias camas cómodas y baños compartidos, que brindan todo lo que necesita para una estadía placentera. Cada cama está equipada con enchufes USB para su comodidad."
     },
     "faq": [
+      {},
       {
         "question": "¿Cuándo se toma el pago?",
         "answer": "Dependiendo de los términos y condiciones de su reserva, los pagos se realizan antes de su llegada cuando finaliza el período de cancelación gratuita.\nPara las reservas no reembolsables, el pago se realiza en el momento de la reserva.\nSi su tarjeta bancaria o pago no se realiza, le enviaremos un recordatorio para que actualice los datos de su tarjeta. Sólo se garantizan las reservas pagadas."
