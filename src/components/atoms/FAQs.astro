@@ -18,8 +18,8 @@ const content = contents[currentLanguage];
 
 /* const faq = content.faq; */
 
-const faq =
- "faq": [
+const faq = {
+  "faq": [
   {
     "question": "Do you have luggage storage if I arrive before check-in time?",
     "answer": "Yes. Free luggage storage is available from 8am, both before check-in and after check-out for the full day. Guests do not need to wait until their room is ready to drop off bags."
@@ -144,8 +144,8 @@ const faq =
     "question": "My question isn't answered here — how can I contact you?",
     "answer": "Don't hesitate to reach out to us directly via WhatsApp and we'll be happy to help."
   }
-];
-
+  ]
+};
 // Check if content is present in object
 // Object might be empty
 const faqFiltered = faq.filter((item) => {
