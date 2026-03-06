@@ -16,7 +16,64 @@ const contents = {
 const currentLanguage = i18next.language;
 const content = contents[currentLanguage];
 
-const faq = content.faq;
+/* const faq = content.faq; */
+
+const faq = [
+  {
+    question: "Do you have a luggage room if I arrive before check-in time?",
+    answer:
+      "Yes, you can drop off your bags in the morning from 8am before check in time and also after check out, for the entire day. This comes free of charge.",
+  },
+  {
+    question: "When is payment taken?",
+    answer:
+      "Depending of your booking terms and conditions, payments are taken prior to your arrival when the free cancellation period ends. \nFor non-refundable bookings, payment is taken right away upon reservation.\nIf your bank card or payment is not going through we will send you a reminder asking to update card your details. Only reservation paid for are guaranteed.",
+  },
+  {
+    question: "Do you have WIFI?",
+    answer:
+      "Yes we do! WiFi works great all around, the password will be sent to you upon check-in.",
+  },
+  {
+    question: "Can I store my bag in the room?",
+    answer:
+      'All the shared rooms have lockers about 80cm*30cm*40cm which allow you to store a big backpack or a "carry-on" style suitcase. If you have bigger items we may help you store them. We sell padlocks for £4 if you forget yours.',
+  },
+  {
+    question: "Do you serve breakfast?",
+    answer:
+      "Breakfast can be enjoyed at the SNAX cafe, beneath the hostel, you can also get a voucher from us (£4.50).\nBreakfast consists of a barista style coffee/hot drink + a filled roll.",
+  },
+  {
+    question: "Do you have a kitchen for self-catering purposes?",
+    answer:
+      "Yes we do, with all the usual utensils and crockery. Kitchen is open from 8am until 12am. We work hard to keep the kitchen safe and clean for everyone. We ask for guests using the kitchen to take care of it and keep it tidy.",
+  },
+  {
+    question: "Do you have a laundry service?",
+    answer:
+      "We do not provide a laundry service however we can recommend laundrettes in the vicinity.",
+  },
+  {
+    question: "Do you allocate bed numbers to guests?",
+    answer:
+      "We have a first come first served policy regarding bed allocation and we will make sure you have feel comfortable and have a comfortable bed during your entire stay.",
+  },
+  {
+    question: "Where can I park my car?",
+    answer:
+      "We are right in the town centre and parking can be tricky. We would encourage you to take public transports to come over.\nOtherwise, the best you can do is to download the app Ringgo, there is paid parking on Waterloo Place, St Andrews Square or George Street.\nFrom 6.30pm till 8.30am (at night), on-street-parking is free.",
+  },
+  {
+    question: "And if I come by bicyle?",
+    answer:
+      "Yes, we have a secure place for your bicycle. However our hostel is at the top of a building so there are quite a few steps to get up to us.",
+  },
+  {
+    question: "Your question is left unanswered?",
+    answer: "Don't hesitate to reach out on Whatsapp.",
+  },
+];
 
 // Check if content is present in object
 // Object might be empty
