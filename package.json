@@ -4,11 +4,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "predev": "node frontAid.js",
     "dev": "astro dev",
-    "prestart": "node frontAid.js",
     "start": "astro dev",
-    "prebuild": "node frontAid.js",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
