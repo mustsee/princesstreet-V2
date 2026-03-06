@@ -19,73 +19,131 @@ const content = contents[currentLanguage];
 /* const faq = content.faq; */
 
 const faq = [
+ "faq": [
   {
-    question: "Do you have a luggage room if I arrive before check-in time?",
-    answer:
-      "Yes, you can drop off your bags in the morning from 8am before check in time and also after check out, for the entire day. This comes free of charge.",
-  },
-
-  {
-    question: "Where you located?",
-    answer:
-      "The Princes Street Hostel is perfectly positioned on the edge of Edinburgh's New Town, just minutes from Waverley Train Station, Edinburgh Bus Station, and with direct tram and bus links from Edinburgh Airport. Unlike hostels and hotels tucked into the Old Town's steep closes and cobbled wynds, our location means no exhausting uphill climbs with heavy luggage — just a straightforward, flat arrival straight to your bed.",
-  },
-
-  {
-    question: "Do you have a luggage room if I arrive before check-in time?",
-    answer:
-      "Yes, you can drop off your bags in the morning from 8am before check in time and also after check out, for the entire day. This comes free of charge.",
-  },
-
-  {
-    question: "When is payment taken?",
-    answer:
-      "Depending of your booking terms and conditions, payments are taken prior to your arrival when the free cancellation period ends. \nFor non-refundable bookings, payment is taken right away upon reservation.\nIf your bank card or payment is not going through we will send you a reminder asking to update card your details. Only reservation paid for are guaranteed.",
+    "question": "Do you have luggage storage if I arrive before check-in time?",
+    "answer": "Yes. Free luggage storage is available from 8am, both before check-in and after check-out for the full day. Guests do not need to wait until their room is ready to drop off bags."
   },
   {
-    question: "Do you have WIFI?",
-    answer:
-      "Yes we do! WiFi works great all around, the password will be sent to you upon check-in.",
+    "question": "What time is check-in and check-out?",
+    "answer": "Check-in opens at 3pm and check-out is by 10am. Free luggage storage is available from 8am if you arrive before your room is ready, and for the full day after check-out."
   },
   {
-    question: "Can I store my bag in the room?",
-    answer:
-      'All the shared rooms have lockers about 80cm*30cm*40cm which allow you to store a big backpack or a "carry-on" style suitcase. If you have bigger items we may help you store them. We sell padlocks for £4 if you forget yours.',
+    "question": "Where is Princes Street Hostel located?",
+    "answer": "Princes Street Hostel and Haystack Hostel are located on the edge of Edinburgh's New Town, a short walk from Waverley Train Station and Edinburgh Bus Station, with direct tram and Airlink 100 bus connections from Edinburgh Airport. The flat New Town location avoids the steep climbs common near Old Town accommodation."
   },
   {
-    question: "Do you serve breakfast?",
-    answer:
-      "Breakfast can be enjoyed at the SNAX cafe, beneath the hostel, you can also get a voucher from us (£4.50).\nBreakfast consists of a barista style coffee/hot drink + a filled roll.",
+    "question": "How close is the hostel to Edinburgh Castle and the Royal Mile?",
+    "answer": "The hostel is around a 10–15 minute walk from both Edinburgh Castle and the Royal Mile. Being based in the New Town means you can stroll down to the Old Town's main attractions without the uphill return climb that catches out guests staying closer to the castle."
   },
   {
-    question: "Do you have a kitchen for self-catering purposes?",
-    answer:
-      "Yes we do, with all the usual utensils and crockery. Kitchen is open from 8am until 12am. We work hard to keep the kitchen safe and clean for everyone. We ask for guests using the kitchen to take care of it and keep it tidy.",
+    "question": "How far is Waverley Train Station from the hostel?",
+    "answer": "Waverley Station is approximately a 5 minute walk from the hostel, making it one of the most conveniently located hostels in Edinburgh for rail travellers. There is no need for a taxi or bus connection from the station."
   },
   {
-    question: "Do you have a laundry service?",
-    answer:
-      "We do not provide a laundry service however we can recommend laundrettes in the vicinity.",
+    "question": "How far is Edinburgh Bus Station from the hostel?",
+    "answer": "Edinburgh Bus Station (St Andrew Square) is within a 5 minute walk, making the hostel equally convenient for coach arrivals from other UK cities or Scottish towns."
   },
   {
-    question: "Do you allocate bed numbers to guests?",
-    answer:
-      "We have a first come first served policy regarding bed allocation and we will make sure you have feel comfortable and have a comfortable bed during your entire stay.",
+    "question": "How do I get from Edinburgh Airport to the hostel?",
+    "answer": "The two best options are the Airlink 100 bus and the Edinburgh Tram. The Airlink 100 runs 24 hours, departing from Waverley Bridge every 10 minutes (04:00–00:10) and every 30 minutes overnight. The tram departs from St Andrew Square every 7 minutes between 7am–7pm and every 15 minutes at other times, with no service between midnight and 6am. Both stops are a short walk from the hostel. Journey time is approximately 30 minutes."
   },
   {
-    question: "Where can I park my car?",
-    answer:
-      "We are right in the town centre and parking can be tricky. We would encourage you to take public transports to come over.\nOtherwise, the best you can do is to download the app Ringgo, there is paid parking on Waterloo Place, St Andrews Square or George Street.\nFrom 6.30pm till 8.30am (at night), on-street-parking is free.",
+    "question": "Is Edinburgh easy to get around without a car?",
+    "answer": "Yes. Edinburgh's city centre is compact and very walkable. Most major attractions — the Royal Mile, Holyrood Palace, Calton Hill, Princes Street Gardens, and the National Museum — are reachable on foot from the hostel. For destinations further afield, Lothian Buses operate frequent services across the city, and the tram line connects the city centre to Murrayfield, Edinburgh Park, and the Airport."
   },
   {
-    question: "And if I come by bicyle?",
-    answer:
-      "Yes, we have a secure place for your bicycle. However our hostel is at the top of a building so there are quite a few steps to get up to us.",
+    "question": "Is the hostel in a safe area of Edinburgh?",
+    "answer": "Yes. The hostel is situated in Edinburgh's New Town, a well-lit, busy, and well-connected central neighbourhood. It is considered one of the safest and most accessible parts of the city for visitors."
   },
   {
-    question: "Your question is left unanswered?",
-    answer: "Don't hesitate to reach out on Whatsapp.",
+    "question": "Where can I park near the hostel?",
+    "answer": "The hostel is in the city centre where parking is limited and public transport is strongly recommended. If driving, the RingGo app can be used for paid parking on Waterloo Place, St Andrews Square, or George Street. On-street parking is free between 6:30pm and 8:30am."
   },
+  {
+    "question": "Is reception open 24 hours?",
+    "answer": "Reception is staffed until midnight on weekdays and until 2am on weekends. A member of staff remains on site around the clock for emergencies. Guests expecting a late arrival should contact the hostel in advance — self check-in instructions can be arranged, but we do need to know ahead of time."
+  },
+  {
+    "question": "What ID do I need to check in?",
+    "answer": "A valid government-issued photo ID is required at check-in. Accepted documents include a passport, national identity card, or driving licence."
+  },
+  {
+    "question": "What dorm sizes are available, and do you have private rooms?",
+    "answer": "Princes Street Hostel offers a range of room types, from 12-bed dormitories through to private double rooms. Whether you're looking for a social dorm experience or more privacy, there's an option to suit."
+  },
+  {
+    "question": "Can I reserve a bottom bunk?",
+    "answer": "Bottom bunks cannot be reserved in advance. Bed allocation is first come, first served. Arriving promptly at check-in time gives the best chance of securing a preferred bunk."
+  },
+  {
+    "question": "Is there a minimum age requirement?",
+    "answer": "Guests must be 18 or over to stay in a shared dormitory room. Guests under 18 are welcome in private rooms only and must be accompanied by an adult."
+  },
+  {
+    "question": "Are there power sockets near the beds?",
+    "answer": "Yes. Each bed has access to both a USB Type-A charging port and a standard power socket, so you can charge your devices without needing an adaptor or extension lead."
+  },
+  {
+    "question": "Do you have WiFi?",
+    "answer": "Yes. WiFi is available throughout the hostel. The password is provided at check-in."
+  },
+  {
+    "question": "Are there lockers in the dorm rooms?",
+    "answer": "Yes. Each shared room has lockers measuring approximately 80cm × 30cm × 40cm, suitable for a large backpack or carry-on suitcase. Padlocks are available to purchase at reception for £4. Larger items can sometimes be stored separately on request."
+  },
+  {
+    "question": "Are linen and towels provided?",
+    "answer": "Linen, duvets, and pillows are provided in all rooms. Towels are not included in dorm bookings but can be hired at reception for £3 per person. Towels are included in double room bookings."
+  },
+  {
+    "question": "Are the bathrooms gender-specific?",
+    "answer": "This varies by floor. Some floors have gender-specific bathrooms; others have single-stall toilets. Shower stalls are generally mixed-use but fully enclosed and private."
+  },
+  {
+    "question": "Is there a lift?",
+    "answer": "Unfortunately not. The hostel is located at the top of a traditional Edinburgh tenement building with no lift. Guests with mobility requirements should be aware of this before booking."
+  },
+  {
+    "question": "Do you serve breakfast?",
+    "answer": "Breakfast is available at SNAX Café, located directly beneath the hostel. Vouchers can be purchased from reception for £5, covering a barista-style coffee or hot drink plus a filled roll. A full Scottish breakfast is also available at the same price."
+  },
+  {
+    "question": "Is there a self-catering kitchen?",
+    "answer": "Yes. A fully equipped kitchen with utensils and crockery is available to all guests, open from 8am to midnight. Guests are asked to keep it clean and tidy."
+  },
+  {
+    "question": "Do you have a laundry service?",
+    "answer": "There is no in-house laundry service, but staff can direct guests to nearby laundrettes."
+  },
+  {
+    "question": "Is there bicycle storage?",
+    "answer": "Yes, secure bicycle storage is available. Please note that the hostel is at the top of a building with several flights of stairs."
+  },
+  {
+    "question": "Are groups welcome?",
+    "answer": "Yes, groups are welcome. For group bookings please get in touch directly so we can discuss availability and arrangements."
+  },
+  {
+    "question": "Are pets allowed?",
+    "answer": "No, pets are not permitted at the hostel."
+  },
+  {
+    "question": "When is payment taken?",
+    "answer": "For flexible bookings, payment is taken when the free cancellation period ends. Non-refundable bookings are charged immediately upon reservation. Unpaid reservations are not guaranteed — if a payment fails, guests will be contacted to update their card details."
+  },
+  {
+    "question": "What is the cancellation policy?",
+    "answer": "Cancellation terms vary depending on your booking type and the platform you booked through. Please refer to the terms and conditions in your booking confirmation for the specific policy that applies to your reservation."
+  },
+  {
+    "question": "Can I extend my stay?",
+    "answer": "Yes, extensions are possible subject to availability. Please note that the hostel does not accommodate long-term or live-in stays, and consecutive stays are limited to a maximum of 7 nights."
+  },
+  {
+    "question": "My question isn't answered here — how can I contact you?",
+    "answer": "Don't hesitate to reach out to us directly via WhatsApp and we'll be happy to help."
+  }
 ];
 
 // Check if content is present in object
