@@ -33,11 +33,15 @@
     "rooms": {
       "title": "Discover our Rooms",
       "general-description": "Our hostel is divided into 4 levels. Our shared bathroom facilities are cleaned and maintained regularly to ensure they are always spotless.",
-      "db-rooms-description": "Our hostel offers clean and cosy double rooms with shared bathrooms. Perfect for travellers on a budget, each room is equipped with comfortable beds and basic amenities. Guests have access to shared bathrooms and shower facilities. Our rooms are perfect for couples, friends or solo travellers who want to save money while still having a comfortable place to stay.",
+      "db-rooms-description": "Our hostel offers clean and cosy double rooms with shared bathrooms, we also have a twin room! Perfect for travellers on a budget, each room is equipped with comfortable beds and basic amenities. Guests have access to shared bathrooms and shower facilities. Our rooms are perfect for couples, friends or solo travellers who want to save money while still having a comfortable place to stay.",
       "shared-rooms-description": "Our dormitory rooms are perfect for groups, friends and individual travellers on a budget. We offer 4-beds to 10-beds room options, all with shared bathroom facilities. Each bed is equipped with USB plugs and a locker to keep your personal belongings safe. Some of our dorms are female only so that everyone can feel comfortable. If you fancy making friends and enjoy the essence of what a hostel is you will love the budget friendly dorms!",
       "private-rooms-description": "Our quadruple and larger private rooms are perfect for groups, friends and families looking for a private comfortable and affordable accommodation in the heart of Edinburgh. Each room features multiple comfortable beds and shared bathroom facilities, providing everything you need for a pleasant stay. Each bed is equipped with USB plugs for your convenience."
     },
     "faq": [
+      {
+        "question": "Do you have a luggage room if I arrive before check-in time?",
+        "answer": "Yes, you can drop off your bags in the morning from 8am before check in time and also after check out, for the entire day. This comes free of charge."
+      },
       {
         "question": "When is payment taken?",
         "answer": "Depending of your booking terms and conditions, payments are taken prior to your arrival when the free cancellation period ends. \nFor non-refundable bookings, payment is taken right away upon reservation.\nIf your bank card or payment is not going through we will send you a reminder asking to update card your details. Only reservation paid for are guaranteed."
@@ -52,7 +56,7 @@
       },
       {
         "question": "Do you serve breakfast?",
-        "answer": "Breakfast can be enjoyed at the SNAX cafe, beneath the hostel, you can also get a voucher from us (£4.20).\nBreakfast consists of a barista style coffee/hot drink + a filled roll."
+        "answer": "Breakfast can be enjoyed at the SNAX cafe, beneath the hostel, you can also get a voucher from us (£4.50).\nBreakfast consists of a barista style coffee/hot drink + a filled roll."
       },
       {
         "question": "Do you have a kitchen for self-catering purposes?",
@@ -245,6 +249,7 @@
       "private-rooms-description": "Nos chambres privées quadruples ou plus sont parfaites pour les groupes d'ami(e)s et les familles à la recherche d'un hébergement privé confortable et abordable au cœur d'Édimbourg. Chaque chambre dispose de plusieurs lits confortables et d'une salle de bains commune, offrant tout ce dont vous avez besoin pour un séjour agréable. Chaque lit est équipé de prises USB pour votre confort."
     },
     "faq": [
+      {},
       {
         "question": "Quand le paiement est-il prélevé ?",
         "answer": "Selon les termes et conditions de votre réservation, les paiements sont prélevés avant votre arrivée à la fin de la période d'annulation gratuite.\nPour les réservations non remboursables, le paiement est prélevé immédiatement lors de la réservation.\nSi votre carte bancaire ou votre paiement ne passe pas, nous vous enverrons un rappel vous demandant de mettre à jour vos coordonnées. Seules les réservations payées sont garanties."
@@ -391,6 +396,7 @@
       "private-rooms-description": "Nuestras habitaciones privadas cuádruples y más grandes son perfectas para grupos, amigos y familias que buscan un alojamiento privado cómodo y asequible en el corazón de Edimburgo. Cada habitación cuenta con varias camas cómodas y baños compartidos, que brindan todo lo que necesita para una estadía placentera. Cada cama está equipada con enchufes USB para su comodidad."
     },
     "faq": [
+      {},
       {
         "question": "¿Cuándo se toma el pago?",
         "answer": "Dependiendo de los términos y condiciones de su reserva, los pagos se realizan antes de su llegada cuando finaliza el período de cancelación gratuita.\nPara las reservas no reembolsables, el pago se realiza en el momento de la reserva.\nSi su tarjeta bancaria o pago no se realiza, le enviaremos un recordatorio para que actualice los datos de su tarjeta. Sólo se garantizan las reservas pagadas."
