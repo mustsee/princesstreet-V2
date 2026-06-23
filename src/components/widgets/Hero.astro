@@ -22,7 +22,16 @@ const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
     <div
       class="w-full absolute bottom-0 md:bottom-1/4 md:translate-y-1/2 left-1/2 -translate-x-1/2 bg-transparent"
     >
-      <div id="bookWidget-82775-150425-0-1674643010"></div>
+      <form id="date-form">
+            <label for="start">Start date:</label>
+            <input type="date" id="start" name="start" required />
+            <label for="end">End date:</label>
+            <input type="date" id="end" name="end" required />
+            <input type="submit" id="dates-submit" value="Loading..." disabled />
+      </form>
+      
+      <!-- <button class="distributor-open">Book Now</button> -->
+      <!-- <div id="bookWidget-82775-150425-0-1674643010"></div> -->
     </div>
   </div>
 </section>
@@ -45,34 +54,6 @@ Edinburgh is one of Europe's most captivating cities — and where you stay shou
     </div>
   </div>
 
-
-  <script>
-    // @ts-nocheck
-    jQuery(document).ready(function () {
-      jQuery("#bookWidget-82775-150425-0-1674643010").bookWidget({
-        propid: 150425,
-        availableBackgroundColor: "#4ade80",
-        backgroundColor: "transparent",
-        borderColor: "transparent",
-        boxShadow: false,
-        buttonBackgroundColor: "#1d4ed8",
-        buttonTitle: "BOOK NOW",
-        dateFormat: "dd/mm/yy",
-        defaultNightsAdvance: 0,
-        defaultNumNight: 2,
-        formAction: "https://beds24.com/booking.php",
-        formTarget: "_self",
-        fontSize: "16px",
-        defaultNumAdult: 1,
-        searchLinkText: " ",
-        showLabels: false,
-        unavailableBackgroundColor: "#ef4444",
-        widgetLang: "en",
-        widgetType: "BookingStrip",
-      });
-    });
-  </script>
-
   <style is:global>
     @media (max-width: 767px) {
       #hero-img {
@@ -90,11 +71,6 @@ Edinburgh is one of Europe's most captivating cities — and where you stay shou
       #hero-img {
         height: 500px;
       }
-    }
-
-    #bookWidget-82775-150425-0-1674643010 .book-btn {
-      font-weight: 600;
-      padding: 6px 16px !important;
     }
   </style>
 </div>
