@@ -1,0 +1,643 @@
+---
+// DateRangePicker.astro
+// Premium dual-month date range picker + guest count.
+// Hidden inputs #start, #end, #guests are read by the BaseLayout form handler.
+---
+
+<div id="drp-wrapper">
+  <!-- Trigger bar -->
+  <div id="drp-trigger" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false">
+    <span id="drp-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+        <line x1="16" y1="2" x2="16" y2="6"/>
+        <line x1="8" y1="2" x2="8" y2="6"/>
+        <line x1="3" y1="10" x2="21" y2="10"/>
+      </svg>
+    </span>
+    <span id="drp-dates-label">
+      <span id="drp-start-label">Check-in</span>
+      <span id="drp-arrow">&#8594;</span>
+      <span id="drp-end-label">Check-out</span>
+    </span>
+    <span id="drp-divider"></span>
+    <span id="drp-guests-trigger">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+      <span id="drp-guests-label">Guests</span>
+    </span>
+  </div>
+
+  <!-- Hidden inputs consumed by BaseLayout form handler -->
+  <input type="hidden" id="start"  name="start"  />
+  <input type="hidden" id="end"    name="end"    />
+  <input type="hidden" id="guests" name="guests" value="1" />
+
+  <!-- Dropdown panel -->
+  <div id="drp-panel" role="dialog" aria-modal="true" aria-label="Select dates and guests" hidden>
+    <!-- Header -->
+    <div id="drp-panel-header">
+      <button id="drp-prev" aria-label="Previous month" type="button">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div id="drp-month-titles">
+        <span id="drp-title-left"></span>
+        <span id="drp-title-right"></span>
+      </div>
+      <button id="drp-next" aria-label="Next month" type="button">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <!-- Calendars -->
+    <div id="drp-calendars">
+      <div id="drp-cal-left"  class="drp-cal"></div>
+      <div id="drp-cal-right" class="drp-cal"></div>
+    </div>
+
+    <!-- Guests -->
+    <div id="drp-guests-section">
+      <span id="drp-guests-heading">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        Guests
+      </span>
+      <div id="drp-stepper">
+        <button id="drp-guest-minus" type="button" aria-label="Remove guest">&#8722;</button>
+        <span id="drp-guest-count">1</span>
+        <button id="drp-guest-plus"  type="button" aria-label="Add guest">&#43;</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="drp-footer">
+      <button id="drp-clear" type="button">Clear</button>
+      <button id="drp-apply" type="button" disabled>Book Now</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* ── Variables ──────────────────────────────────────── */
+  #drp-wrapper {
+    --drp-yellow:    #f5c518;
+    --drp-yellow-dk: #d4a900;
+    --drp-black:     #111111;
+    --drp-white:     #ffffff;
+    --drp-surface:   #ffffff;
+    --drp-border:    #e5e5e5;
+    --drp-muted:     #9ca3af;
+    --drp-text:      #1a1a1a;
+    --drp-range-bg:  #fff8d6;
+    --drp-radius:    14px;
+    --drp-shadow:    0 20px 60px rgba(0,0,0,.18), 0 4px 16px rgba(0,0,0,.10);
+    position: relative;
+    display: inline-flex;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* ── Trigger ────────────────────────────────────────── */
+  #drp-trigger {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--drp-white);
+    border: 2px solid var(--drp-border);
+    border-radius: 50px;
+    padding: 10px 18px;
+    cursor: pointer;
+    user-select: none;
+    transition: border-color .2s, box-shadow .2s;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--drp-text);
+    white-space: nowrap;
+  }
+  #drp-trigger:hover,
+  #drp-trigger:focus-visible {
+    border-color: var(--drp-yellow);
+    box-shadow: 0 0 0 3px rgba(245,197,24,.25);
+    outline: none;
+  }
+  #drp-trigger[aria-expanded="true"] {
+    border-color: var(--drp-yellow);
+    box-shadow: 0 0 0 3px rgba(245,197,24,.25);
+  }
+  #drp-icon { color: var(--drp-black); display: flex; }
+  #drp-dates-label { display: flex; align-items: center; gap: 6px; }
+  #drp-arrow { color: var(--drp-muted); font-size: 12px; }
+  #drp-divider {
+    width: 1px; height: 20px;
+    background: var(--drp-border);
+    margin: 0 4px;
+  }
+  #drp-guests-trigger {
+    display: flex; align-items: center; gap: 6px;
+    color: var(--drp-text);
+  }
+
+  /* ── Panel ──────────────────────────────────────────── */
+  #drp-panel {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--drp-surface);
+    border: 1px solid var(--drp-border);
+    border-radius: var(--drp-radius);
+    box-shadow: var(--drp-shadow);
+    z-index: 9999;
+    width: 680px;
+    max-width: 98vw;
+    overflow: hidden;
+    animation: drp-pop .18s cubic-bezier(.34,1.56,.64,1);
+  }
+  @keyframes drp-pop {
+    from { opacity: 0; transform: translateX(-50%) scale(.96) translateY(-6px); }
+    to   { opacity: 1; transform: translateX(-50%) scale(1)   translateY(0);    }
+  }
+  #drp-panel[hidden] { display: none; }
+
+  /* ── Panel Header ───────────────────────────────────── */
+  #drp-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px 10px;
+    border-bottom: 1px solid var(--drp-border);
+  }
+  #drp-panel-header button {
+    background: none; border: none; cursor: pointer;
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    color: var(--drp-text);
+    transition: background .15s;
+  }
+  #drp-panel-header button:hover { background: var(--drp-range-bg); }
+  #drp-month-titles {
+    display: flex; flex: 1;
+    justify-content: space-around;
+    font-weight: 700; font-size: 15px; color: var(--drp-text);
+  }
+
+  /* ── Calendars ──────────────────────────────────────── */
+  #drp-calendars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 16px 20px 8px;
+  }
+  .drp-cal { min-width: 0; }
+  .drp-cal + .drp-cal {
+    border-left: 1px solid var(--drp-border);
+    padding-left: 20px;
+  }
+
+  /* Day-of-week header */
+  .drp-dow {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 6px;
+  }
+  .drp-dow span {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--drp-muted);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    padding: 4px 0;
+  }
+
+  /* Day grid */
+  .drp-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+  }
+
+  /* Cell wrapper handles range bg strip */
+  .drp-cell {
+    position: relative;
+  }
+  .drp-cell--in-range::before {
+    content: '';
+    position: absolute;
+    top: 10%; bottom: 10%; left: 0; right: 0;
+    background: var(--drp-range-bg);
+    z-index: 0;
+  }
+  .drp-cell--range-start::before { left: 50%; }
+  .drp-cell--range-end::before   { right: 50%; }
+
+  /* Day button */
+  .drp-day {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    background: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--drp-text);
+    transition: background .12s, color .12s, transform .1s;
+    z-index: 1;
+  }
+  .drp-day:hover:not(.drp-day--empty):not(.drp-day--past) {
+    background: var(--drp-yellow);
+    color: var(--drp-black);
+    transform: scale(1.1);
+  }
+  .drp-day--empty  { cursor: default; pointer-events: none; }
+  .drp-day--past   { color: var(--drp-muted); cursor: not-allowed; pointer-events: none; }
+  .drp-day--today  { font-weight: 800; }
+  .drp-day--today::after {
+    content: '';
+    position: absolute;
+    bottom: 3px; left: 50%; transform: translateX(-50%);
+    width: 4px; height: 4px;
+    background: var(--drp-yellow);
+    border-radius: 50%;
+  }
+  .drp-day--start,
+  .drp-day--end {
+    background: var(--drp-yellow) !important;
+    color: var(--drp-black) !important;
+    font-weight: 700;
+    border-radius: 50%;
+    transform: scale(1.08);
+    box-shadow: 0 2px 8px rgba(245,197,24,.5);
+  }
+  .drp-day--in-range {
+    background: var(--drp-range-bg);
+    border-radius: 0;
+  }
+
+  /* ── Guests Section ─────────────────────────────────── */
+  #drp-guests-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-top: 1px solid var(--drp-border);
+    background: #fafafa;
+  }
+  #drp-guests-heading {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 14px; font-weight: 600; color: var(--drp-text);
+  }
+  #drp-stepper {
+    display: flex; align-items: center; gap: 14px;
+  }
+  #drp-stepper button {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    border: 2px solid var(--drp-border);
+    background: var(--drp-white);
+    font-size: 20px; line-height: 1;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: border-color .15s, background .15s;
+    color: var(--drp-text);
+  }
+  #drp-stepper button:hover:not(:disabled) {
+    border-color: var(--drp-yellow);
+    background: var(--drp-yellow);
+  }
+  #drp-stepper button:disabled { opacity: .35; cursor: not-allowed; }
+  #drp-guest-count {
+    font-size: 20px; font-weight: 700;
+    min-width: 28px; text-align: center;
+    color: var(--drp-text);
+  }
+
+  /* ── Footer ─────────────────────────────────────────── */
+  #drp-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 14px 20px;
+    border-top: 1px solid var(--drp-border);
+  }
+  #drp-clear {
+    background: none; border: none;
+    font-size: 14px; font-weight: 500;
+    color: var(--drp-muted); cursor: pointer;
+    padding: 8px 14px; border-radius: 8px;
+    transition: color .15s, background .15s;
+  }
+  #drp-clear:hover { color: var(--drp-text); background: #f0f0f0; }
+  #drp-apply {
+    background: var(--drp-yellow);
+    color: var(--drp-black);
+    border: none;
+    font-size: 14px; font-weight: 700;
+    padding: 10px 28px; border-radius: 50px;
+    cursor: pointer;
+    transition: background .15s, transform .1s, opacity .15s;
+    letter-spacing: .02em;
+  }
+  #drp-apply:hover:not(:disabled) {
+    background: var(--drp-yellow-dk);
+    transform: scale(1.03);
+  }
+  #drp-apply:disabled { opacity: .4; cursor: not-allowed; transform: none; }
+
+  /* ── Mobile ──────────────────────────────────────────── */
+  @media (max-width: 680px) {
+    #drp-panel {
+      left: 0; transform: none;
+      width: 100vw; border-radius: 16px 16px 0 0;
+      position: fixed; top: auto; bottom: 0;
+      border-bottom: none;
+      animation: drp-slide .22s ease-out;
+    }
+    @keyframes drp-slide {
+      from { transform: translateY(30px); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+    #drp-calendars {
+      grid-template-columns: 1fr;
+      max-height: 55vh;
+      overflow-y: auto;
+    }
+    .drp-cal + .drp-cal {
+      border-left: none; padding-left: 0;
+      border-top: 1px solid var(--drp-border);
+      padding-top: 16px; margin-top: 8px;
+    }
+    #drp-trigger { font-size: 13px; padding: 8px 14px; gap: 7px; }
+  }
+</style>
+
+<script>
+(function () {
+  /* ── State ────────────────────────────────────────── */
+  var viewYear, viewMonth;
+  var startDate = null;
+  var endDate   = null;
+  var hoverDate = null;
+  var guests    = 1;
+  var open      = false;
+
+  /* ── Refs ─────────────────────────────────────────── */
+  var wrapper     = document.getElementById('drp-wrapper');
+  var trigger     = document.getElementById('drp-trigger');
+  var panel       = document.getElementById('drp-panel');
+  var calLeft     = document.getElementById('drp-cal-left');
+  var calRight    = document.getElementById('drp-cal-right');
+  var titleLeft   = document.getElementById('drp-title-left');
+  var titleRight  = document.getElementById('drp-title-right');
+  var prevBtn     = document.getElementById('drp-prev');
+  var nextBtn     = document.getElementById('drp-next');
+  var clearBtn    = document.getElementById('drp-clear');
+  var applyBtn    = document.getElementById('drp-apply');
+  var startLabel  = document.getElementById('drp-start-label');
+  var endLabel    = document.getElementById('drp-end-label');
+  var guestCountEl= document.getElementById('drp-guest-count');
+  var guestsLabel = document.getElementById('drp-guests-label');
+  var minusBtn    = document.getElementById('drp-guest-minus');
+  var plusBtn     = document.getElementById('drp-guest-plus');
+  var inputStart  = document.getElementById('start');
+  var inputEnd    = document.getElementById('end');
+  var inputGuests = document.getElementById('guests');
+
+  var DOW    = ['Su','Mo','Tu','We','Th','Fr','Sa'];
+  var MONTHS = ['January','February','March','April','May','June','July',
+                'August','September','October','November','December'];
+
+  /* ── Init ─────────────────────────────────────────── */
+  function init() {
+    var now = new Date();
+    viewYear  = now.getFullYear();
+    viewMonth = now.getMonth();
+    render();
+  }
+
+  /* ── Helpers ──────────────────────────────────────── */
+  function sameDay(a, b) {
+    return a && b &&
+      a.getFullYear() === b.getFullYear() &&
+      a.getMonth()    === b.getMonth()    &&
+      a.getDate()     === b.getDate();
+  }
+  function dateOnly(d) {
+    return d ? new Date(d.getFullYear(), d.getMonth(), d.getDate()) : null;
+  }
+  function fmt(d) {
+    if (!d) return '';
+    var dd = String(d.getDate()).padStart(2,'0');
+    var mm = String(d.getMonth()+1).padStart(2,'0');
+    return dd + '/' + mm + '/' + d.getFullYear();
+  }
+  function toInput(d) {
+    if (!d) return '';
+    var dd = String(d.getDate()).padStart(2,'0');
+    var mm = String(d.getMonth()+1).padStart(2,'0');
+    return d.getFullYear() + '-' + mm + '-' + dd;
+  }
+
+  /* ── Render ───────────────────────────────────────── */
+  function render() {
+    var ry = viewMonth === 11 ? viewYear + 1 : viewYear;
+    var rm = viewMonth === 11 ? 0 : viewMonth + 1;
+
+    titleLeft.textContent  = MONTHS[viewMonth] + ' ' + viewYear;
+    titleRight.textContent = MONTHS[rm] + ' ' + ry;
+
+    renderMonth(calLeft,  viewYear,  viewMonth);
+    renderMonth(calRight, ry, rm);
+
+    startLabel.textContent  = startDate ? fmt(startDate) : 'Check-in';
+    endLabel.textContent    = endDate   ? fmt(endDate)   : 'Check-out';
+    guestCountEl.textContent = guests;
+    guestsLabel.textContent = guests === 1 ? '1 Guest' : guests + ' Guests';
+
+    inputStart.value  = toInput(startDate);
+    inputEnd.value    = toInput(endDate);
+    inputGuests.value = guests;
+
+    applyBtn.disabled = !(startDate && endDate);
+    minusBtn.disabled = guests <= 1;
+  }
+
+  function renderMonth(container, year, month) {
+    container.innerHTML = '';
+
+    /* DOW header */
+    var dow = document.createElement('div');
+    dow.className = 'drp-dow';
+    DOW.forEach(function(d) {
+      var s = document.createElement('span');
+      s.textContent = d;
+      dow.appendChild(s);
+    });
+    container.appendChild(dow);
+
+    var grid = document.createElement('div');
+    grid.className = 'drp-days';
+
+    var today      = dateOnly(new Date());
+    var firstDow   = new Date(year, month, 1).getDay();
+    var daysInMo   = new Date(year, month + 1, 0).getDate();
+
+    /* Determine effective range for highlighting */
+    var previewEnd = (!endDate && startDate && hoverDate) ? hoverDate : endDate;
+    var rangeS = null, rangeE = null;
+    if (startDate && previewEnd) {
+      var s0 = dateOnly(startDate), e0 = dateOnly(previewEnd);
+      if (s0 <= e0) { rangeS = s0; rangeE = e0; }
+      else          { rangeS = e0; rangeE = s0; }
+    }
+
+    /* Empty leading cells */
+    for (var i = 0; i < firstDow; i++) {
+      var cell = document.createElement('div');
+      cell.className = 'drp-cell';
+      var emp = document.createElement('button');
+      emp.type = 'button';
+      emp.className = 'drp-day drp-day--empty';
+      emp.tabIndex = -1;
+      cell.appendChild(emp);
+      grid.appendChild(cell);
+    }
+
+    for (var d = 1; d <= daysInMo; d++) {
+      var date = new Date(year, month, d);
+      var datePlain = dateOnly(date);
+
+      var isPast   = datePlain < today;
+      var isToday  = sameDay(datePlain, today);
+      var isStart  = sameDay(datePlain, startDate);
+      var isEnd    = endDate
+                       ? sameDay(datePlain, endDate)
+                       : (startDate && hoverDate && !endDate && sameDay(datePlain, hoverDate));
+      var inRange  = rangeS && rangeE && datePlain > rangeS && datePlain < rangeE;
+      var isCap    = isStart || isEnd;
+
+      var cell = document.createElement('div');
+      cell.className = 'drp-cell';
+
+      /* Range strip styling */
+      if (inRange) cell.classList.add('drp-cell--in-range');
+      if (isStart && rangeE && !sameDay(startDate, rangeE)) cell.classList.add('drp-cell--range-start');
+      if (isEnd   && rangeS && !sameDay(rangeS, datePlain)) cell.classList.add('drp-cell--range-end');
+
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'drp-day';
+      btn.textContent = d;
+      btn.setAttribute('aria-label', date.toDateString());
+
+      if (isPast)  btn.classList.add('drp-day--past');
+      if (isToday) btn.classList.add('drp-day--today');
+      if (isStart) btn.classList.add('drp-day--start');
+      if (isEnd)   btn.classList.add('drp-day--end');
+      if (inRange) btn.classList.add('drp-day--in-range');
+
+      if (!isPast) {
+        (function(dt){
+          btn.addEventListener('click',      function() { handleDayClick(dt); });
+          btn.addEventListener('mouseenter', function() { handleHover(dt); });
+          btn.addEventListener('mouseleave', function() { handleLeave(); });
+        })(datePlain);
+      }
+
+      cell.appendChild(btn);
+      grid.appendChild(cell);
+    }
+
+    container.appendChild(grid);
+  }
+
+  /* ── Interaction ──────────────────────────────────── */
+  function handleDayClick(date) {
+    if (!startDate || (startDate && endDate)) {
+      startDate = date;
+      endDate   = null;
+      hoverDate = null;
+    } else {
+      if (sameDay(date, startDate)) {
+        endDate = date;
+      } else if (date < startDate) {
+        endDate   = startDate;
+        startDate = date;
+      } else {
+        endDate = date;
+      }
+      hoverDate = null;
+    }
+    render();
+  }
+
+  function handleHover(date) {
+    if (startDate && !endDate) { hoverDate = date; render(); }
+  }
+  function handleLeave() {
+    if (startDate && !endDate) { hoverDate = null; render(); }
+  }
+
+  function openPanel() {
+    open = true;
+    panel.hidden = false;
+    trigger.setAttribute('aria-expanded', 'true');
+  }
+  function closePanel() {
+    open = false;
+    panel.hidden = true;
+    trigger.setAttribute('aria-expanded', 'false');
+  }
+
+  /* ── Events ───────────────────────────────────────── */
+  trigger.addEventListener('click', function() { open ? closePanel() : openPanel(); });
+  trigger.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open ? closePanel() : openPanel(); }
+    if (e.key === 'Escape') closePanel();
+  });
+
+  prevBtn.addEventListener('click', function() {
+    if (viewMonth === 0) { viewMonth = 11; viewYear--; } else viewMonth--;
+    render();
+  });
+  nextBtn.addEventListener('click', function() {
+    if (viewMonth === 11) { viewMonth = 0; viewYear++; } else viewMonth++;
+    render();
+  });
+
+  clearBtn.addEventListener('click', function() {
+    startDate = null; endDate = null; hoverDate = null; render();
+  });
+
+  applyBtn.addEventListener('click', function() {
+    if (startDate && endDate) {
+      var form = document.getElementById('date-form');
+      if (form) form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+      closePanel();
+    }
+  });
+
+  minusBtn.addEventListener('click', function() { if (guests > 1) { guests--; render(); } });
+  plusBtn.addEventListener('click',  function() { guests++; render(); });
+
+  document.addEventListener('click', function(e) {
+    if (open && !wrapper.contains(e.target)) closePanel();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && open) closePanel();
+  });
+
+  init();
+})();
+</script>

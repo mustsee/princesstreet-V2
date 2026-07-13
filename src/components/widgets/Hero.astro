@@ -2,6 +2,7 @@
 import { Trans } from "astro-i18next/components";
 import { t } from "i18next";
 import Logo from "~/components/atoms/Logo.astro";
+import DateRangePicker from "~/components/widgets/DateRangePicker.astro";
 const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
 ---
 
@@ -19,19 +20,16 @@ const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
         <Logo />
       </div> -->
     </div>
-    <div
-      class="w-full absolute bottom-0 md:bottom-1/4 md:translate-y-1/2 left-1/2 -translate-x-1/2 bg-transparent"
-    >
+
+    <!-- Booking bar -->
+    <div id="hero-booking-bar">
       <form id="date-form">
-            <label for="start">Start date:</label>
-            <input type="date" id="start" name="start" required />
-            <label for="end">End date:</label>
-            <input type="date" id="end" name="end" required />
-            <input type="submit" id="dates-submit" value="Loading..." disabled />
+        <DateRangePicker />
+        <button type="submit" id="dates-submit" disabled>
+          <span>Book Now</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
       </form>
-      
-      <!-- <button class="distributor-open">Book Now</button> -->
-      <!-- <div id="bookWidget-82775-150425-0-1674643010"></div> -->
     </div>
   </div>
 </section>
@@ -56,20 +54,80 @@ Edinburgh is one of Europe's most captivating cities — and where you stay shou
 
   <style is:global>
     @media (max-width: 767px) {
-      #hero-img {
-        height: 500px;
-      }
+      #hero-img { height: 500px; }
     }
-
     @media (min-width: 768px) {
-      #hero-img {
-        height: 400px;
-      }
+      #hero-img { height: 420px; }
+    }
+    @media (min-width: 1024px) {
+      #hero-img { height: 540px; }
+    }
+    /* Allow the booking bar panel to overflow the hero section */
+    #hero-img { overflow: visible; }
+
+    /* ── Booking bar ── */
+    #hero-booking-bar {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      z-index: 50;
+      width: max-content;
+      max-width: calc(100vw - 32px);
+    }
+    #hero-booking-bar form {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #ffffff;
+      border-radius: 60px;
+      box-shadow: 0 8px 40px rgba(0,0,0,.18), 0 2px 8px rgba(0,0,0,.08);
+      padding: 8px 8px 8px 6px;
+    }
+    #dates-submit {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #111111;
+      color: #ffffff;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 22px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background .15s, transform .1s, opacity .15s;
+      letter-spacing: .03em;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    #dates-submit:hover:not(:disabled) {
+      background: #f5c518;
+      color: #111111;
+      transform: scale(1.04);
+    }
+    #dates-submit:disabled {
+      opacity: .4;
+      cursor: not-allowed;
     }
 
-    @media (min-width: 1024px) {
-      #hero-img {
-        height: 500px;
+    @media (max-width: 680px) {
+      #hero-booking-bar {
+        bottom: auto;
+        top: auto;
+        transform: none;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        margin-top: -28px;
+        padding: 0 16px;
+      }
+      #hero-booking-bar form {
+        border-radius: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 12px 12px 12px 10px;
       }
     }
   </style>

@@ -53,7 +53,7 @@ const { meta = {} } = Astro.props;
                             // Don't use the default submit button behavior. We want to handle it ourselves.
                             event.preventDefault();
                             // Get the dates from the date form.
-                            const { start, end } = event.target.elements;
+                            const { start, end, guests } = event.target.elements;
                             const [startYears, startMonths, startDays] = start.value.split('-');
                             const [endYears, endMonths, endDays] = end.value.split('-');
 
@@ -62,6 +62,9 @@ const { meta = {} } = Astro.props;
                             // Use the Booking Engine Widget Javascript API to set the dates in the widget and open it.
                             api.setStartDate(startDate);
                             api.setEndDate(endDate);
+                            if (guests && guests.value && api.setAdultCount) {
+                                api.setAdultCount(parseInt(guests.value, 10) || 1);
+                            }
                             api.showRooms();
                             api.open();
                         });
@@ -72,8 +75,9 @@ const { meta = {} } = Astro.props;
                     // Enable the submit button, because the Booking Engine Widget is ready to be used.
                     const enableSubmit = () => {
                         const submitButton = document.getElementById('dates-submit');
-                        submitButton.value = 'Submit';
-                        submitButton.disabled = false;
+                        if (submitButton) {
+                            submitButton.removeAttribute('disabled');
+                        }
                     };
                     enableSubmit();
                 }
