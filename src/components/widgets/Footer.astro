@@ -14,10 +14,15 @@ import { getPermalink } from "~/utils/permalinks";
       <div class="footer-item">
         +44 755 313 7828<br />hello@princesstreethostel.com
       </div>
-      <div
-        class="footer-item mb-0 hover:underline transition duration-150 ease-in-out"
-      >
-        <a href={getPermalink("terms-and-conditions")}>Terms & conditions</a>
+      <div class="footer-item">
+        <a
+          class="mb-0 hover:underline transition duration-150 ease-in-out"
+          href={getPermalink("terms-and-conditions")}>Terms & conditions</a
+        >&nbsp;|&nbsp;
+        <a
+          class="mb-0 hover:underline transition duration-150 ease-in-out"
+          href={getPermalink("privacy-policy")}>Privacy policy</a
+        >
       </div>
     </div>
   </div>
