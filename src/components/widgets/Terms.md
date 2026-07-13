@@ -92,14 +92,22 @@
 
 3. Fire Regulations: Guests are required to familiarise themselves and comply with all fire regulations and evacuation procedures at the property where they are staying. Any malicious activation of fire alarms or misuse of fire equipment including tampering will result in a £100.00 penalty being incurred.
 
-4. Smoking: The Princes Street Hostel operates a no smoking policy throughout the premises. This is in line with legislative changes in Scotland which dictates a ban on smoking in public places, effective from 26 March 2006. Any guest found smoking within the building will be charged a fee of £100.00 to cover the cost of restoring the room to a smoke-free condition. Further failure to comply will result in the guest(s) being asked to leave the premises immediately and will not be offered a refund. The smoking area is located on the outside of the hostel.
+4. Smoking and Vaping: The Princes Street Hostel operates a strict no smoking and no vaping policy throughout the premises. This applies to cigarettes, e-cigarettes, vapes and all other smoking or vaping devices, and is in line with legislative changes in Scotland which dictate a ban on smoking in public places, effective from 26 March 2006. Any guest found smoking or vaping within the building will be charged a fee of £100.00 to cover the cost of restoring the room to a smoke-free condition. Further failure to comply will result in the guest(s) being asked to leave the premises immediately without refund. The designated smoking area is located outside the hostel.
+
 
 5. 1. Alcohol: Under Section 68 of the 1976 Licensing (Scotland) Act, it is an offence for any person under 18 to buy or attempt to buy alcohol or consume alcohol. The use of illegal drugs is strictly prohibited in and around The Princes Street Hostel at any time. If the Hostel Manager/staff member suspects that a person is in possession of illegal drugs, he or she will contact the local police. Guests found to be contravening the above policies may be requested to leave the Hostel without refund.
    2. Consumption of alcohol not purchased in the Hostel is only permitted in the self- catering kitchen and lounge area at the discretion of the Hostel manager. Guests are requested to consider the collective needs and comfort of others in the Hostel.
 
-6. Hazardous Items: The use of candles and camping stoves within the Hostel is always strictly prohibited.
+6. Hazardous Items: The use of candles and camping stoves within the Hostel is always strictly prohibited. The use of barbecues and the lighting of fires in and around the Hostel grounds are strictly prohibited.   
 
-   The use of barbecues and the lighting of fires in and around the Hostel grounds are strictly prohibited
+   Batteries, Chargers and E-Cigarettes/Vapes: Due to the serious fire risk posed by lithium-ion batteries, the following rules apply at all times:
+   - E-bikes, e-scooters and their batteries must not be brought into the Hostel building or charged on the premises under any circumstances.
+   - Charging of phones, laptops, power banks, vapes and other devices is permitted only when using the correct, undamaged charger supplied or approved by the device manufacturer. Cheap, counterfeit or damaged chargers and cables must not be used.
+   - Devices must never be charged on beds, under pillows, on bedding, or left charging unattended overnight.
+   - E-cigarettes and vapes must not be used anywhere inside the building (the smoking policy applies equally to vaping) and must not be left on charge unattended.
+   - Any battery, charger or device that appears damaged, swollen, or becomes unusually hot must be unplugged immediately and reported to reception.
+
+   Guests who fail to comply with these fire safety rules may be asked to leave the Hostel without refund, and will be liable for any damage caused.
 
 7. Security: The Princes Street Hostel and associated facilities are for the express and sole use of the hostel guests. In the interest of security, guests are requested to refrain from bringing general members of the public (who do not have a booking with the Hostel) into the hostel or into the accommodation provided.
 
