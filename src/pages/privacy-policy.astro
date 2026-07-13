@@ -1,0 +1,25 @@
+---
+import { changeLanguage } from "i18next";
+import { SITE } from "~/config.mjs";
+import { getCanonical, getPermalink } from "~/utils/permalinks";
+import PrivacyPolicy from "./../components/widgets/PrivacyPolicy.md";
+import Layout from "~/layouts/PageLayout.astro";
+
+changeLanguage("en");
+
+const meta = {
+  title: `Privacy policy — ${SITE.name}`,
+  description: SITE.description,
+  canonical: getCanonical(getPermalink("privacy-policy")),
+};
+---
+
+<Layout {meta}>
+  <div
+    class="container mx-auto px-6 max-w-3xl prose prose-headings:text-center dark:prose-invert prose-a:text-primary-600 dark:prose-a:text-primary-400 my-8"
+  >
+    <article>
+      <PrivacyPolicy />
+    </article>
+  </div>
+</Layout>
