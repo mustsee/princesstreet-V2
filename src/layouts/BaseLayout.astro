@@ -12,7 +12,8 @@ const { meta = {} } = Astro.props;
 <!DOCTYPE html>
 <html lang="en" class="motion-safe:scroll-smooth 2xl:text-[20px]">
   <head>
-    <script is:inline src="https://api.mews.com/distributor/distributor.min.js"></script>
+    <script is:inline src="https://api.mews.com/distributor/distributor.min.js"
+    ></script>
     <MetaTags {...meta} />
     <link
       rel="icon"
@@ -36,51 +37,57 @@ const { meta = {} } = Astro.props;
       src="//gc.zgo.at/count.js"
     ></script>
     <script>
-      Mews.Distributor({
+      Mews.Distributor(
+        {
           configurationIds: [
-              'c415d9f7-70c8-4e4b-9a93-b4420092d2b3',
+            "x-xxxxxx-xxxx-xxxx-xxxxxx", // Add your configuration ID
           ],
-          openElements: '.distributor-open',
-      },
-      // Add callback which will enable Submit button and open the Booking Engine Widget upon button click.
-                function (api) {
-                    // Listen on submit and when user submits, open booking engine with given dates.
-                    const listenOnSubmit = () => {
-                        // Find the form in DOM and listen on submit.
-                        const form = document.getElementById('date-form');
+          openElements: ".distributor-open",
+        },
+        // Add callback which will enable Submit button and open the Booking Engine Widget upon button click.
+        function (api) {
+          // Listen on submit and when user submits, open booking engine with given dates.
+          const listenOnSubmit = () => {
+            // Find the form in DOM and listen on submit.
+            const form = document.getElementById("date-form");
 
-                        form.addEventListener('submit', event => {
-                            // Don't use the default submit button behavior. We want to handle it ourselves.
-                            event.preventDefault();
-                            // Get the dates from the date form.
-                            const { start, end, guests } = event.target.elements;
-                            const [startYears, startMonths, startDays] = start.value.split('-');
-                            const [endYears, endMonths, endDays] = end.value.split('-');
+            form.addEventListener("submit", (event) => {
+              // Don't use the default submit button behavior. We want to handle it ourselves.
+              event.preventDefault();
+              // Get the dates from the date form.
+              const { start, end, guests } = event.target.elements;
+              const [startYears, startMonths, startDays] =
+                start.value.split("-");
+              const [endYears, endMonths, endDays] = end.value.split("-");
 
-                            const startDate = new Date(startYears, startMonths - 1, startDays);
-                            const endDate = new Date(endYears, endMonths - 1, endDays);
-                            // Use the Booking Engine Widget Javascript API to set the dates in the widget and open it.
-                            api.setStartDate(startDate);
-                            api.setEndDate(endDate);
-                            if (guests && guests.value && api.setAdultCount) {
-                                api.setAdultCount(parseInt(guests.value, 10) || 1);
-                            }
-                            api.showRooms();
-                            api.open();
-                        });
-                    };
+              const startDate = new Date(
+                startYears,
+                startMonths - 1,
+                startDays
+              );
+              const endDate = new Date(endYears, endMonths - 1, endDays);
+              // Use the Booking Engine Widget Javascript API to set the dates in the widget and open it.
+              api.setStartDate(startDate);
+              api.setEndDate(endDate);
+              if (guests && guests.value && api.setAdultCount) {
+                api.setAdultCount(parseInt(guests.value, 10) || 1);
+              }
+              api.showRooms();
+              api.open();
+            });
+          };
 
-                    listenOnSubmit();
+          listenOnSubmit();
 
-                    // Enable the submit button, because the Booking Engine Widget is ready to be used.
-                    const enableSubmit = () => {
-                        const submitButton = document.getElementById('dates-submit');
-                        if (submitButton) {
-                            submitButton.removeAttribute('disabled');
-                        }
-                    };
-                    enableSubmit();
-                }
+          // Enable the submit button, because the Booking Engine Widget is ready to be used.
+          const enableSubmit = () => {
+            const submitButton = document.getElementById("dates-submit");
+            if (submitButton) {
+              submitButton.removeAttribute("disabled");
+            }
+          };
+          enableSubmit();
+        }
       );
     </script>
   </body>
