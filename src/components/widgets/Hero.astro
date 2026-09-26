@@ -2,6 +2,7 @@
 import { Trans } from "astro-i18next/components";
 import { t } from "i18next";
 import Logo from "~/components/atoms/Logo.astro";
+import DateRangePicker from "~/components/widgets/DateRangePicker.astro";
 const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
 ---
 
@@ -20,15 +21,17 @@ const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
       </div> -->
     </div>
     <div
-      class="w-full absolute bottom-0 md:bottom-1/4 md:translate-y-1/2 left-1/2 -translate-x-1/2 bg-transparent"
+      class="w-full absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 bg-transparent px-4 flex justify-center z-30 pointer-events-none"
     >
-      <div id="bookWidget-82775-150425-0-1674643010"></div>
+      <div class="pointer-events-auto">
+        <DateRangePicker />
+      </div>
     </div>
   </div>
 </section>
 
 <div class="max-w-6xl mx-auto px-4 sm:px-6">
-  <div class="py-12 md:py-20">
+  <div class="pt-14 pb-12 sm:pt-16 md:py-20">
     <div class="flex justify-center mb-8">
       <h2
         class="text-sm sm:text-base bg-white border-y-4 border-yellow-500 dark:bg-slate-900 text-gray-900 dark:text-white px-2 py-1 whitespace-nowrap"
@@ -40,38 +43,32 @@ const images = await Astro.glob("~/assets/images/hero-hq/**.jpg");
     <div class="text-center max-w-5xl mx-auto">
       <div class="max-w-3xl mx-auto">
         <p class="text-xl text-gray-600 dark:text-slate-400">
-Edinburgh is one of Europe's most captivating cities — and where you stay should match the experience. Housed in a <strong>characterful Victorian tenement building</strong> on the edge of the <strong>historic New Town</strong>, <strong>The Princes Street Hostel</strong> offers the <strong>comfort and cleanliness</strong> you'd expect from a quality city centre hotel, at <strong>a fraction of the price</strong>. Perfectly located <strong>steps from Waverley Station</strong> with the Royal Mile, Princes Street Gardens, and Edinburgh's finest restaurants and bars all within easy walking distance.<br><br>Our <strong>rooms and facilities</strong> are maintained to an <strong>impeccable standard</strong>, our staff are <strong>knowledgeable and genuinely welcoming</strong>, and our location means you spend less time travelling and more time enjoying the city. Whether you're here for a <strong>weekend break</strong> or an <strong>extended stay</strong> — you'll find everything you need, without paying for things you don't.<br><br>A place that feels <strong>safe, comfortable, and friendly</strong> — in the heart of one of the world's greatest cities. <strong>Smart travel starts here.</strong>        </p>
+          Edinburgh is one of Europe's most captivating cities — and where you
+          stay should match the experience. Housed in a <strong
+            >characterful Victorian tenement building</strong
+          > on the edge of the <strong>historic New Town</strong>, <strong
+            >The Princes Street Hostel</strong
+          > offers the <strong>comfort and cleanliness</strong> you'd expect from
+          a quality city centre hotel, at <strong
+            >a fraction of the price</strong
+          >. Perfectly located <strong>steps from Waverley Station</strong> with
+          the Royal Mile, Princes Street Gardens, and Edinburgh's finest restaurants
+          and bars all within easy walking distance.<br /><br />Our <strong
+            >rooms and facilities</strong
+          > are maintained to an <strong>impeccable standard</strong>, our staff
+          are <strong>knowledgeable and genuinely welcoming</strong>, and our
+          location means you spend less time travelling and more time enjoying
+          the city. Whether you're here for a <strong>weekend break</strong> or an
+          <strong>extended stay</strong> — you'll find everything you need, without
+          paying for things you don't.<br /><br />A place that feels <strong
+            >safe, comfortable, and friendly</strong
+          > — in the heart of one of the world's greatest cities. <strong
+            >Smart travel starts here.</strong
+          >
+        </p>
       </div>
     </div>
   </div>
-
-
-  <script>
-    // @ts-nocheck
-    jQuery(document).ready(function () {
-      jQuery("#bookWidget-82775-150425-0-1674643010").bookWidget({
-        propid: 150425,
-        availableBackgroundColor: "#4ade80",
-        backgroundColor: "transparent",
-        borderColor: "transparent",
-        boxShadow: false,
-        buttonBackgroundColor: "#1d4ed8",
-        buttonTitle: "BOOK NOW",
-        dateFormat: "dd/mm/yy",
-        defaultNightsAdvance: 0,
-        defaultNumNight: 2,
-        formAction: "https://beds24.com/booking.php",
-        formTarget: "_self",
-        fontSize: "16px",
-        defaultNumAdult: 1,
-        searchLinkText: " ",
-        showLabels: false,
-        unavailableBackgroundColor: "#ef4444",
-        widgetLang: "en",
-        widgetType: "BookingStrip",
-      });
-    });
-  </script>
 
   <style is:global>
     @media (max-width: 767px) {
@@ -90,11 +87,6 @@ Edinburgh is one of Europe's most captivating cities — and where you stay shou
       #hero-img {
         height: 500px;
       }
-    }
-
-    #bookWidget-82775-150425-0-1674643010 .book-btn {
-      font-weight: 600;
-      padding: 6px 16px !important;
     }
   </style>
 </div>

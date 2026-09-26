@@ -1,0 +1,630 @@
+---
+export interface Props {
+  class?: string;
+  mewsConfigurationId?: string;
+  defaultGuests?: number;
+  defaultChildren?: number;
+}
+
+const {
+  class: className = "",
+  mewsConfigurationId = "c415d9f7-70c8-4e4b-9a93-b4420092d2b3",
+  defaultGuests = 1,
+  defaultChildren = 0,
+} = Astro.props;
+---
+
+<div
+  class={`date-range-picker-container relative inline-block ${className}`}
+  data-date-range-picker
+  data-mews-configuration-id={mewsConfigurationId}
+  data-default-guests={defaultGuests}
+  data-default-children={defaultChildren}
+>
+  <!-- Outer Pill Container -->
+  <div
+    class="bg-white dark:bg-slate-900 rounded-full p-1 sm:p-1.5 shadow-xl border border-gray-200/90 dark:border-slate-700/80 flex items-center gap-1 sm:gap-2 transition-all select-none"
+  >
+    <!-- Combined Date & Guests Trigger Group -->
+    <div class="flex items-center">
+      <!-- Date Trigger Section -->
+      <div
+        class="relative flex items-center w-[132px] sm:w-[284px] flex-shrink-0"
+        data-date-section
+      >
+        <div
+          class="w-full flex items-center justify-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 rounded-full hover:bg-gray-100/80 dark:hover:bg-slate-800/80 cursor-pointer transition select-none group"
+          data-date-trigger
+        >
+          <!-- Calendar Icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex-shrink-0"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+
+          <!-- Mobile: "Dates" Section (compact single label) -->
+          <span
+            class="w-[96px] sm:hidden flex-shrink-0 text-center text-xs font-medium text-gray-800 dark:text-gray-200 whitespace-nowrap"
+            data-mobile-dates-display
+          >
+            Dates
+          </span>
+
+          <!-- Desktop: 1. Check-in Section (fixed width) -->
+          <span
+            class="hidden sm:inline-block w-[100px] flex-shrink-0 text-center text-sm font-medium text-gray-800 dark:text-gray-200 whitespace-nowrap"
+            data-checkin-display
+          >
+            Check-in
+          </span>
+
+          <!-- Desktop: 2. Arrow Section (fixed width) -->
+          <span
+            class="hidden sm:flex w-5 flex-shrink-0 items-center justify-center text-gray-400 dark:text-gray-500"
+            data-arrow-display
+            aria-hidden="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-3.5 h-3.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+            </svg>
+          </span>
+
+          <!-- Desktop: 3. Check-out Section (fixed width) -->
+          <span
+            class="hidden sm:inline-block w-[100px] flex-shrink-0 text-center text-sm font-medium text-gray-800 dark:text-gray-200 whitespace-nowrap"
+            data-checkout-display
+          >
+            Check-out
+          </span>
+        </div>
+
+        <!-- Hidden input strictly anchored to the date trigger for AirDatepicker -->
+        <input
+          type="text"
+          class="absolute inset-0 opacity-0 w-full h-full cursor-pointer z-10"
+          data-date-input
+          readonly
+          aria-label="Select check-in and check-out dates"
+          tabindex="0"
+        />
+      </div>
+
+      <!-- Subtle Divider -->
+      <div class="h-4 w-px bg-gray-200 dark:bg-slate-700 mx-1 flex-shrink-0">
+      </div>
+
+      <!-- Guests Section with Popover -->
+      <div class="relative flex-shrink-0" data-guests-container>
+        <button
+          type="button"
+          class="w-[92px] sm:w-[110px] flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-1.5 sm:py-2 rounded-full hover:bg-gray-100/80 dark:hover:bg-slate-800/80 cursor-pointer transition select-none group flex-shrink-0"
+          data-guests-trigger
+          aria-expanded="false"
+          aria-haspopup="true"
+        >
+          <!-- Guests Icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-yellow-500 dark:text-yellow-400 group-hover:text-yellow-600 dark:group-hover:text-yellow-300 transition-colors flex-shrink-0"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+            ></path>
+          </svg>
+          <span
+            class="w-[60px] sm:w-[72px] text-center text-xs sm:text-sm font-medium text-gray-800 dark:text-gray-200 whitespace-nowrap flex-shrink-0"
+            data-guests-display
+          >
+            1 Guest
+          </span>
+        </button>
+
+        <!-- Guests Dropdown Popover -->
+        <div
+          class="hidden absolute top-full mt-2 left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-0 w-60 bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-gray-200 dark:border-slate-700 p-4 z-50 text-gray-800 dark:text-gray-200 transition-all flex flex-col gap-3"
+          data-guests-dropdown
+        >
+          <!-- Adults Row -->
+          <div class="flex items-center justify-between gap-3">
+            <div>
+              <p class="text-sm font-semibold">Adults</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button
+                type="button"
+                class="w-7 h-7 rounded-full border border-gray-300 dark:border-slate-600 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed text-gray-700 dark:text-gray-300 font-bold transition"
+                data-adult-minus
+                aria-label="Decrease adults"
+              >
+                &minus;
+              </button>
+              <span
+                class="w-5 text-center text-sm font-semibold"
+                data-adult-count>1</span
+              >
+              <button
+                type="button"
+                class="w-7 h-7 rounded-full border border-gray-300 dark:border-slate-600 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed text-gray-700 dark:text-gray-300 font-bold transition"
+                data-adult-plus
+                aria-label="Increase adults"
+              >
+                +
+              </button>
+            </div>
+          </div>
+
+          <div class="h-px bg-gray-100 dark:bg-slate-800"></div>
+
+          <!-- Children Row -->
+          <div class="flex items-center justify-between gap-3">
+            <div>
+              <p class="text-sm font-semibold">Children</p>
+              <p class="text-[11px] text-gray-500 dark:text-gray-400">
+                0-18 yrs
+              </p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button
+                type="button"
+                class="w-7 h-7 rounded-full border border-gray-300 dark:border-slate-600 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed text-gray-700 dark:text-gray-300 font-bold transition"
+                data-child-minus
+                aria-label="Decrease children"
+              >
+                &minus;
+              </button>
+              <span
+                class="w-5 text-center text-sm font-semibold"
+                data-child-count>0</span
+              >
+              <button
+                type="button"
+                class="w-7 h-7 rounded-full border border-gray-300 dark:border-slate-600 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-slate-800 disabled:opacity-30 disabled:cursor-not-allowed text-gray-700 dark:text-gray-300 font-bold transition"
+                data-child-plus
+                aria-label="Increase children"
+              >
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Action Button (Book Now) -->
+    <button
+      type="button"
+      class="h-9 sm:h-10 px-4 sm:px-5 rounded-full bg-yellow-400 hover:bg-yellow-500 active:bg-yellow-600 text-gray-900 font-semibold text-xs sm:text-sm tracking-wide flex items-center gap-1.5 shadow-sm hover:shadow transition-all duration-200 transform active:scale-95 flex-shrink-0"
+      data-book-btn
+    >
+      <span>Book Now</span>
+    </button>
+  </div>
+</div>
+
+<script>
+  import AirDatepicker from "air-datepicker";
+  import type { AirDatepickerLocale } from "air-datepicker";
+  import "air-datepicker/air-datepicker.css";
+
+  const localeEn: Partial<AirDatepickerLocale> = {
+    days: [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ],
+    daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+    months: [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ],
+    monthsShort: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ],
+    today: "Today",
+    clear: "Clear",
+    dateFormat: "dd/MM/yyyy",
+    timeFormat: "hh:mm aa",
+    firstDay: 1,
+  };
+
+  function initDatePickers() {
+    const containers = document.querySelectorAll("[data-date-range-picker]");
+
+    containers.forEach((container) => {
+      // Avoid double initialization
+      if ((container as any).__datepickerInited) return;
+      (container as any).__datepickerInited = true;
+
+      const input = container.querySelector(
+        "[data-date-input]"
+      ) as HTMLInputElement | null;
+      const checkinDisplay = container.querySelector("[data-checkin-display]");
+      const checkoutDisplay = container.querySelector(
+        "[data-checkout-display]"
+      );
+      const mobileDatesDisplay = container.querySelector(
+        "[data-mobile-dates-display]"
+      );
+      const bookBtn = container.querySelector("[data-book-btn]");
+      const guestsTrigger = container.querySelector("[data-guests-trigger]");
+      const guestsDropdown = container.querySelector("[data-guests-dropdown]");
+      const adultMinus = container.querySelector(
+        "[data-adult-minus]"
+      ) as HTMLButtonElement | null;
+      const adultPlus = container.querySelector(
+        "[data-adult-plus]"
+      ) as HTMLButtonElement | null;
+      const adultCountEl = container.querySelector("[data-adult-count]");
+
+      const childMinus = container.querySelector(
+        "[data-child-minus]"
+      ) as HTMLButtonElement | null;
+      const childPlus = container.querySelector(
+        "[data-child-plus]"
+      ) as HTMLButtonElement | null;
+      const childCountEl = container.querySelector("[data-child-count]");
+
+      const guestsDisplay = container.querySelector("[data-guests-display]");
+
+      if (!input) return;
+
+      const mewsConfigId =
+        container.getAttribute("data-mews-configuration-id") ||
+        "c415d9f7-70c8-4e4b-9a93-b4420092d2b3";
+      const defaultGuestsAttr = container.getAttribute("data-default-guests");
+      const defaultChildrenAttr = container.getAttribute(
+        "data-default-children"
+      );
+      let adultCount = defaultGuestsAttr ? parseInt(defaultGuestsAttr, 10) : 1;
+      let childCount = defaultChildrenAttr
+        ? parseInt(defaultChildrenAttr, 10)
+        : 0;
+
+      // Keep track of the Mews distributor API instance
+      let distributorApi: any = null;
+
+      const initMews = () => {
+        if (
+          typeof (window as any).Mews !== "undefined" &&
+          (window as any).Mews.Distributor
+        ) {
+          (window as any).Mews.Distributor(
+            {
+              configurationIds: [mewsConfigId],
+              openElements: ".distributor-open",
+            },
+            (api: any) => {
+              distributorApi = api;
+            }
+          );
+        }
+      };
+
+      initMews();
+      if (!distributorApi && typeof (window as any).Mews === "undefined") {
+        window.addEventListener("load", initMews, { once: true });
+      }
+
+      // Update Guest UI
+      const updateGuestUI = () => {
+        if (adultCountEl) adultCountEl.textContent = `${adultCount}`;
+        if (childCountEl) childCountEl.textContent = `${childCount}`;
+
+        const totalGuests = adultCount + childCount;
+        if (guestsDisplay) {
+          guestsDisplay.textContent = `${totalGuests} Guest${
+            totalGuests > 1 ? "s" : ""
+          }`;
+        }
+        if (adultMinus) {
+          adultMinus.disabled = adultCount <= 1;
+        }
+        if (adultPlus) {
+          adultPlus.disabled = adultCount >= 10;
+        }
+        if (childMinus) {
+          childMinus.disabled = childCount <= 0;
+        }
+        if (childPlus) {
+          childPlus.disabled = childCount >= 6;
+        }
+      };
+
+      updateGuestUI();
+
+      // Adult Stepper handlers
+      adultMinus?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (adultCount > 1) {
+          adultCount--;
+          updateGuestUI();
+        }
+      });
+
+      adultPlus?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (adultCount < 10) {
+          adultCount++;
+          updateGuestUI();
+        }
+      });
+
+      // Child Stepper handlers
+      childMinus?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (childCount > 0) {
+          childCount--;
+          updateGuestUI();
+        }
+      });
+
+      childPlus?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (childCount < 6) {
+          childCount++;
+          updateGuestUI();
+        }
+      });
+
+      let dp: AirDatepicker<HTMLElement> | null = null;
+
+      // Toggle Guest Dropdown
+      guestsTrigger?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = !guestsDropdown?.classList.contains("hidden");
+        if (isOpen) {
+          guestsDropdown?.classList.add("hidden");
+          guestsTrigger.setAttribute("aria-expanded", "false");
+        } else {
+          try {
+            if (dp && (dp as any).visible) {
+              dp.hide();
+            }
+          } catch (_) {
+            // ignore datepicker hide error
+          }
+          guestsDropdown?.classList.remove("hidden");
+          guestsTrigger.setAttribute("aria-expanded", "true");
+        }
+      });
+
+      // Prevent clicks inside guests dropdown from closing it
+      guestsDropdown?.addEventListener("click", (e) => {
+        e.stopPropagation();
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener("click", () => {
+        if (!guestsDropdown?.classList.contains("hidden")) {
+          guestsDropdown?.classList.add("hidden");
+          guestsTrigger?.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      const formatNice = (d: Date) => {
+        return d.toLocaleDateString("en-GB", {
+          day: "numeric",
+          month: "short",
+        });
+      };
+
+      const formatRangeMobile = (d1: Date, d2: Date) => {
+        if (
+          d1.getMonth() === d2.getMonth() &&
+          d1.getFullYear() === d2.getFullYear()
+        ) {
+          const month = d1.toLocaleDateString("en-GB", { month: "short" });
+          return `${d1.getDate()} - ${d2.getDate()} ${month}`;
+        }
+        return `${formatNice(d1)} - ${formatNice(d2)}`;
+      };
+
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      dp = new AirDatepicker(input, {
+        range: true,
+        dynamicRange: true,
+        multipleDatesSeparator: " - ",
+        locale: localeEn,
+        minDate: today,
+        autoClose: true,
+        isMobile: false, // Opens as a popup below the widget rather than fullscreen modal
+        position: "bottom left",
+        offset: 10,
+        dateFormat: "dd/MM/yyyy",
+        onShow() {
+          // Close guest dropdown if open
+          guestsDropdown?.classList.add("hidden");
+          guestsTrigger?.setAttribute("aria-expanded", "false");
+        },
+        onSelect({ date }) {
+          if (Array.isArray(date) && date.length === 2 && date[0] && date[1]) {
+            const d1 = date[0];
+            const d2 = date[1];
+            if (checkinDisplay) checkinDisplay.textContent = formatNice(d1);
+            if (checkoutDisplay) checkoutDisplay.textContent = formatNice(d2);
+            if (mobileDatesDisplay)
+              mobileDatesDisplay.textContent = formatRangeMobile(d1, d2);
+          } else if (Array.isArray(date) && date.length === 1 && date[0]) {
+            if (checkinDisplay)
+              checkinDisplay.textContent = formatNice(date[0]);
+            if (checkoutDisplay) checkoutDisplay.textContent = "Check-out";
+            if (mobileDatesDisplay)
+              mobileDatesDisplay.textContent = formatNice(date[0]);
+          } else {
+            if (checkinDisplay) checkinDisplay.textContent = "Check-in";
+            if (checkoutDisplay) checkoutDisplay.textContent = "Check-out";
+            if (mobileDatesDisplay) mobileDatesDisplay.textContent = "Dates";
+          }
+        },
+      });
+
+      // Book button behavior: Connect to Mews Booking Engine
+      bookBtn?.addEventListener("click", (e) => {
+        e.preventDefault();
+        const selected = dp ? dp.selectedDates : null;
+        if (!selected || selected.length < 2) {
+          dp?.show();
+          return;
+        }
+
+        const [d1, d2] = selected;
+
+        const openMewsWithParams = (api: any) => {
+          if (api.setStartDate) api.setStartDate(d1);
+          if (api.setEndDate) api.setEndDate(d2);
+          if (api.setAdultCount) api.setAdultCount(adultCount);
+          if (api.setChildCount) api.setChildCount(childCount);
+          if (api.showRooms) api.showRooms();
+          if (api.open) api.open();
+        };
+
+        if (distributorApi) {
+          openMewsWithParams(distributorApi);
+          return;
+        }
+
+        // If Mews is loaded globally on window but distributorApi isn't ready yet
+        if (
+          typeof (window as any).Mews !== "undefined" &&
+          (window as any).Mews.Distributor
+        ) {
+          (window as any).Mews.Distributor(
+            {
+              configurationIds: [mewsConfigId],
+              openElements: ".distributor-open",
+            },
+            (api: any) => {
+              distributorApi = api;
+              openMewsWithParams(api);
+            }
+          );
+          return;
+        }
+
+        // Fallback: If Mews widget script failed to load or is blocked, open Mews standalone deeplink
+        const pad = (n: number) => (n < 10 ? `0${n}` : `${n}`);
+        const formatIso = (d: Date) =>
+          `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+
+        const standaloneUrl = `https://app.mews.com/distributor/${mewsConfigId}?mewsStart=${formatIso(
+          d1
+        )}&mewsEnd=${formatIso(d2)}&mewsAdultCount=${adultCount}&mewsChildCount=${childCount}&mewsRoute=rooms`;
+        window.open(standaloneUrl, "_blank");
+      });
+    });
+  }
+
+  // Support both DOMContentLoaded and Astro view transitions / page swaps if any
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initDatePickers);
+  } else {
+    initDatePickers();
+  }
+  document.addEventListener("astro:page-load", initDatePickers);
+</script>
+
+<style is:global>
+  /* Air-Datepicker Custom Luxury Theme */
+  .air-datepicker {
+    --adp-font-family: inherit;
+    --adp-font-size: 13px;
+    --adp-border-radius: 16px;
+    --adp-accent-color: #2563eb;
+    --adp-color-current-date: #2563eb;
+    --adp-cell-border-radius: 8px;
+    --adp-cell-background-color-selected: #2563eb;
+    --adp-cell-background-color-selected-hover: #1d4ed8;
+    --adp-cell-background-color-in-range: rgba(37, 99, 235, 0.12);
+    --adp-cell-background-color-in-range-hover: rgba(37, 99, 235, 0.22);
+    --adp-cell-border-color-in-range: #2563eb;
+    --adp-btn-color: #2563eb;
+    --adp-btn-color-hover: #1d4ed8;
+    --adp-day-name-color: #d97706; /* amber-600 */
+    --adp-day-name-color-hover: #2563eb;
+    --adp-border-color: #e2e8f0;
+    --adp-border-color-inner: #f1f5f9;
+    --adp-z-index: 1000;
+    max-width: calc(100vw - 32px);
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.12),
+      0 8px 10px -6px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Dark mode overrides */
+  html.dark .air-datepicker {
+    --adp-background-color: #0f172a;
+    --adp-background-color-hover: #1e293b;
+    --adp-background-color-active: #334155;
+    --adp-color: #f1f5f9;
+    --adp-color-secondary: #94a3b8;
+    --adp-color-other-month: #475569;
+    --adp-color-disabled: #334155;
+    --adp-border-color: #334155;
+    --adp-border-color-inner: #1e293b;
+    --adp-nav-arrow-color: #94a3b8;
+    --adp-cell-background-color-hover: #1e293b;
+    --adp-cell-background-color-in-range: rgba(37, 99, 235, 0.28);
+    --adp-cell-background-color-in-range-hover: rgba(37, 99, 235, 0.38);
+    --adp-btn-color: #60a5fa;
+    --adp-btn-color-hover: #93c5fd;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5),
+      0 8px 10px -6px rgba(0, 0, 0, 0.4);
+  }
+
+  html.dark .air-datepicker--pointer:after {
+    background: #0f172a;
+    border-color: #334155;
+  }
+</style>
